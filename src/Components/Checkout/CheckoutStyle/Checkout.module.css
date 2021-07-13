@@ -1,0 +1,104 @@
+.content .container {
+  display: flex;
+  justify-content: center; }
+  .content .container .form {
+    margin: 22px 50px 0 0; }
+    .content .container .form .abz {
+      text-transform: uppercase;
+      font-size: 22px;
+      margin: 0 0 20px 0;
+      display: inline-block; }
+    .content .container .form form .inputs {
+      width: 225px;
+      height: 30px;
+      padding: 0 0 0 5px; }
+    .content .container .form form .names {
+      font-size: 18px; }
+    .content .container .form form .star {
+      color: red; }
+    .content .container .form form .first {
+      display: flex;
+      margin: 0 0 20px 0; }
+      .content .container .form form .first .name {
+        margin: 0 50px 0 0; }
+    .content .container .form form .second {
+      margin: 0 0 20px 0; }
+      .content .container .form form .second .inputs_street {
+        width: 510px;
+        height: 30px;
+        padding: 0 0 0 5px; }
+    .content .container .form form .three {
+      display: flex; }
+      .content .container .form form .three .number_house {
+        margin: 0 50px 0 0; }
+  .content .container .order {
+    background: #F8F8F8;
+    width: 600px; }
+    .content .container .order .order_header {
+      text-align: center;
+      font-size: 22px; }
+    .content .container .order .order_info {
+      background: white;
+      margin: 0 20px 50px 20px; }
+      .content .container .order .order_info .information {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: solid 2px #EEEFEF;
+        margin: 0 20px 0 20px; }
+        .content .container .order .order_info .information .tov {
+          margin: 15px 0 15px 0; }
+        .content .container .order .order_info .information .tov_2 {
+          margin: 15px 0 15px 0; }
+      .content .container .order .order_info .full_order .info .your_order {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 20px 0 20px;
+        border-bottom: solid 2px #EEEFEF; }
+        .content .container .order .order_info .full_order .info .your_order .container_name {
+          margin: 15px 0 15px 0; }
+          .content .container .order .order_info .full_order .info .your_order .container_name .name {
+            color: #777777; }
+          .content .container .order .order_info .full_order .info .your_order .container_name .x {
+            margin: 0 0 0 5px; }
+        .content .container .order .order_info .full_order .info .your_order .costs {
+          margin: 15px 0 15px 0;
+          color: #777777;
+          font-size: 15px; }
+      .content .container .order .order_info .not_all_cost {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: solid 2px #EEEFEF;
+        margin: 0 20px 0 20px; }
+        .content .container .order .order_info .not_all_cost .not_all {
+          margin: 15px 0 15px 0;
+          color: #242424; }
+        .content .container .order .order_info .not_all_cost .all_costs {
+          margin: 15px 0 15px 0;
+          font-size: 15px;
+          color: #777777; }
+      .content .container .order .order_info .dostavka {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: solid 2px #EEEFEF;
+        margin: 0 20px 0 20px; }
+        .content .container .order .order_info .dostavka .name_dostavka {
+          margin: 15px 0 15px 0;
+          color: #242424; }
+        .content .container .order .order_info .dostavka .cost_dostavka {
+          margin: 15px 0 15px 0;
+          color: #242424; }
+      .content .container .order .order_info .all_cost {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: solid 2px #EEEFEF;
+        margin: 0 20px 0 20px; }
+        .content .container .order .order_info .all_cost .all {
+          margin: 15px 0 15px 0;
+          color: #242424; }
+        .content .container .order .order_info .all_cost .alls {
+          margin: 15px 0 15px 0;
+          color: orange;
+          font-weight: 700;
+          font-size: 22px; }
+
+/*# sourceMappingURL=Checkout.module.css.map */

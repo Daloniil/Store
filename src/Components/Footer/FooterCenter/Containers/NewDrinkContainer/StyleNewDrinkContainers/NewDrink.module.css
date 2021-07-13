@@ -1,0 +1,26 @@
+.drink {
+  list-style-type: none;
+  width: 300px; }
+  .drink .drink_container {
+    display: flex;
+    border-top: 0.2px solid #57718a;
+    margin: 15px 0 0 0;
+    padding: 15px 0 0 0;
+    text-decoration: none;
+    cursor: pointer; }
+    .drink .drink_container .photo img {
+      width: 70px;
+      height: 70px; }
+    .drink .drink_container .drink_name {
+      padding: 10px 0 0 30px; }
+      .drink .drink_container .drink_name span {
+        color: black;
+        font-size: 14px;
+        transition-duration: 0.4s; }
+      .drink .drink_container .drink_name p {
+        color: orange;
+        font-size: 15px; }
+      .drink .drink_container .drink_name span:hover {
+        color: #57718a; }
+
+/*# sourceMappingURL=NewDrink.module.css.map */

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,cAAe;EACb,UAAU,EAAE,OAAO;EACnB,KAAK,EAAE,IAAI;EACX,OAAO,EAAE,aAAa;EACtB,UAAU,EAAE,MAAM;EAGlB,uCAAyB;IACvB,OAAO,EAAE,UAAU;IAEnB,yCAAE;MACA,KAAK,EAAE,OAAO;MACd,SAAS,EAAE,IAAI;MAEf,8CAAK;QACH,KAAK,EAAE,OAAO",
+"sources": ["FooterBottom.scss"],
+"names": [],
+"file": "FooterBottom.module.css"
+}

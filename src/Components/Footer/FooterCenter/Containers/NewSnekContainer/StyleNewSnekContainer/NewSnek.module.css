@@ -1,0 +1,26 @@
+.snek {
+  list-style-type: none;
+  cursor: pointer;
+  width: 300px; }
+  .snek .snek_container {
+    display: flex;
+    border-top: 0.2px solid #57718a;
+    margin: 15px 0 0 0;
+    padding: 15px 0 0 0;
+    text-decoration: none; }
+    .snek .snek_container .photo img {
+      width: 70px;
+      height: 70px; }
+    .snek .snek_container .snek_name {
+      padding: 10px 0 0 30px; }
+      .snek .snek_container .snek_name span {
+        color: black;
+        font-size: 14px;
+        transition-duration: 0.4s; }
+      .snek .snek_container .snek_name p {
+        color: orange;
+        font-size: 15px; }
+      .snek .snek_container .snek_name span:hover {
+        color: #57718a; }
+
+/*# sourceMappingURL=NewSnek.module.css.map */

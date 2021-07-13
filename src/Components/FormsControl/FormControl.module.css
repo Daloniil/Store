@@ -1,0 +1,15 @@
+.formControl.error input,
+.formControl.error textarea {
+  border: solid red 2px; }
+
+.formControl.standart input {
+  border: solid 2px gray; }
+
+.formControl.error div {
+  color: red; }
+
+.errormessageinput {
+  font-size: 18px;
+  margin: 5px 0 0 0; }
+
+/*# sourceMappingURL=FormControl.module.css.map */

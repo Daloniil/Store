@@ -1,0 +1,14 @@
+.footer_bottom {
+  background: #f2f0eb;
+  width: 100%;
+  padding: 25px 0 25px 0;
+  text-align: center; }
+  .footer_bottom .footer_bottom_container {
+    padding: 10px 0 0 0; }
+    .footer_bottom .footer_bottom_container p {
+      color: #57718a;
+      font-size: 16px; }
+      .footer_bottom .footer_bottom_container p span {
+        color: #bd0627; }
+
+/*# sourceMappingURL=FooterBottom.module.css.map */

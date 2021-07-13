@@ -1,0 +1,37 @@
+.content {
+  margin: 0 0 0 40px;
+  height: 680px;
+  width: 250px;
+  overflow: hidden;
+  border-left: solid 1px black; }
+  .content .names {
+    margin: 10px 0 10px 20px;
+    font-size: 18px; }
+  .content .container {
+    display: block;
+    border-bottom: solid 1px black;
+    position: relative;
+    margin: 0 0 20px 10px;
+    text-decoration: none; }
+    .content .container .container_photo {
+      display: inline-block;
+      margin: 0 10px 10px 0; }
+    .content .container .info {
+      position: absolute;
+      top: 10px;
+      display: inline-block;
+      width: 150px; }
+      .content .container .info .container_name {
+        font-size: 15px;
+        font-weight: 600;
+        color: black; }
+      .content .container .info .container_cost {
+        margin: 10px 0 32px 0;
+        font-weight: 500;
+        color: #EE9937; }
+
+@media (max-width: 1208px) {
+  .content {
+    display: none; } }
+
+/*# sourceMappingURL=LaterSeen.module.css.map */

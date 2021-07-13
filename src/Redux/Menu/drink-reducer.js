@@ -1,0 +1,92 @@
+const SETDRINK = "SET-DRINK";
+
+
+let initialState = {
+    drink: [
+        {
+            id: 14,
+            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2020/01/Сік-яблучно-гранатовий-300x300.png',
+            name: "Сік яблучно-гранатовий 1л",
+            cost: 28,
+            structure: "",
+            amount: 1
+
+        },
+        {
+            id: 15,
+            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2019/09/pepsi_bottle_600_square.png',
+            name: "Pepsi 1 л",
+            cost: 25,
+            structure: "",
+            amount: 1
+
+        },
+        {
+            id: 16,
+            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2019/02/Сік-мультивітамін-300x300.png',
+            name: "Сік мульти-вітамінний 1л",
+            cost: 28,
+            structure: "",
+            amount: 1
+
+        },
+        {
+            id: 17,
+            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2019/02/Сік-яблучно-виноградний-300x300.png',
+            name: "Сік яблучно-виноградний 1л",
+            cost: 28,
+            structure: "",
+            amount: 1
+
+        },
+        {
+            id: 18,
+            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2019/02/Сік-мультифрукт-300x300.png',
+            name: "Сік мульти-фруктовий 1л",
+            cost: 28,
+            structure: "",
+            amount: 1
+
+        },
+        {
+            id: 19,
+            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2019/02/cocacola_bottle_600_square.png',
+            name: "Coca Cola",
+            cost: 25,
+            structure: "",
+            amount: 1
+
+        },
+
+
+    ],
+
+
+};
+const drinkReducer = (state = initialState, action) => {
+    switch (action.type) {
+        case SETDRINK: {
+            return {
+                ...state,
+                drink: [...state.drink, ...action.drink]
+            }
+        }
+
+        default:
+            return state;
+
+
+    }
+
+
+}
+
+
+export const setdrinkAC = (users) => {
+    return {
+        type: SETDRINK,
+        users: users,
+    }
+}
+
+export default drinkReducer;

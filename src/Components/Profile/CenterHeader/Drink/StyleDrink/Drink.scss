@@ -1,0 +1,131 @@
+.pizza {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 100%;
+  padding: 50px 0 0 0;
+  background-color: #f2f0eb;
+
+  .pizza_nav {
+    text-decoration: none;
+
+    .pizza_container {
+      height: 400px;
+      width: 300px;
+      margin: 0 0 85px 0;
+
+      .pizza_all {
+        margin: 0 5px 0 5px;
+        max-width: 300px;
+        max-height: 385px;
+        overflow: hidden;
+        transition-duration: 0.2s;
+
+        .pizza_all_photo {
+          .img {
+            width: 292px;
+            height: 292px;
+
+          }
+        }
+
+        .pizza_all_name {
+          text-align: center;
+          margin: 0 5px 0 5px;
+
+
+          .name {
+            color: #1272cc;
+            font-size: 24px;
+            font-weight: 700;
+
+          }
+        }
+
+        .pizza_all_cost {
+          text-align: center;
+          padding: 10px 0 0 0;
+
+
+          .cost {
+            color: #bd0627;
+            font-size: 20px;
+            font-weight: 400;
+
+          }
+        }
+
+        .pizza_all_structure {
+          text-align: center;
+          padding: 26px 0 0 0;
+          margin: 0 5px 0 5px;
+
+          .structure {
+            color: #57718a;
+            font-weight: 700;
+          }
+        }
+
+        .pizza_all_bottom {
+          padding: 10px 0 0 0;
+          display: flex;
+          justify-content: center;
+
+          .pizza_all_bottom_like {
+            padding: 0 20px 0 0;
+
+            .like {
+
+            }
+          }
+
+          .pizza_all_bottom_button {
+            padding: 0 0 0 5px;
+            margin-bottom: 10px;
+
+
+            .button {
+              .your_buy {
+                display: block;
+                text-decoration: none;
+                width: 80px;
+                height: 30px;
+                background-color: #CA3835;
+                border-radius: 20px;
+                color: white;
+                font-size: 14px;
+                text-align: center;
+                padding: 8px 0 0 0;
+
+              }
+
+            }
+          }
+
+        }
+      }
+    }
+
+    .pizza_all:hover {
+      background-color: white;
+      max-height: 600px;
+      overflow: visible;
+      border-radius: 5%;
+      transition-timing-function: cubic-bezier(0.75, -1, 0.21, -1);
+      transform: scale(1.03, 1.03);
+    }
+  }
+
+
+}
+
+@media (min-width: 600px) {
+
+  .pizza_all_photo {
+    .img {
+      width: 400px;
+      height: 400px;
+
+    }
+  }
+}
