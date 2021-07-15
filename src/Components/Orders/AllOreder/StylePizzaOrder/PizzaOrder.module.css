@@ -100,7 +100,7 @@
       padding: 8px 0 0 0; }
   .content .container_item {
     display: flex;
-    margin: 0 0 0 13%; }
+    margin: 0 0 0 18.4%; }
     .content .container_item .item_info .menu_info .link_menu_info {
       color: black;
       text-decoration: none;
@@ -118,7 +118,7 @@
       color: black;
       font-weight: 700;
       font-size: 34px;
-      margin: 20px 0 20px 0; }
+      margin: 20px 2px 20px 2px; }
     .content .container_item .item_info .info .cost_info {
       color: #EE9937;
       font-weight: 600;

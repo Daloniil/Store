@@ -2,8 +2,6 @@ import React from 'react';
 import {connect} from "react-redux";
 import {compose} from "redux";
 import HeaderCenter from "./HeaderCenter";
-import {amountLeght} from "../../../Redux/buy-item-reducer";
-
 
 class HeaderCenterContainer extends React.Component {
 
@@ -13,7 +11,7 @@ class HeaderCenterContainer extends React.Component {
         return (
 
             <HeaderCenter item={this.props.item} length={this.props.lenght} amounts={this.props.amounts}
-                          />
+            />
         )
     }
 }

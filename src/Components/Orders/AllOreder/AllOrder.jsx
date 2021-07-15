@@ -2,7 +2,6 @@ import s from './StylePizzaOrder/PizzaOrder.module.css'
 import React from "react";
 import {NavLink} from "react-router-dom";
 import LastSeenContainer from "../LaterSeen/LastSeenContainer";
-import * as Scroll from 'react-scroll'
 
 
 class AllOrder extends React.Component {

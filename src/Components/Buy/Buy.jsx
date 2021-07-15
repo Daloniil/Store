@@ -1,10 +1,13 @@
 import {NavLink} from "react-router-dom";
 import s from "./StyleBuy/Buy.module.css";
 import {Component} from "react";
-import {amountLeghtplus} from "../../Redux/buy-item-reducer";
 
 
 class Buy extends Component {
+
+    plus
+    minus
+    delet
 
 
     componentDidUpdate(prevProps, prevState) {
@@ -17,13 +20,7 @@ class Buy extends Component {
 
     state = {
         item: this.props.item,
-
     }
-
-
-    plus
-    minus
-    delet
 
 
     render() {
@@ -92,9 +89,11 @@ class Buy extends Component {
 
                         <span className={s.delete} onClick={this.delet = () => {
                             let searchindex = u._id
+                            this.props.amountLeghtminus(this.state.item[this.state.item.findIndex(el => el._id === searchindex)].eat.amount)
                             this.state.item[this.state.item.findIndex(el => el._id === searchindex)].eat.amount = 1
                             this.state.item.splice(this.state.item.findIndex(el => el._id === searchindex), 1)
                             this.props.deleteLenght(this.props.lenght > 0 ? this.props.lenght - 1 : null)
+                            debugger
                             this.forceUpdate()
                         }
                         }>x</span>

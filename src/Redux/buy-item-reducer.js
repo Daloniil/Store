@@ -65,7 +65,7 @@ const buyItem = (state = initialState, action) => {
                     ...state,
                     item: [...state.item, buyeat],
                     lenght: state.item.length,
-                    amoun: action.info.amount
+                    amoun: state.amoun + 1,
 
                 }
             } else {

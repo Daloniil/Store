@@ -1,27 +1,16 @@
-import s from './FormControl.module.css';
+import s from './StyleFormsControl/FormControl.module.css';
 import React from "react";
-import {Field} from "redux-form";
 
 
 const FromControl = ({input, meta, ...props}) => {
 
     let showing
-    if (meta.touched && meta.error) {
-        showing = s.error
-    } else if (meta.touched) {
-        showing = s.touch
-    } else if (props.error) {
-        showing = s.error
-
-    } else {
-        showing = s.standart
-    }
+    {meta.touched && meta.error ? showing = s.error : meta.touched ? showing = s.touch : props.error ? showing = s.error : showing = s.standart}
 
     return (
 
         <div className={s.formControl + " " + showing}>
             <div>
-
                 {props.children}
             </div>
 
@@ -29,7 +18,6 @@ const FromControl = ({input, meta, ...props}) => {
     )
 
 }
-
 
 export const Input = (props) => {
     const {input, meta, element, ...restProps} = props
