@@ -1,4 +1,4 @@
-const SETPIZZA = "SET-PIZZA";
+import {actionsType} from "../redux-store";
 
 
 let initialState = {
@@ -120,10 +120,14 @@ let initialState = {
 
 
 };
-const pizzaReducer = (state = initialState, action) => {
+
+export type initialStateType = typeof initialState
+
+
+const pizzaReducer = (state = initialState, action: ActionsTypes): initialStateType => {
     switch (action.type) {
-        case SETPIZZA: {
-            return {
+        case "SETPIZZA": {
+            return <initialStateType>{
                 ...state,
                 pizza: [...state.pizza, ...action.pizza]
             }
@@ -138,12 +142,15 @@ const pizzaReducer = (state = initialState, action) => {
 }
 
 
-export const setpizzAC = (users) => {
-    return {
-        type: SETPIZZA,
-        users: users,
+type ActionsTypes = actionsType<typeof actions>
+
+export const actions = {
+    setpizzAC: (pizza: Array<initialStateType>) => {
+        return {
+            type: "SETPIZZA",
+            pizza: pizza,
+        } as const
     }
+
 }
-
-
 export default pizzaReducer;

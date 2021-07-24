@@ -1,4 +1,4 @@
-const SETSNEKS = "SET-SNEKS";
+import {actionsType} from "../redux-store";
 
 
 let initialState = {
@@ -118,12 +118,16 @@ let initialState = {
 
 
 };
-const sneksReducer = (state = initialState, action) => {
+
+export type initialStateType = typeof initialState
+
+
+const sneksReducer = (state = initialState, action: ActionsTypes): initialStateType => {
     switch (action.type) {
-        case SETSNEKS: {
-            return {
+        case "SETSNEKS": {
+            return <initialStateType>{
                 ...state,
-                pizza: [...state.sneks, ...action.sneks]
+                sneks: [...state.sneks, ...action.sneks]
             }
         }
 
@@ -137,11 +141,16 @@ const sneksReducer = (state = initialState, action) => {
 }
 
 
-export const setsnekAC = (users) => {
-    return {
-        type: SETSNEKS,
-        users: users,
+type ActionsTypes = actionsType<typeof actions>
+
+export const actions = {
+    setsnekAC: (sneks: Array<initialStateType>) => {
+        return {
+            type: "SETSNEKS",
+            sneks: sneks,
+        } as const
     }
+
 }
 
 export default sneksReducer;

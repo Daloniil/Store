@@ -1,5 +1,5 @@
 import React from 'react';
-import {newpizzaAC} from "../../../../../Redux/NewMenu/new-pizza-reducer";
+import {actions} from "../../../../../Redux/NewMenu/new-pizza-reducer";
 import {connect} from "react-redux";
 import NewPizza from "./NewPizza";
 
@@ -8,7 +8,7 @@ let mapDispatchToProps = (dispatch) => {
 
     return {
         setUser: (users) => {
-            dispatch(newpizzaAC(users));
+            dispatch(actions.newpizzaAC(users));
         },
 
     }

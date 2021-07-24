@@ -1,3 +1,5 @@
+import {actionsType} from "../redux-store";
+
 const NEWSNEK = "NEW-SNEK"
 
 let initialState = {
@@ -43,10 +45,14 @@ let initialState = {
 
 
 };
-const newSnekReducer = (state = initialState, action) => {
+
+export type initialStateType = typeof initialState
+
+
+const newSnekReducer = (state = initialState, action: ActionsTypes): initialStateType => {
     switch (action.type) {
-        case NEWSNEK: {
-            return {
+        case "NEWSNEK": {
+            return <initialStateType>{
                 ...state,
                 snek: [...state.snek, ...action.snek]
             }
@@ -59,11 +65,17 @@ const newSnekReducer = (state = initialState, action) => {
 
 }
 
-export const newsnekAC = (users) => {
-    return {
-        type: NEWSNEK,
-        users: users,
+
+type ActionsTypes = actionsType<typeof actions>
+
+export const actions = {
+    newsnekAC: (snek: Array<initialStateType>) => {
+        return {
+            type: "NEWSNEK",
+            snek: snek,
+        } as const
     }
+
 }
 
 export default newSnekReducer;

@@ -1,10 +1,10 @@
-const SETDRINK = "SET-DRINK";
+import {actionsType} from "../redux-store";
 
 
 let initialState = {
     drink: [
         {
-            id: 14,
+            id: 49,
             photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2020/01/Сік-яблучно-гранатовий-300x300.png',
             name: "Сік яблучно-гранатовий 1л",
             cost: 28,
@@ -13,7 +13,7 @@ let initialState = {
 
         },
         {
-            id: 15,
+            id: 50,
             photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2019/09/pepsi_bottle_600_square.png',
             name: "Pepsi 1 л",
             cost: 25,
@@ -22,7 +22,7 @@ let initialState = {
 
         },
         {
-            id: 16,
+            id: 51,
             photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2019/02/Сік-мультивітамін-300x300.png',
             name: "Сік мульти-вітамінний 1л",
             cost: 28,
@@ -31,7 +31,7 @@ let initialState = {
 
         },
         {
-            id: 17,
+            id: 52,
             photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2019/02/Сік-яблучно-виноградний-300x300.png',
             name: "Сік яблучно-виноградний 1л",
             cost: 28,
@@ -39,34 +39,19 @@ let initialState = {
             amount: 1
 
         },
-        {
-            id: 18,
-            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2019/02/Сік-мультифрукт-300x300.png',
-            name: "Сік мульти-фруктовий 1л",
-            cost: 28,
-            structure: "",
-            amount: 1
-
-        },
-        {
-            id: 19,
-            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2019/02/cocacola_bottle_600_square.png',
-            name: "Coca Cola",
-            cost: 25,
-            structure: "",
-            amount: 1
-
-        },
-
 
     ],
 
 
 };
-const drinkReducer = (state = initialState, action) => {
+
+export type initialStateType = typeof initialState
+
+
+const newDrinkReducer = (state = initialState, action: ActionsTypes): initialStateType => {
     switch (action.type) {
-        case SETDRINK: {
-            return {
+        case "NEWDRINK": {
+            return <initialStateType>{
                 ...state,
                 drink: [...state.drink, ...action.drink]
             }
@@ -75,18 +60,22 @@ const drinkReducer = (state = initialState, action) => {
         default:
             return state;
 
-
     }
-
 
 }
 
 
-export const setdrinkAC = (users) => {
-    return {
-        type: SETDRINK,
-        users: users,
+type ActionsTypes = actionsType<typeof actions>
+
+export const actions = {
+    newdrinkAC: (drink: Array<initialStateType>) => {
+        return {
+            type: "NEWDRINK",
+            drink: drink,
+        } as const
     }
+
 }
 
-export default drinkReducer;
+
+export default newDrinkReducer;

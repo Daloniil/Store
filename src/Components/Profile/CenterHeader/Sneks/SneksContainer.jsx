@@ -1,7 +1,7 @@
 import React from 'react';
 import Sneks from "./Sneks";
 import {connect} from "react-redux";
-import {buy} from "../../../../Redux/buy-item-reducer";
+import {actions} from "../../../../Redux/buy-item-reducer";
 import {compose} from "redux";
 
 
@@ -29,7 +29,7 @@ let mapStateToprops = (state) => {
 
 
 export default compose(
-    connect(mapStateToprops, {buy}),
+    connect(mapStateToprops, {buy: actions.buy}),
 )(SneksContainer)
 
 

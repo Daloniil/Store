@@ -15,10 +15,4 @@ export const maxLenghtCrater = (maxLenght) => value => {
 }
 
 
-export const nameCreate = value => {
-    if (Number.isInteger(value) == false) {
-        return `Невірне ім'я`
-    }
-    return undefined
 
-}

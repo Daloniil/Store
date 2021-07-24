@@ -1,15 +1,42 @@
 .content {
+  .about_header {
+    margin: -25px 0 0 0;
+
+    .about_header_container {
+      background-image: url("https://99px.ru/sstorage/53/2019/05/tmb_259821_283955.jpg");
+      background-size: 100%;
+      width: 100%;
+      background-repeat: no-repeat;
+      height: 200px;
+
+      .about_header_text {
+        background-color: rgba(0, 0, 0, 0.6);
+        height: 200px;
+
+        h2 {
+          padding: 80px 0 0 0;
+          text-align: center;
+          color: white;
+          opacity: 1;
+          font-size: 30px;
+
+        }
+      }
+    }
+  }
+
   .container {
+    margin: 20px 0 0 0;
     display: flex;
     justify-content: center;
 
     .form {
-      margin: 22px 50px 0 0;
+      margin: 22px 30px 30px 30px;
 
       .abz {
         text-transform: uppercase;
         font-size: 22px;
-        margin: 0 0 20px 0;
+        margin: 0 0 20px 15px;
         display: inline-block;
 
       }
@@ -19,12 +46,11 @@
           width: 225px;
           height: 30px;
           padding: 0 0 0 5px;
-
+          border: 1px solid #E5E5E5;
         }
 
         .names {
           font-size: 18px;
-
 
         }
 
@@ -55,6 +81,8 @@
             width: 510px;
             height: 30px;
             padding: 0 0 0 5px;
+            border: 1px solid #E5E5E5;
+
           }
 
         }
@@ -74,6 +102,16 @@
 
         .button {
           button {
+            margin: 20px 0 0 0;
+            display: block;
+            text-decoration: none;
+            width: 95%;
+            height: 30px;
+            border-radius: 5px;
+            background-color: #ca3835;
+            color: white;
+            font-size: 14px;
+            text-align: center;
           }
 
         }
@@ -84,6 +122,7 @@
     .order {
       background: #F8F8F8;
       width: 600px;
+      margin: 0 20px 28px 20px;
 
       .order_header {
         text-align: center;
@@ -134,7 +173,7 @@
               }
 
               .costs {
-                margin: 15px 0 15px 0;
+                margin: 15px 0 15px 7px;
                 color: #777777;
                 font-size: 15px;
 
@@ -152,7 +191,7 @@
           margin: 0 20px 0 20px;
 
           .not_all {
-            margin: 15px 0 15px 0;
+            margin: 15px 0 15px 7px;
             color: #242424;
           }
 
@@ -212,3 +251,95 @@
 
   }
 }
+
+@media (max-width: 1300px) {
+  .content {
+    margin: 0 0 150px 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    flex-wrap: wrap;
+
+
+  }
+
+}
+
+
+@media (max-width: 560px) {
+
+  .form {
+    .inputs {
+      margin: 0 0 0 15px;
+      max-width: 180px;
+      width: 180px;
+    }
+
+    .inputs_street {
+      margin: 0 0 0 15px;
+      max-width: 430px;
+      width: 430px;
+
+    }
+
+    .names {
+      margin: 0 0 0 15px;
+
+    }
+
+    .button {
+      button {
+        transform: translate(15px, 0px);
+      }
+    }
+  }
+
+}
+
+
+@media (max-width: 470px) {
+  .form {
+    padding: 0 0 0 10%;
+
+    .button {
+      button {
+        max-width: 180px;
+      }
+    }
+
+    .inputs {
+      margin: 0 0 10px 15px;
+      min-width: 225px;
+      width: 225px;
+    }
+
+    .first {
+      flex-wrap: wrap;
+
+    }
+
+
+    .inputs_street {
+      max-width: 225px;
+      width: 225px;
+    }
+
+    .three {
+      flex-wrap: wrap;
+
+    }
+
+  }
+
+}
+
+@media (max-width: 380px) {
+  .tov_2 {
+    display: none;
+  }
+  .form {
+  }
+}
+

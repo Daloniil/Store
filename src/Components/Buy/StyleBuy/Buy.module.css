@@ -116,6 +116,7 @@
     max-width: 300px; }
 
   .all {
+    transform: translate(15px, 0);
     max-width: 260px; }
     .all .button_order {
       transform: translate(-125px, 0); } }

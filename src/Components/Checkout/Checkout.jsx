@@ -1,6 +1,6 @@
 import {connect} from "react-redux";
 import {Field, reduxForm} from "redux-form";
-import {maxLenghtCrater, nameCreate, required} from "../../Validators/validator"
+import {maxLenghtCrater, required} from "../../Validators/validator"
 import s from "./CheckoutStyle/Checkout.module.css";
 import {Input} from "../FormsControl/FormContorl";
 import {Redirect} from "react-router-dom";
@@ -22,49 +22,6 @@ const ChekoutForm = (props) => {
 
     return (
         <div className={s.container}>
-            <div className={s.form}>
-                <span className={s.abz}>Оплата та доставка</span>
-                <form onSubmit={props.handleSubmit} action="telegram.php" method="POST">
-                    <div className={s.first}>
-                        <div className={s.name}>
-                            <span className={s.names}>Ім'я </span><span className={s.star}>*</span>
-                            <Field placeholder={"Ім'я"} component={Input} validate={[required, nameCreate]}
-                                   name={"name"} className={s.inputs}/>
-                        </div>
-
-                        <div className={s.phone}>
-                            <span className={s.names}>Телефон<span className={s.star}>*</span></span>
-                            <Field placeholder={"Телефон"} component={Input} validate={[required, maxLengh]}
-                                   name={"phone"} className={s.inputs}/>
-                        </div>
-                    </div>
-
-                    <div className={s.second}>
-                        <span className={s.names}>Вулиця<span className={s.star}>*</span></span>
-                        <Field placeholder={"Вулиця"} component={Input} validate={required}
-                               name={"street"} className={s.inputs_street}/>
-                    </div>
-
-                    <div className={s.three}>
-                        <div className={s.number_house}>
-                            <span className={s.names}>Номер будинку<span className={s.star}>*</span></span>
-                            <Field placeholder={"Номер будинку"} component={Input} validate={required}
-                                   name={"number_house"} className={s.inputs}/>
-                        </div>
-
-                        <div className={s.pid}>
-                            <span className={s.names}>Номер під'їзду <span className={s.star}>*</span></span>
-                            <Field placeholder={"Номер під'їзду "} component={Input} validate={required}
-                                   name={"pid"} className={s.inputs}/>
-                        </div>
-
-                    </div>
-
-                    <div className={s.button}>
-                        <button type="submit">Download Here</button>
-                    </div>
-                </form>
-            </div>
             <div className={s.order}>
                 <p className={s.order_header}>ВАШЕ ЗАМОВЛЕННЯ</p>
                 <div className={s.order_info}>
@@ -115,6 +72,49 @@ const ChekoutForm = (props) => {
                 </div>
 
             </div>
+            <div className={s.form}>
+                <span className={s.abz}>Оплата та доставка</span>
+                <form onSubmit={props.handleSubmit} action="telegram.php" method="POST">
+                    <div className={s.first}>
+                        <div className={s.name}>
+                            <span className={s.names}>Ім'я </span><span className={s.star}>*</span>
+                            <Field placeholder={"Ім'я"} component={Input} validate={[required]}
+                                   name={"name"} className={s.inputs}/>
+                        </div>
+
+                        <div className={s.phone}>
+                            <span className={s.names}>Телефон<span className={s.star}>*</span></span>
+                            <Field placeholder={"Телефон"} component={Input} validate={[required, maxLengh]}
+                                   name={"phone"} className={s.inputs}/>
+                        </div>
+                    </div>
+
+                    <div className={s.second}>
+                        <span className={s.names}>Вулиця<span className={s.star}>*</span></span>
+                        <Field placeholder={"Вулиця"} component={Input} validate={required}
+                               name={"street"} className={s.inputs_street}/>
+                    </div>
+
+                    <div className={s.three}>
+                        <div className={s.number_house}>
+                            <span className={s.names}>Номер будинку<span className={s.star}>*</span></span>
+                            <Field placeholder={"Номер будинку"} component={Input} validate={required}
+                                   name={"number_house"} className={s.inputs}/>
+                        </div>
+
+                        <div className={s.pid}>
+                            <span className={s.names}>Номер під'їзду <span className={s.star}>*</span></span>
+                            <Field placeholder={"Номер під'їзду "} component={Input} validate={required}
+                                   name={"pid"} className={s.inputs}/>
+                        </div>
+
+                    </div>
+
+                    <div className={s.button}>
+                        <button type="submit">Оформити</button>
+                    </div>
+                </form>
+            </div>
         </div>
     )
 }
@@ -130,6 +130,13 @@ const Chekout = (props) => {
     }
     return (
         <div className={s.content}>
+            <div className={s.about_header}>
+                <div className={s.about_header_container}>
+                    <div className={s.about_header_text}>
+                        <h2>Оформлення</h2>
+                    </div>
+                </div>
+            </div>
             {props.lenght != null ? <ReduxChekoutForm onSubmit={onSubmit} item={props.item}/> :
                 <Redirect to={"/buy"}/>}
 

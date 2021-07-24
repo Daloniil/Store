@@ -4,7 +4,7 @@ import {withRouter} from "react-router-dom"
 import {compose} from "redux";
 import {newItem} from "../../../Redux/later-seen-reducer";
 import AllOrder from "./AllOrder";
-import {buy} from "../../../Redux/buy-item-reducer";
+import {actions} from "../../../Redux/buy-item-reducer";
 
 
 class AllOrderContainer extends React.Component {
@@ -68,7 +68,7 @@ let mapStateToprops = (state) => {
 }
 
 export default compose(
-    connect(mapStateToprops, {newItem, buy}),
+    connect(mapStateToprops, {newItem, buy: actions.buy}),
     withRouter,
 )(AllOrderContainer)
 

@@ -1,4 +1,5 @@
-const SETSOUS = "SET-SOUS";
+import {actionsType} from "../redux-store";
+
 
 let initialState = {
     sous: [
@@ -79,11 +80,13 @@ let initialState = {
 
 };
 
+export type initialStateType = typeof initialState
 
-const sousReducer = (state = initialState, action) => {
+
+const sousReducer = (state = initialState, action: ActionsTypes): initialStateType => {
     switch (action.type) {
-        case SETSOUS : {
-            return {
+        case "SETSOUS" : {
+            return <initialStateType>{
                 ...state,
                 sous: [...state.sous, action.sous]
             }
@@ -94,11 +97,16 @@ const sousReducer = (state = initialState, action) => {
 }
 
 
-export const setsousAC = (users) => {
-    return {
-        type: SETSOUS,
-        users: users,
+type ActionsTypes = actionsType<typeof actions>
+
+export const actions = {
+    setsousAC: (sous: Array<initialStateType>) => {
+        return {
+            type: "SETSOUS",
+            sous: sous,
+        } as const
     }
+
 }
 
 

@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from "react-redux";
 import {compose} from "redux";
 import Buy from "./Buy";
-import {amountLeghtminus, amountLeghtplus, deleteLenght} from "../../Redux/buy-item-reducer";
+import {actions} from "../../Redux/buy-item-reducer";
 
 
 class BuyContainer extends React.Component {
@@ -35,7 +35,11 @@ let mapStateToprops = (state) => {
 }
 
 export default compose(
-    connect(mapStateToprops, {deleteLenght, amountLeghtminus, amountLeghtplus}),
+    connect(mapStateToprops, {
+        deleteLenght: actions.deleteLenght,
+        amountLeghtminus: actions.amountLeghtminus,
+        amountLeghtplus: actions.amountLeghtplus
+    }),
 )(BuyContainer)
 
 

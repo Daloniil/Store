@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from "react-redux";
 import Pizza from "./Pizza";
-import {buy} from "../../../../Redux/buy-item-reducer";
+import {actions} from "../../../../Redux/buy-item-reducer";
 import {compose} from "redux";
 
 
@@ -28,7 +28,7 @@ let mapStateToprops = (state) => {
 
 
 export default compose(
-    connect(mapStateToprops, {buy}),
+    connect(mapStateToprops, {buy: actions.buy}),
 )(PizzaContainer)
 
 

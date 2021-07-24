@@ -1,14 +1,14 @@
 import React from 'react';
 import {connect} from "react-redux";
 import NewDrink from "./NewDrink";
-import {newdrinkAC} from "../../../../../Redux/NewMenu/new-drink-reducer";
+import {actions} from "../../../../../Redux/NewMenu/new-drink-reducer";
 
 
 let mapDispatchToProps = (dispatch) => {
 
     return {
         setUser: (users) => {
-            dispatch(newdrinkAC(users));
+            dispatch(actions.newdrinkAC(users));
         },
 
     }

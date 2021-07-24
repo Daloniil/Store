@@ -1,21 +1,39 @@
-const BUYITEM = "BUY-ITEM"
-const LENGHT = "LENGHT"
-const AMOUNTSMINUS = "AMOUNTSMINUS"
-const AMOUNTSPLUS = "AMOUNTSPLUS"
+import {actionsType} from "./redux-store";
 
 
 let initialState = {
-    item: [],
-    lenght: null,
-    amoun: null,
+    item: [] as Array<ItemType>,
+    lenght: null as number | null,
+    amoun: 0 as number,
 
 };
 
-const buyItem = (state = initialState, action) => {
+
+export type ItemType = {
+    _id: number,
+    id: number,
+    name: string,
+    eat: {
+        id: number,
+        name: string,
+        cost: number,
+        size: number,
+        finalcost: number,
+        amount: number
+    },
+    cost: number,
+    size: number,
+    finalcost: number,
+    amount: number
+}
+
+
+export type initialStateType = typeof initialState
+
+
+const buyItem = (state = initialState, action: ActionsTypes): initialStateType => {
     switch (action.type) {
-        case BUYITEM: {
-
-
+        case "BUYITEM": {
             let n = state.item.length;
             let buyeat = {
                 _id: n,
@@ -50,11 +68,12 @@ const buyItem = (state = initialState, action) => {
                         let searchId = action.info.id
                         let indexId = state.item.findIndex(el => el.id === searchId)
 
+
                         return {
                             ...state,
-                            ...state.item[indexId].eat.amount += 1,
+                            ...state.item[indexId].eat.amount += Object(1 as {}),
                             amoun: state.amoun + 1,
-                            ...state.item[indexId].cost = state.item[indexId].finalcost * state.item[indexId].eat.amount,
+                            ...state.item[indexId].cost = Object(state.item[indexId].finalcost * state.item[indexId].eat.amount as {}),
                         }
                     }
 
@@ -71,31 +90,32 @@ const buyItem = (state = initialState, action) => {
             } else {
                 let Id = action.info.id
                 let index = state.item.findIndex(el => el.id === Id)
+
                 return {
                     ...state,
-                    ...state.item[index].eat.amount += 1,
+                    ...state.item[index].eat.amount += Object(1 as {}),
                     amoun: state.amoun + 1,
-                    ...state.item[index].cost = state.item[index].finalcost * state.item[index].eat.amount,
+                    ...state.item[index].cost = Object(state.item[index].finalcost * state.item[index].eat.amount as {}),
                 }
             }
         }
 
 
-        case LENGHT: {
+        case "LENGHT": {
             return {
                 ...state,
                 lenght: action.lenght
             }
         }
 
-        case AMOUNTSMINUS: {
+        case "AMOUNTSMINUS": {
             return {
                 ...state,
                 amoun: state.amoun - action.newam
             }
         }
 
-        case AMOUNTSPLUS: {
+        case "AMOUNTSPLUS": {
             return {
                 ...state,
                 amoun: state.amoun + 1
@@ -108,30 +128,35 @@ const buyItem = (state = initialState, action) => {
 }
 
 
-export const buy = (info, cost, size) => {
-    return {
-        type: BUYITEM,
-        info, cost, size
-    }
-}
+type ActionsTypes = actionsType<typeof actions>
 
-export const deleteLenght = (lenght) => {
-    return {
-        type: LENGHT,
-        lenght
-    }
-}
+export const actions = {
 
-export const amountLeghtminus = (newam) => {
-    return {
-        type: AMOUNTSMINUS,
-        newam
-    }
-}
+    buy: (info: ItemType, cost: number, size: number) => {
+        return {
+            type: "BUYITEM",
+            info, cost, size
+        } as const
+    },
 
-export const amountLeghtplus = () => {
-    return {
-        type: AMOUNTSPLUS,
+    deleteLenght: (lenght: number) => {
+        return {
+            type: "LENGHT",
+            lenght
+        } as const
+    },
+
+    amountLeghtminus: (newam: number) => {
+        return {
+            type: "AMOUNTSMINUS",
+            newam
+        } as const
+    },
+
+    amountLeghtplus: () => {
+        return {
+            type: "AMOUNTSPLUS",
+        } as const
     }
 }
 

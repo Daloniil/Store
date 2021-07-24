@@ -1,17 +1,36 @@
+.content .about_header {
+  margin: -25px 0 0 0; }
+  .content .about_header .about_header_container {
+    background-image: url("https://99px.ru/sstorage/53/2019/05/tmb_259821_283955.jpg");
+    background-size: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    height: 200px; }
+    .content .about_header .about_header_container .about_header_text {
+      background-color: rgba(0, 0, 0, 0.6);
+      height: 200px; }
+      .content .about_header .about_header_container .about_header_text h2 {
+        padding: 80px 0 0 0;
+        text-align: center;
+        color: white;
+        opacity: 1;
+        font-size: 30px; }
 .content .container {
+  margin: 20px 0 0 0;
   display: flex;
   justify-content: center; }
   .content .container .form {
-    margin: 22px 50px 0 0; }
+    margin: 22px 30px 30px 30px; }
     .content .container .form .abz {
       text-transform: uppercase;
       font-size: 22px;
-      margin: 0 0 20px 0;
+      margin: 0 0 20px 15px;
       display: inline-block; }
     .content .container .form form .inputs {
       width: 225px;
       height: 30px;
-      padding: 0 0 0 5px; }
+      padding: 0 0 0 5px;
+      border: 1px solid #E5E5E5; }
     .content .container .form form .names {
       font-size: 18px; }
     .content .container .form form .star {
@@ -26,14 +45,27 @@
       .content .container .form form .second .inputs_street {
         width: 510px;
         height: 30px;
-        padding: 0 0 0 5px; }
+        padding: 0 0 0 5px;
+        border: 1px solid #E5E5E5; }
     .content .container .form form .three {
       display: flex; }
       .content .container .form form .three .number_house {
         margin: 0 50px 0 0; }
+    .content .container .form form .button button {
+      margin: 20px 0 0 0;
+      display: block;
+      text-decoration: none;
+      width: 95%;
+      height: 30px;
+      border-radius: 5px;
+      background-color: #ca3835;
+      color: white;
+      font-size: 14px;
+      text-align: center; }
   .content .container .order {
     background: #F8F8F8;
-    width: 600px; }
+    width: 600px;
+    margin: 0 20px 28px 20px; }
     .content .container .order .order_header {
       text-align: center;
       font-size: 22px; }
@@ -61,7 +93,7 @@
           .content .container .order .order_info .full_order .info .your_order .container_name .x {
             margin: 0 0 0 5px; }
         .content .container .order .order_info .full_order .info .your_order .costs {
-          margin: 15px 0 15px 0;
+          margin: 15px 0 15px 7px;
           color: #777777;
           font-size: 15px; }
       .content .container .order .order_info .not_all_cost {
@@ -70,7 +102,7 @@
         border-bottom: solid 2px #EEEFEF;
         margin: 0 20px 0 20px; }
         .content .container .order .order_info .not_all_cost .not_all {
-          margin: 15px 0 15px 0;
+          margin: 15px 0 15px 7px;
           color: #242424; }
         .content .container .order .order_info .not_all_cost .all_costs {
           margin: 15px 0 15px 0;
@@ -100,5 +132,44 @@
           color: orange;
           font-weight: 700;
           font-size: 22px; }
+
+@media (max-width: 1300px) {
+  .content {
+    margin: 0 0 150px 0; } }
+@media (max-width: 1200px) {
+  .container {
+    flex-wrap: wrap; } }
+@media (max-width: 560px) {
+  .form .inputs {
+    margin: 0 0 0 15px;
+    max-width: 180px;
+    width: 180px; }
+  .form .inputs_street {
+    margin: 0 0 0 15px;
+    max-width: 430px;
+    width: 430px; }
+  .form .names {
+    margin: 0 0 0 15px; }
+  .form .button button {
+    transform: translate(15px, 0px); } }
+@media (max-width: 470px) {
+  .form {
+    padding: 0 0 0 10%; }
+    .form .button button {
+      max-width: 180px; }
+    .form .inputs {
+      margin: 0 0 10px 15px;
+      min-width: 225px;
+      width: 225px; }
+    .form .first {
+      flex-wrap: wrap; }
+    .form .inputs_street {
+      max-width: 225px;
+      width: 225px; }
+    .form .three {
+      flex-wrap: wrap; } }
+@media (max-width: 380px) {
+  .tov_2 {
+    display: none; } }
 
 /*# sourceMappingURL=Checkout.module.css.map */
