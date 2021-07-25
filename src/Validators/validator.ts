@@ -12,10 +12,14 @@ export const required: FieldValidatorType = (value) => {
 export const maxLenghtCrater = (maxLenght: number): FieldValidatorType => (value) => {
     if (value.length > maxLenght) {
         return `Не вірний номер телефона`
+    } else if (isNaN(+value)) {
+        return `Не вірний номер телефона`
     }
     return undefined
 
 }
+
+
 
 
 
