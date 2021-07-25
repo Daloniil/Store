@@ -4,11 +4,22 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import {NavLink} from "react-router-dom";
 import s from "./SliderItem.module.css"
+import {AllOrderType} from "../../Types/Type";
 
-export default class SliderItem extends Component {
+
+type Ownprops = {
+    pizza: Array<AllOrderType>
+    drink: Array<AllOrderType>
+    sneks: Array<AllOrderType>
+    sous: Array<AllOrderType>
+    number: number
+}
 
 
-    prov
+export default class SliderItem extends Component <Ownprops> {
+
+
+    prov: Array<AllOrderType> | null = null
 
     render() {
         const settings = {
@@ -66,14 +77,15 @@ export default class SliderItem extends Component {
             this.props.number < 14 || this.props.number >= 41 && this.props.number < 45 ? this.prov = this.props.pizza :
                 this.props.number >= 14 && this.props.number < 20 || this.props.number >= 49 && this.props.number < 53 ? this.prov = this.props.drink :
                     this.props.number >= 20 && this.props.number < 33 || this.props.number >= 45 && this.props.number < 49 ? this.prov = this.props.sneks :
-                        this.props.number >= 33 && this.props.number < 41 ? this.prov = this.props.sous : this.prov = ""
+                        this.props.number >= 33 && this.props.number < 41 ? this.prov = this.props.sous : this.prov = this.props.pizza
         }
 
 
+        // @ts-ignore
         return (
 
             <div className={s.content}>
-                <span className={s.about_slider} >Схожі товари</span>
+                <span className={s.about_slider}>Схожі товари</span>
 
                 <Slider {...settings} className={s.slider}>
 

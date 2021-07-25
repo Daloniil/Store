@@ -4,7 +4,7 @@ import {RouteComponentProps, withRouter} from "react-router-dom"
 import {compose} from "redux";
 import AllOrder from "./AllOrder";
 import {actionsn} from "../../../Redux/later-seen-reducer";
-import {actions, ItemType} from "../../../Redux/buy-item-reducer";
+import {actions} from "../../../Redux/buy-item-reducer";
 import {AppStateType} from "../../../Redux/redux-store";
 import {AllOrderType} from "../../../Types/Type";
 
@@ -25,7 +25,7 @@ type Ownprops = {
     size: number
     ves: number
     newItem: (info: AllOrderType, ves: number | undefined, size: number | undefined) => void
-    buy: (info: ItemType, cost: number, size: number) => void
+    buy: (info: AllOrderType, cost: number, size: number) => void
     number: number | null
 }
 

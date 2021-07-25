@@ -1,14 +1,35 @@
 import React from 'react';
 import {connect} from "react-redux";
-import {withRouter} from "react-router-dom"
+import {RouteComponentProps, withRouter} from "react-router-dom"
 import {compose} from "redux";
 import SliderItem from "./SliderItem";
+import {AllOrderType} from "../../Types/Type";
+import {AppStateType} from "../../Redux/redux-store";
 
 
-class SliderItemContainer extends React.Component {
+type Ownprops = {
+    pizza: Array<AllOrderType>
+    drink: Array<AllOrderType>
+    sneks: Array<AllOrderType>
+    sous: Array<AllOrderType>
+    number: number
+}
+
+type PathParamsType = {
+    id: string
+}
+
+
+type Props = RouteComponentProps<PathParamsType> & Ownprops
+
+
+class SliderItemContainer extends React.Component <Props> {
 
 
     render() {
+
+        let numbers: number | null = +this.props.match.params.id
+
 
         return (
             <div>
@@ -17,7 +38,7 @@ class SliderItemContainer extends React.Component {
                     drink={this.props.drink}
                     sneks={this.props.sneks}
                     sous={this.props.sous}
-                    number={this.props.match.params.id}
+                    number={numbers}
                 />
             </div>
 
@@ -26,7 +47,7 @@ class SliderItemContainer extends React.Component {
 }
 
 
-let mapStateToprops = (state) => {
+let mapStateToprops = (state: AppStateType) => {
 
     return {
         pizza: state.pizzaPage.pizza,
