@@ -1,11 +1,11 @@
 import {NavLink} from "react-router-dom";
 import React from 'react';
 import './StyleHeaderCenter/HeaderCenter.css'
-import {ItemType} from "../../../Redux/buy-item-reducer";
+import {BuyItemType} from "../../../Redux/buy-item-reducer";
 
 
 type Props = {
-    item: Array<ItemType>
+    item: Array<BuyItemType>
     length: number | null,
     amounts: number,
 }

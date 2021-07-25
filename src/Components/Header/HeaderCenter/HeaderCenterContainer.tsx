@@ -3,11 +3,11 @@ import {connect} from "react-redux";
 import {compose} from "redux";
 import HeaderCenter from "./HeaderCenter";
 import {AppStateType} from "../../../Redux/redux-store";
-import {ItemType} from "../../../Redux/buy-item-reducer";
+import {BuyItemType} from "../../../Redux/buy-item-reducer";
 
 
 type Props = {
-    item: Array<ItemType>
+    item: Array<BuyItemType>
     lenght: number | null,
     amounts: number,
 }

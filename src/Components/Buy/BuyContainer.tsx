@@ -2,12 +2,12 @@ import React from 'react';
 import {connect} from "react-redux";
 import {compose} from "redux";
 import Buy from "./Buy";
-import {actions, ItemType} from "../../Redux/buy-item-reducer";
+import {actions, BuyItemType} from "../../Redux/buy-item-reducer";
 import {AppStateType} from "../../Redux/redux-store";
 
 
 type Props = {
-    item: Array<ItemType>
+    item: Array<BuyItemType>
     lenght: number | null
     amounts: number
 

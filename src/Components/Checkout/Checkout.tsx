@@ -6,13 +6,13 @@ import {Input} from "../FormsControl/FormContorl";
 import {Redirect} from "react-router-dom";
 import React from "react";
 import {AppStateType} from "../../Redux/redux-store";
-import {ItemType} from "../../Redux/buy-item-reducer";
+import {BuyItemType} from "../../Redux/buy-item-reducer";
 
 
 const maxLengh = maxLenghtCrater(10)
 
 type PropsType = {
-    item: Array<ItemType>
+    item: Array<BuyItemType>
 
 }
 
@@ -131,7 +131,7 @@ const ReduxChekoutForm = reduxForm<Chekout, PropsType>({
 
 
 type Props = {
-    item: Array<ItemType>
+    item: Array<BuyItemType>
     lenght: number | null
 
 }
