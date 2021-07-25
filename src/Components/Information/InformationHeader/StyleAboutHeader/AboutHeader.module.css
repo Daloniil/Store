@@ -1,0 +1,19 @@
+.about_header {
+  margin: -33px 0 0 0; }
+  .about_header .about_header_container {
+    background-image: url("https://99px.ru/sstorage/53/2019/05/tmb_259821_283955.jpg");
+    background-size: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    height: 200px; }
+    .about_header .about_header_container .about_header_text {
+      background-color: rgba(0, 0, 0, 0.6);
+      height: 200px; }
+      .about_header .about_header_container .about_header_text h2 {
+        padding: 55px 0 0 0;
+        text-align: center;
+        color: white;
+        opacity: 1;
+        font-size: 40px; }
+
+/*# sourceMappingURL=AboutHeader.module.css.map */

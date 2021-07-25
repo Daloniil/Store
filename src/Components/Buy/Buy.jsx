@@ -93,7 +93,6 @@ class Buy extends Component {
                             this.state.item[this.state.item.findIndex(el => el._id === searchindex)].eat.amount = 1
                             this.state.item.splice(this.state.item.findIndex(el => el._id === searchindex), 1)
                             this.props.deleteLenght(this.props.lenght > 0 ? this.props.lenght - 1 : null)
-                            debugger
                             this.forceUpdate()
                         }
                         }>x</span>
@@ -101,6 +100,8 @@ class Buy extends Component {
                     </div>
 
                 </div>)}
+
+
 
 
                 <div className={s.all}>
@@ -116,9 +117,6 @@ class Buy extends Component {
             </div>
         }
 
-        let Scroll = require('react-scroll');
-        let scroll = Scroll.animateScroll;
-        scroll.scrollToTop()
 
         return (
             <div className={s.content}>

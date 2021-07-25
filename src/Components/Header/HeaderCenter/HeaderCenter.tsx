@@ -64,7 +64,9 @@ const HeaderCenter: React.FC<Props> = (props) => {
                         <span>Відгуки</span>
                     </div>
                     <div className="header_center_container_infromation">
-                        <span>Інформація і доставка</span>
+
+                        <NavLink to="/information" className="information" activeClassName="ac">Інформація і
+                            доставка</NavLink>
                     </div>
                     <div className="header_center_container_contact">
                         <span>Контакти</span>

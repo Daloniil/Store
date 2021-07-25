@@ -22,9 +22,6 @@ const ChekoutForm: React.FC<InjectedFormProps<Chekout, PropsType> & PropsType> =
         return Math.round(a + b.cost);
     }, 0);
 
-    let Scroll = require('react-scroll');
-    let scroll = Scroll.animateScroll;
-    scroll.scrollToTop()
 
     return (
         <div className={s.container}>
@@ -141,6 +138,9 @@ export type Chekout = {
 
 
 const Chekout: React.FC<Props> = (props) => {
+    let Scroll = require('react-scroll');
+    let scroll = Scroll.animateScroll;
+    scroll.scrollToTop()
     const onSubmit = (formData: Chekout) => {
         console.log(formData)
     }

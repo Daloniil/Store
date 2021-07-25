@@ -8,6 +8,7 @@ import AllOrderContainer from "./Components/Orders/AllOreder/AllOrderContainer";
 import SliderItemContainer from "./Components/SliderItem/SliderItemContainers";
 import BuyContainer from "./Components/Buy/BuyContainer";
 import Checkout from "./Components/Checkout/Checkout";
+import Information from "./Components/Information/Information";
 
 
 function App() {
@@ -19,6 +20,8 @@ function App() {
                 <Route exact path="/" render={() => <Redirect to={"/profile/pizza"}/>}/>
 
                 <Route path="/about" render={() => <About/>}/>
+
+                <Route path="/information" render={() => <Information/>}/>
 
                 <Route path="/profile/" render={() => <Profile/>}/>
 

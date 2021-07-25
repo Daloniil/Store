@@ -18,11 +18,14 @@ type Props = {
 
 }
 
+
 class BuyContainer extends React.Component<Props> {
 
 
     render() {
-
+        let Scroll = require('react-scroll');
+        let scroll = Scroll.animateScroll;
+        scroll.scrollToTop()
 
         return (
 
