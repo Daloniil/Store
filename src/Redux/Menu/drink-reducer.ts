@@ -1,4 +1,5 @@
 import {actionsType, BaseThunkType} from "../redux-store";
+import {DrinkType} from "../NewMenu/new-drink-reducer";
 
 
 let initialState = {
@@ -59,7 +60,7 @@ let initialState = {
         },
 
 
-    ],
+    ] as Array<DrinkType>,
 
 
 };

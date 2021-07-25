@@ -2,6 +2,8 @@ import {actionsType} from "../redux-store";
 
 
 export type SnekType = {
+    size: number,
+    finalcost: number,
     id: number
     photoURL: string
     name: string

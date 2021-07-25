@@ -3,11 +3,28 @@ import React from "react";
 import {NavLink} from "react-router-dom";
 import LastSeenContainer from "../LaterSeen/LastSeenContainer";
 
+import {AllOrderType} from "../../../Types/Type";
 
-class AllOrder extends React.Component {
+type Props = {
+    pizza: AllOrderType
+    drink: AllOrderType
+    sneks: AllOrderType
+    sous: AllOrderType
+    npizza: AllOrderType
+    nsnek: AllOrderType
+    ndrink: AllOrderType
+    size: number
+    ves: number
+    newItem: (info: AllOrderType, ves: number | undefined, size: number | undefined) => void
+    buy: (info: AllOrderType, cost: number, size: number) => void
+    number: number
+}
 
 
-    componentDidUpdate(prevProps, prevState) {
+class AllOrder extends React.Component <Props> {
+
+
+    componentDidUpdate(prevProps: Props, prevState: Props) {
         if (prevProps != this.props) {
             this.setState({
                 size: this.props.size,
@@ -22,7 +39,7 @@ class AllOrder extends React.Component {
                     amount: this.props.pizza.amount,
                     cost: this.props.pizza.cost,
 
-                },
+                } as AllOrderType,
                 drink: {
                     id: this.props.drink.id,
                     photoURL: this.props.drink.photoURL,
@@ -31,7 +48,7 @@ class AllOrder extends React.Component {
                     cost: this.props.drink.cost,
                     amount: this.props.drink.amount
 
-                },
+                } as AllOrderType,
                 sneks: {
                     id: this.props.sneks.id,
                     photoURL: this.props.sneks.photoURL,
@@ -40,7 +57,7 @@ class AllOrder extends React.Component {
                     cost: this.props.sneks.cost,
                     amount: this.props.sneks.amount
 
-                },
+                } as AllOrderType,
                 sous: {
                     id: this.props.sous.id,
                     photoURL: this.props.sous.photoURL,
@@ -49,7 +66,7 @@ class AllOrder extends React.Component {
                     cost: this.props.sous.cost,
                     amount: this.props.sous.amount
 
-                },
+                } as AllOrderType,
                 npizza: {
                     id: this.props.npizza.id,
                     photoURL: this.props.npizza.photoURL,
@@ -66,7 +83,7 @@ class AllOrder extends React.Component {
                     cost: this.props.nsnek.cost,
                     amount: this.props.nsnek.amount
 
-                },
+                } as AllOrderType,
                 ndrink: {
                     id: this.props.ndrink.id,
                     photoURL: this.props.ndrink.photoURL,
@@ -76,7 +93,7 @@ class AllOrder extends React.Component {
                     amount: this.props.ndrink.amount
 
 
-                },
+                } as AllOrderType,
 
                 style_line28: s.no,
                 style_line33: s.no,
@@ -101,9 +118,7 @@ class AllOrder extends React.Component {
             structure: this.props.pizza.structure,
             amount: this.props.pizza.amount,
             cost: this.props.pizza.cost,
-
-
-        },
+        } as AllOrderType,
         drink: {
             id: this.props.drink.id,
             photoURL: this.props.drink.photoURL,
@@ -112,7 +127,7 @@ class AllOrder extends React.Component {
             cost: this.props.drink.cost,
             amount: this.props.drink.amount
 
-        },
+        } as AllOrderType,
         sneks: {
             id: this.props.sneks.id,
             photoURL: this.props.sneks.photoURL,
@@ -121,7 +136,7 @@ class AllOrder extends React.Component {
             cost: this.props.sneks.cost,
             amount: this.props.sneks.amount
 
-        },
+        } as AllOrderType,
         sous: {
             id: this.props.sous.id,
             photoURL: this.props.sous.photoURL,
@@ -130,7 +145,7 @@ class AllOrder extends React.Component {
             cost: this.props.sous.cost,
             amount: this.props.sous.amount
 
-        },
+        } as AllOrderType,
         npizza: {
             id: this.props.npizza.id,
             photoURL: this.props.npizza.photoURL,
@@ -140,7 +155,7 @@ class AllOrder extends React.Component {
             cost: this.props.npizza.cost,
 
 
-        },
+        } as AllOrderType,
         nsnek: {
             id: this.props.nsnek.id,
             photoURL: this.props.nsnek.photoURL,
@@ -149,7 +164,7 @@ class AllOrder extends React.Component {
             cost: this.props.nsnek.cost,
             amount: this.props.nsnek.amount
 
-        },
+        } as AllOrderType,
         ndrink: {
             id: this.props.ndrink.id,
             photoURL: this.props.ndrink.photoURL,
@@ -158,7 +173,7 @@ class AllOrder extends React.Component {
             cost: this.props.ndrink.cost,
             amount: this.props.ndrink.amount
 
-        },
+        } as AllOrderType,
 
         style_line28: s.no,
         style_line33: s.no,
@@ -232,24 +247,24 @@ class AllOrder extends React.Component {
         if (this.props.number <= 13) {
             this.props.buy(this.state.pizza, this.state.cost, this.state.size)
         } else if (this.props.number >= 14 && this.props.number < 20) {
-            this.props.buy(this.props.drink, this.props.drink.cost)
+            this.props.buy(this.props.drink, this.props.drink.cost, 0)
         } else if (this.props.number >= 20 && this.props.number < 33) {
-            this.props.buy(this.props.sneks, this.props.sneks.cost)
+            this.props.buy(this.props.sneks, this.props.sneks.cost, 0)
         } else if (this.props.number >= 33 && this.props.number < 41) {
-            this.props.buy(this.props.sous, this.props.sous.cost)
+            this.props.buy(this.props.sous, this.props.sous.cost, 0)
         } else if (this.props.number >= 41 && this.props.number < 45) {
             this.props.buy(this.state.npizza, this.state.cost, this.state.size)
         } else if (this.props.number >= 45 && this.props.number < 49) {
-            this.props.buy(this.props.nsnek, this.props.nsnek.cost)
+            this.props.buy(this.props.nsnek, this.props.nsnek.cost, 0)
         } else if (this.props.number >= 49 && this.props.number < 53) {
-            this.props.buy(this.props.ndrink, this.props.ndrink.cost)
+            this.props.buy(this.props.ndrink, this.props.ndrink.cost, 0)
         }
 
     }
 
-    prov
-    link
-    name
+    prov: any
+    link: any
+    name: any
 
 
     render() {

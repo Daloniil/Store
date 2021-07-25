@@ -1,4 +1,5 @@
 import {actionsType} from "./redux-store";
+import {AllOrderType, ItemType} from "../Types/Type";
 
 
 let initialState = {
@@ -6,22 +7,6 @@ let initialState = {
 
 };
 
-export type ItemType = {
-    _id: number,
-    id: number,
-    eat: EatType
-    ves: number
-    size: number,
-}
-
-export type EatType = {
-    id: number,
-    name: string,
-    cost: number,
-    size: number,
-    finalcost: number,
-    amount: number
-}
 
 export type initialStateType = typeof initialState
 
@@ -62,7 +47,7 @@ const laterSeen = (state = initialState, action: ActionsTypes): initialStateType
 type ActionsTypes = actionsType<typeof actionsn>
 
 export const actionsn = {
-    newItem: (info: EatType, ves: number, size: number) => {
+    newItem: (info: AllOrderType, ves: number | undefined, size: number | undefined) => {
         return {
             type: "NEWITEMS",
             info, ves, size

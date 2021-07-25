@@ -1,14 +1,6 @@
 import {actionsType, BaseThunkType} from "../redux-store";
+import {AllOrderType} from "../../Types/Type";
 
-
-export type DrinkType = {
-    id: number
-    photoURL: string
-    name: string
-    cost: number,
-    structure: string,
-    amount: number
-}
 
 let initialState = {
     drink: [
@@ -49,7 +41,7 @@ let initialState = {
 
         },
 
-    ] as Array<DrinkType>,
+    ] as Array<AllOrderType>,
 
 
 };
@@ -75,8 +67,6 @@ const newDrinkReducer = (state = initialState, action: ActionsTypes): initialSta
 
 
 type ActionsTypes = actionsType<typeof actions>
-
-export type ThunkType = BaseThunkType<ActionsTypes>
 
 
 export const actions = {

@@ -1,4 +1,7 @@
 import {actionsType} from "../redux-store";
+import {AllOrderType} from "../../Types/Type";
+
+
 
 
 let initialState = {
@@ -114,9 +117,9 @@ let initialState = {
 
         },
 
-    ],
-    siza: 28,
-    ves: 370
+    ] as Array<AllOrderType>,
+    siza: 28 as number,
+    ves: 370 as number
 
 
 };

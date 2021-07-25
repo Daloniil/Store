@@ -1,4 +1,5 @@
 import {actionsType} from "../redux-store";
+import {SnekType} from "../NewMenu/new-snek-reducer";
 
 
 let initialState = {
@@ -114,7 +115,7 @@ let initialState = {
         },
 
 
-    ],
+    ] as Array<SnekType>,
 
 
 };

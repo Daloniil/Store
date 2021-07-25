@@ -1,6 +1,17 @@
 import {actionsType} from "../redux-store";
 
 
+export type SousType = {
+    size: number,
+    finalcost: number,
+    id: number
+    photoURL: string
+    name: string
+    cost: number,
+    structure: string,
+    amount: number
+}
+
 let initialState = {
     sous: [
         {
@@ -75,7 +86,7 @@ let initialState = {
         },
 
 
-    ],
+    ] as Array<SousType>,
 
 
 };
