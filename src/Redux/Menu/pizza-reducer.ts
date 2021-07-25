@@ -1,14 +1,26 @@
 import {actionsType} from "../redux-store";
 import {AllOrderType} from "../../Types/Type";
 
-
+import photoId1 from "../../Assets/Pizza/Premium.png.pagespeed.ce.3YPAVJIKMJ.png"
+import photoId2 from "../../Assets/Pizza/Fermerska.png.pagespeed.ce.p_Y-0X0Wda.png"
+import photoId3 from "../../Assets/Pizza/Margarita.png.pagespeed.ce.4RN5qhb1BY.png"
+import photoId4 from "../../Assets/Pizza/Selyanska.png"
+import photoId5 from "../../Assets/Pizza/Pekelna1.png"
+import photoId6 from "../../Assets/Pizza/Sytna.png"
+import photoId7 from "../../Assets/Pizza/Salami.png"
+import photoId8 from "../../Assets/Pizza/Sokovyta.png"
+import photoId9 from "../../Assets/Pizza/Apetitna.png"
+import photoId10 from "../../Assets/Pizza/4myasa.png"
+import photoId11 from "../../Assets/Pizza/4syra.png"
+import photoId12 from "../../Assets/Pizza/Pikantna.png"
+import photoId13 from "../../Assets/Pizza/Nizhna.png"
 
 
 let initialState = {
     pizza: [
         {
             id: 1,
-            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2021/03/Premium.png.pagespeed.ce.3YPAVJIKMJ.png',
+            photoURL: photoId1,
             name: "Преміальна",
             cost: 86,
             structure: "Склад: томатний соус, сир сулугуні, грудинка, шинка, пармезан, петрушка",
@@ -16,7 +28,7 @@ let initialState = {
         },
         {
             id: 2,
-            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2020/11/Fermerska.png.pagespeed.ce.p_Y-0X0Wda.png',
+            photoURL: photoId2,
             name: "Фермерська",
             cost: 84,
             structure: "Склад: соус вершковий, сир сулугуні, балик, шинка, кукурудза, чеддер, кріп",
@@ -25,7 +37,7 @@ let initialState = {
         },
         {
             id: 3,
-            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2020/11/Margarita.png.pagespeed.ce.4RN5qhb1BY.png',
+            photoURL: photoId3,
             name: "Маргаріта",
             cost: 64,
             structure: "Склад: соус томатний, сир моцарела, помідори, сир сулугуні, орегано",
@@ -34,7 +46,7 @@ let initialState = {
         },
         {
             id: 4,
-            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2020/04/Selyanska.png',
+            photoURL: photoId4,
             name: "Селянська",
             cost: 70,
             structure: "Склад: соус томатний, сир сулугуні, балик, куряче філе, кріп",
@@ -43,7 +55,7 @@ let initialState = {
         },
         {
             id: 5,
-            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2021/03/Premium.png.pagespeed.ce.3YPAVJIKMJ.png',
+            photoURL: photoId5,
             name: "Пекельна",
             cost: 79,
             structure: "Склад: соус томатний, сир сулугуні, соус чилі, перець чилі, бекон, салямі",
@@ -52,7 +64,7 @@ let initialState = {
         },
         {
             id: 6,
-            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2018/11/Sytna.png',
+            photoURL: photoId6,
             name: "Ситна",
             cost: 82,
             structure: "Склад: соус томатний, сир моцарела, сир чеддер, балик, бекон, гриби",
@@ -61,7 +73,7 @@ let initialState = {
         },
         {
             id: 7,
-            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2018/11/Salami.png',
+            photoURL: photoId7,
             name: "Салямі",
             cost: 81,
             structure: "Склад: соус томатний, сир моцарела, ковбаса салямі, помідор",
@@ -69,7 +81,7 @@ let initialState = {
 
         }, {
             id: 8,
-            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2018/11/Sokovyta.png',
+            photoURL: photoId8,
             name: "Соковита",
             cost: 77,
             structure: "Склад: соус томатний, сир моцарела, балик, бекон, гриби, помідор, сир фета",
@@ -77,7 +89,7 @@ let initialState = {
 
         }, {
             id: 9,
-            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2018/11/Apetitna.png',
+            photoURL: photoId9,
             name: "Апетитна",
             cost: 72,
             structure: "Склад: соус томатний, сир моцарела, мисливські ковбаски, перець болгарський, гриби, огірок",
@@ -85,7 +97,7 @@ let initialState = {
 
         }, {
             id: 10,
-            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2018/11/4myasa.png',
+            photoURL: photoId10,
             name: "4 м'яса",
             cost: 94,
             structure: "Склад: соус томатний, сир моцарела, куряче філе, бекон, салямі, мисливські ковбаски, помідор",
@@ -93,7 +105,7 @@ let initialState = {
 
         }, {
             id: 11,
-            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2018/11/4syra.png',
+            photoURL: photoId11,
             name: "4 сири",
             cost: 84,
             structure: "Склад: соус вершковий, сир моцарела, сир чеддер, сир дорблю, сир пармезан",
@@ -101,7 +113,7 @@ let initialState = {
 
         }, {
             id: 12,
-            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2018/11/Pikantna.png',
+            photoURL: photoId12,
             name: "Пікантна",
             cost: 65,
             structure: "Склад: соус вершковий, сир моцарела, бекон, гриби, цибуля синя (солодка)",
@@ -109,7 +121,7 @@ let initialState = {
 
         }, {
             id: 13,
-            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2018/11/Nizhna.png',
+            photoURL: photoId13,
             name: "Ніжна",
             cost: 68,
             structure: "Склад: соус вершковий, сир моцарела, куряче філе, гриби, ананас, кукурудза",

@@ -1,12 +1,17 @@
 import {actionsType, BaseThunkType} from "../redux-store";
 import {AllOrderType} from "../../Types/Type";
 
+import photoId49 from "../../Assets/Drink/Сік-яблучно-гранатовий-300x300.png"
+import photoId50 from "../../Assets/Drink/pepsi_bottle_600_square.png"
+import photoId51 from "../../Assets/Drink/Сік-мультивітамін-300x300.png"
+import photoId52 from "../../Assets/Drink/Сік-яблучно-виноградний-300x300.png"
+
 
 let initialState = {
     drink: [
         {
             id: 49,
-            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2020/01/Сік-яблучно-гранатовий-300x300.png',
+            photoURL: photoId49,
             name: "Сік яблучно-гранатовий 1л",
             cost: 28,
             structure: "",
@@ -15,7 +20,7 @@ let initialState = {
         },
         {
             id: 50,
-            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2019/09/pepsi_bottle_600_square.png',
+            photoURL: photoId50,
             name: "Pepsi 1 л",
             cost: 25,
             structure: "",
@@ -24,7 +29,7 @@ let initialState = {
         },
         {
             id: 51,
-            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2019/02/Сік-мультивітамін-300x300.png',
+            photoURL: photoId51,
             name: "Сік мульти-вітамінний 1л",
             cost: 28,
             structure: "",
@@ -33,7 +38,7 @@ let initialState = {
         },
         {
             id: 52,
-            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2019/02/Сік-яблучно-виноградний-300x300.png',
+            photoURL: photoId52,
             name: "Сік яблучно-виноградний 1л",
             cost: 28,
             structure: "",

@@ -2,11 +2,16 @@ import {actionsType} from "../redux-store";
 import {AllOrderType} from "../../Types/Type";
 
 
+import photoId41 from "../../Assets/Pizza/Premium.png.pagespeed.ce.3YPAVJIKMJ.png"
+import photoId42 from "../../Assets/Pizza/Fermerska.png.pagespeed.ce.p_Y-0X0Wda.png"
+import photoId43 from "../../Assets/Pizza/Margarita.png.pagespeed.ce.4RN5qhb1BY.png"
+import photoId44 from "../../Assets/Pizza/Selyanska.png"
+
 let initialState = {
     pizza: [
         {
             id: 41,
-            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2021/03/Premium.png.pagespeed.ce.3YPAVJIKMJ.png',
+            photoURL: photoId41,
             name: "Преміальна",
             cost: 86,
             structure: "Склад: томатний соус, сир сулугуні, грудинка, шинка, пармезан, петрушка",
@@ -15,7 +20,7 @@ let initialState = {
         },
         {
             id: 42,
-            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2020/11/Fermerska.png.pagespeed.ce.p_Y-0X0Wda.png',
+            photoURL: photoId42,
             name: "Фермерська",
             cost: 84,
             structure: "Склад: соус вершковий, сир сулугуні, балик, шинка, кукурудза, чеддер, кріп",
@@ -24,7 +29,7 @@ let initialState = {
         },
         {
             id: 43,
-            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2020/11/Margarita.png.pagespeed.ce.4RN5qhb1BY.png',
+            photoURL: photoId43,
             name: "Маргаріта",
             cost: 64,
             structure: "Склад: соус томатний, сир моцарела, помідори, сир сулугуні, орегано",
@@ -33,7 +38,7 @@ let initialState = {
         },
         {
             id: 44,
-            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2020/04/Selyanska.png',
+            photoURL: photoId44,
             name: "Селянська",
             cost: 70,
             structure: "Склад: соус томатний, сир сулугуні, балик, куряче філе, кріп",

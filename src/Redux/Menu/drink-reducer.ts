@@ -1,12 +1,18 @@
 import {actionsType} from "../redux-store";
 import {AllOrderType} from "../../Types/Type";
+import photoId14 from "../../Assets/Drink/Сік-яблучно-гранатовий-300x300.png"
+import photoId15 from "../../Assets/Drink/pepsi_bottle_600_square.png"
+import photoId16 from "../../Assets/Drink/Сік-мультивітамін-300x300.png"
+import photoId17 from "../../Assets/Drink/Сік-яблучно-виноградний-300x300.png"
+import photoId18 from "../../Assets/Drink/Сік-мультивітамін-300x300.png"
+import photoId19 from "../../Assets/Drink/cocacola_bottle_600_square.png"
 
 
 let initialState = {
     drink: [
         {
             id: 14,
-            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2020/01/Сік-яблучно-гранатовий-300x300.png',
+            photoURL: photoId14,
             name: "Сік яблучно-гранатовий 1л",
             cost: 28,
             structure: "",
@@ -15,7 +21,7 @@ let initialState = {
         },
         {
             id: 15,
-            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2019/09/pepsi_bottle_600_square.png',
+            photoURL: photoId15,
             name: "Pepsi 1 л",
             cost: 25,
             structure: "",
@@ -24,7 +30,7 @@ let initialState = {
         },
         {
             id: 16,
-            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2019/02/Сік-мультивітамін-300x300.png',
+            photoURL: photoId16,
             name: "Сік мульти-вітамінний 1л",
             cost: 28,
             structure: "",
@@ -33,7 +39,7 @@ let initialState = {
         },
         {
             id: 17,
-            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2019/02/Сік-яблучно-виноградний-300x300.png',
+            photoURL: photoId17,
             name: "Сік яблучно-виноградний 1л",
             cost: 28,
             structure: "",
@@ -42,7 +48,7 @@ let initialState = {
         },
         {
             id: 18,
-            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2019/02/Сік-мультифрукт-300x300.png',
+            photoURL: photoId18,
             name: "Сік мульти-фруктовий 1л",
             cost: 28,
             structure: "",
@@ -51,7 +57,7 @@ let initialState = {
         },
         {
             id: 19,
-            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2019/02/cocacola_bottle_600_square.png',
+            photoURL: photoId19,
             name: "Coca Cola",
             cost: 25,
             structure: "",

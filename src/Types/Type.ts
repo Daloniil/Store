@@ -5,7 +5,6 @@ export type AllOrderType = {
     cost: number,
     structure: string,
     amount: number
-
     _id: number,
     eat: {
         id: number,
