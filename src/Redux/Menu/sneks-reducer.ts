@@ -1,5 +1,5 @@
 import {actionsType} from "../redux-store";
-import {SnekType} from "../NewMenu/new-snek-reducer";
+import {AllOrderType} from "../../Types/Type";
 
 
 let initialState = {
@@ -115,7 +115,7 @@ let initialState = {
         },
 
 
-    ] as Array<SnekType>,
+    ] as Array<AllOrderType>,
 
 
 };

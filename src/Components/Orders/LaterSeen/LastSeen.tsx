@@ -1,14 +1,23 @@
 import s from './StyleLaterSeen/LaterSeen.module.css'
 import {NavLink} from "react-router-dom";
+import {ItemType} from "../../../Types/Type";
+import React from "react";
 
 
-const LastSeen = (props) => {
+type Props = {
+    item: Array<ItemType>
+
+}
+
+const LastSeen: React.FC<Props> = (props) => {
 
     let l
 
     if (!props.item[0].eat) {
         l = ""
     } else {
+
+
         l = <div>
             {[...props.item].reverse().map(u => <div key={u._id}>
                 <NavLink className={s.container} to={"/items/" + u.eat.id}>

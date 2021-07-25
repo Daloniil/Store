@@ -1,11 +1,11 @@
 import s from './StyleNewPizzaContainer/NewPizza.module.css'
 import {NavLink} from "react-router-dom";
-import {PizzeType} from "../../../../../Redux/NewMenu/new-pizza-reducer";
 import React from "react";
+import {AllOrderType} from "../../../../../Types/Type";
 
 
 type Props = {
-    pizza: Array<PizzeType>
+    pizza: Array<AllOrderType>
 }
 
 

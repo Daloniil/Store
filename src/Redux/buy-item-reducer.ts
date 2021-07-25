@@ -2,14 +2,14 @@ import {actionsType} from "./redux-store";
 
 
 let initialState = {
-    item: [] as Array<ItemType>,
+    item: [] as Array<BuyItemType>,
     lenght: null as number | null,
     amoun: 0 as number,
 
 };
 
 
-export type ItemType = {
+export type BuyItemType = {
     _id: number,
     id: number,
     name: string,
@@ -132,7 +132,7 @@ type ActionsTypes = actionsType<typeof actions>
 
 export const actions = {
 
-    buy: (info: ItemType, cost: number, size: number) => {
+    buy: (info: BuyItemType, cost: number, size: number) => {
         return {
             type: "BUYITEM",
             info, cost, size

@@ -1,14 +1,6 @@
 import {actionsType} from "../redux-store";
+import {AllOrderType} from "../../Types/Type";
 
-
-export type PizzeType = {
-    id: number
-    photoURL: string
-    name: string
-    cost: number,
-    structure: string,
-    amount: number
-}
 
 let initialState = {
     pizza: [
@@ -50,7 +42,7 @@ let initialState = {
         },
 
 
-    ] as Array<PizzeType>,
+    ] as Array<AllOrderType>,
     siza: 28 as number,
     ves: 370 as number
 

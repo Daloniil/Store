@@ -2,9 +2,16 @@ import React from 'react';
 import {connect} from "react-redux";
 import {compose} from "redux";
 import LastSeen from "./LastSeen";
+import {AppStateType} from "../../../Redux/redux-store";
+import {ItemType} from "../../../Types/Type";
 
 
-class LastSeenContainer extends React.Component {
+type Props = {
+    item: Array<ItemType>
+}
+
+
+class LastSeenContainer extends React.Component <Props> {
 
 
     render() {
@@ -17,7 +24,7 @@ class LastSeenContainer extends React.Component {
 }
 
 
-let mapStateToprops = (state) => {
+let mapStateToprops = (state: AppStateType) => {
 
 
     return {

@@ -1,16 +1,5 @@
 import {actionsType} from "../redux-store";
-
-
-export type SnekType = {
-    size: number,
-    finalcost: number,
-    id: number
-    photoURL: string
-    name: string
-    cost: number,
-    structure: string,
-    amount: number
-}
+import {AllOrderType} from "../../Types/Type";
 
 
 let initialState = {
@@ -52,7 +41,7 @@ let initialState = {
 
         },
 
-    ] as Array<SnekType>,
+    ] as Array<AllOrderType>,
 
 
 };

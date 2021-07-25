@@ -1,11 +1,11 @@
 import s from './StyleNewSnekContainer/NewSnek.module.css'
 import {NavLink} from "react-router-dom";
-import {SnekType} from "../../../../../Redux/NewMenu/new-snek-reducer";
 import React from "react";
+import {AllOrderType} from "../../../../../Types/Type";
 
 
 type Props = {
-    snek: Array<SnekType>
+    snek: Array<AllOrderType>
 }
 
 

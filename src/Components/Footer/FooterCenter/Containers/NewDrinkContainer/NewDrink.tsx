@@ -1,11 +1,11 @@
 import s from './StyleNewDrinkContainers/NewDrink.module.css'
 import {NavLink} from "react-router-dom";
-import {DrinkType} from "../../../../../Redux/NewMenu/new-drink-reducer";
 import React from "react";
+import {AllOrderType} from "../../../../../Types/Type";
 
 
 type Props = {
-    drink: Array<DrinkType>
+    drink: Array<AllOrderType>
 }
 
 const NewDrink: React.FC<Props> = (props) => {
