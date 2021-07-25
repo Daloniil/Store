@@ -2,8 +2,9 @@ import s from './StyleFooterCenter/FooterCenter.module.css'
 import NewPizzaContainer from "./Containers/NewPizzaContainer/NewPizzaContainer";
 import NewSnekContainer from "./Containers/NewSnekContainer/NewSnekContainer";
 import NewDrinkContainer from "./Containers/NewDrinkContainer/NewDrinkContainer";
+import React from "react";
 
-const FooterCenter = () => {
+const FooterCenter: React.FC = () => {
     return (
         <div className={s.footer_center}>
             <div className={s.footer_center_wave}>

@@ -1,6 +1,15 @@
 import {actionsType} from "../redux-store";
 
-const NEWSNEK = "NEW-SNEK"
+
+export type SnekType = {
+    id: number
+    photoURL: string
+    name: string
+    cost: number,
+    structure: string,
+    amount: number
+}
+
 
 let initialState = {
     snek: [
@@ -41,7 +50,7 @@ let initialState = {
 
         },
 
-    ],
+    ] as Array<SnekType>,
 
 
 };

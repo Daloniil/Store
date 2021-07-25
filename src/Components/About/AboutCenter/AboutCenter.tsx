@@ -1,6 +1,7 @@
 import s from "./StyleAboutCenter/AboutCenter.module.css";
+import React from "react";
 
-const AboutCenter = () => {
+const AboutCenter: React.FC = () => {
     return (
         <div className={s.about_center}>
             <div className={s.about_center_container}>

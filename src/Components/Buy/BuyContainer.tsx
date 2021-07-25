@@ -2,10 +2,23 @@ import React from 'react';
 import {connect} from "react-redux";
 import {compose} from "redux";
 import Buy from "./Buy";
-import {actions} from "../../Redux/buy-item-reducer";
+import {actions, ItemType} from "../../Redux/buy-item-reducer";
+import {AppStateType} from "../../Redux/redux-store";
 
 
-class BuyContainer extends React.Component {
+type Props = {
+    item: Array<ItemType>
+    lenght: number | null
+    amounts: number
+
+    deleteLenght: (lenght: number) => void
+    amountLeghtminus: (lenght: number) => void
+    amountLeghtplus: () => void
+
+
+}
+
+class BuyContainer extends React.Component<Props> {
 
 
     render() {
@@ -21,7 +34,7 @@ class BuyContainer extends React.Component {
 }
 
 
-let mapStateToprops = (state) => {
+let mapStateToprops = (state: AppStateType) => {
 
     return {
         item: state.BuyPage.item,

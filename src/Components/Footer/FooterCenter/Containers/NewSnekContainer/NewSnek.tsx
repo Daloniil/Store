@@ -1,7 +1,15 @@
 import s from './StyleNewSnekContainer/NewSnek.module.css'
 import {NavLink} from "react-router-dom";
+import {SnekType} from "../../../../../Redux/NewMenu/new-snek-reducer";
+import React from "react";
 
-const NewSnek = (props) => {
+
+type Props = {
+    snek: Array<SnekType>
+}
+
+
+const NewSnek: React.FC<Props> = (props) => {
 
     return (
         <li className={s.snek}>
@@ -15,7 +23,7 @@ const NewSnek = (props) => {
                             {u.name}
                         </span>
                         <p>
-                           {u.cost} грн
+                            {u.cost} грн
                         </p>
                     </div>
                 </NavLink>

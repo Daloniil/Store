@@ -1,4 +1,4 @@
-import {actionsType} from "../redux-store";
+import {actionsType, BaseThunkType} from "../redux-store";
 
 
 let initialState = {
@@ -81,6 +81,7 @@ const drinkReducer = (state = initialState, action: ActionsTypes): initialStateT
 }
 
 type ActionsTypes = actionsType<typeof actions>
+
 
 export const actions = {
     setdrinkAC: (drink: Array<initialStateType>) => {

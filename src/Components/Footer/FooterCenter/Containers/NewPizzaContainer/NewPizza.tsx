@@ -1,7 +1,15 @@
 import s from './StyleNewPizzaContainer/NewPizza.module.css'
 import {NavLink} from "react-router-dom";
+import {PizzeType} from "../../../../../Redux/NewMenu/new-pizza-reducer";
+import React from "react";
 
-const NewPizza = (props) => {
+
+type Props = {
+    pizza: Array<PizzeType>
+}
+
+
+const NewPizza: React.FC<Props> = (props) => {
 
     return (
         <li className={s.pizza}>

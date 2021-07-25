@@ -59,9 +59,9 @@ const laterSeen = (state = initialState, action: ActionsTypes): initialStateType
 
 }
 
-type ActionsTypes = actionsType<typeof actions>
+type ActionsTypes = actionsType<typeof actionsn>
 
-export const actions = {
+export const actionsn = {
     newItem: (info: EatType, ves: number, size: number) => {
         return {
             type: "NEWITEMS",

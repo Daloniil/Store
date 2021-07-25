@@ -1,16 +1,22 @@
 import {connect} from "react-redux";
-import {Field, reduxForm} from "redux-form";
+import {Field, InjectedFormProps, reduxForm} from "redux-form";
 import {maxLenghtCrater, required} from "../../Validators/validator"
 import s from "./CheckoutStyle/Checkout.module.css";
 import {Input} from "../FormsControl/FormContorl";
 import {Redirect} from "react-router-dom";
 import React from "react";
+import {AppStateType} from "../../Redux/redux-store";
+import {ItemType} from "../../Redux/buy-item-reducer";
 
 
 const maxLengh = maxLenghtCrater(10)
 
+type PropsType = {
+    item: Array<ItemType>
 
-const ChekoutForm = (props) => {
+}
+
+const ChekoutForm: React.FC<InjectedFormProps<Chekout, PropsType> & PropsType> = (props) => {
 
     let cost = props.item.reduce(function (a, b) {
         return Math.round(a + b.cost);
@@ -119,13 +125,23 @@ const ChekoutForm = (props) => {
     )
 }
 
-const ReduxChekoutForm = reduxForm({
+const ReduxChekoutForm = reduxForm<Chekout, PropsType>({
     form: "chekout"
 })(ChekoutForm)
 
 
-const Chekout = (props) => {
-    const onSubmit = (formData) => {
+type Props = {
+    item: Array<ItemType>
+    lenght: number | null
+
+}
+export type Chekout = {
+    formData: Array<string>
+}
+
+
+const Chekout: React.FC<Props> = (props) => {
+    const onSubmit = (formData: Chekout) => {
         console.log(formData)
     }
     return (
@@ -145,7 +161,7 @@ const Chekout = (props) => {
 }
 
 
-let mapStateToprops = (state) => {
+let mapStateToprops = (state: AppStateType): Props => {
 
     return {
         item: state.BuyPage.item,

@@ -1,7 +1,14 @@
 import s from './StyleNewDrinkContainers/NewDrink.module.css'
 import {NavLink} from "react-router-dom";
+import {DrinkType} from "../../../../../Redux/NewMenu/new-drink-reducer";
+import React from "react";
 
-const NewDrink = (props) => {
+
+type Props = {
+    drink: Array<DrinkType>
+}
+
+const NewDrink: React.FC<Props> = (props) => {
 
     return (
         <li className={s.drink}>
@@ -15,7 +22,7 @@ const NewDrink = (props) => {
                             {u.name}
                         </span>
                         <p>
-                           {u.cost} грн
+                            {u.cost} грн
                         </p>
                     </div>
                 </NavLink>

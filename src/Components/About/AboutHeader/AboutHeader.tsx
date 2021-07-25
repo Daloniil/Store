@@ -1,6 +1,7 @@
 import s from "./StyleAboutHeader/AboutHeader.module.css";
+import React from "react";
 
-const AboutHeader = () => {
+const AboutHeader: React.FC = () => {
     return (
         <div className={s.about_header}>
             <div className={s.about_header_container}>

@@ -1,6 +1,15 @@
 import {actionsType} from "../redux-store";
 
 
+export type PizzeType = {
+    id: number
+    photoURL: string
+    name: string
+    cost: number,
+    structure: string,
+    amount: number
+}
+
 let initialState = {
     pizza: [
         {
@@ -41,9 +50,9 @@ let initialState = {
         },
 
 
-    ],
-    siza: 28,
-    ves: 370
+    ] as Array<PizzeType>,
+    siza: 28 as number,
+    ves: 370 as number
 
 
 };
