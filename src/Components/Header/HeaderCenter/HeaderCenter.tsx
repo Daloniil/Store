@@ -1,10 +1,19 @@
 import {NavLink} from "react-router-dom";
 import React from 'react';
 import './StyleHeaderCenter/HeaderCenter.css'
+import {ItemType} from "../../../Redux/buy-item-reducer";
 
-const HeaderCenter = (props) => {
 
-    let header_center_container = React.createRef()
+type Props = {
+    item: Array<ItemType>
+    length: number | null,
+    amounts: number,
+}
+
+
+const HeaderCenter: React.FC<Props> = (props) => {
+
+    let header_center_container: any = React.createRef()
 
     let myClick = () => {
         header_center_container.current.classList.toggle('_active')

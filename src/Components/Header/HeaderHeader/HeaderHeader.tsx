@@ -1,7 +1,8 @@
 import s from './StyleHeaderHeader/Header.module.css'
+import React from "react";
 
 
-const HeaderHeader = () => {
+const HeaderHeader:React.FC = () => {
 
     return (
         <div className={s.header}>

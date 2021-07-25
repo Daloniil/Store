@@ -1,8 +1,9 @@
 import HeaderHeader from "./HeaderHeader/HeaderHeader";
 import HeaderCenterContainer from "./HeaderCenter/HeaderCenterContainer";
+import React from "react";
 
 
-const Header = () => {
+const Header: React.FC = () => {
     return (
         <div>
 

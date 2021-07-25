@@ -2,9 +2,18 @@ import React from 'react';
 import {connect} from "react-redux";
 import {compose} from "redux";
 import HeaderCenter from "./HeaderCenter";
+import {AppStateType} from "../../../Redux/redux-store";
+import {ItemType} from "../../../Redux/buy-item-reducer";
 
-class HeaderCenterContainer extends React.Component {
 
+type Props = {
+    item: Array<ItemType>
+    lenght: number | null,
+    amounts: number,
+}
+
+
+class HeaderCenterContainer extends React.Component<Props> {
 
     render() {
 
@@ -17,7 +26,7 @@ class HeaderCenterContainer extends React.Component {
 }
 
 
-let mapStateToprops = (state) => {
+let mapStateToprops = (state: AppStateType) => {
 
     return {
         item: state.BuyPage.item,
