@@ -2,11 +2,26 @@ import {actionsType} from "../redux-store";
 import {AllOrderType} from "../../Types/Type";
 
 
+import photoId20 from "../../Assets/Sneks/Potato-medalion.png"
+import photoId21 from "../../Assets/Sneks/картопляні-кульки-1-600x600.png"
+import photoId22 from "../../Assets/Sneks/нагетси-9шт-1-600x600.png"
+import photoId23 from "../../Assets/Sneks/курячі-ніжки-4шт-1-600x600.png"
+import photoId24 from "../../Assets/Sneks/сирні-палички-1-600x600.png"
+import photoId25 from "../../Assets/Sneks/картопля-зі-спеціями-1-600x600.png"
+import photoId26 from "../../Assets/Sneks/нагетси-6шт-1-600x600.png"
+import photoId27 from "../../Assets/Sneks/картопляні-діпи-1-600x600.png"
+import photoId28 from "../../Assets/Sneks/курячі-ніжки-2шт-1-600x600.png"
+import photoId29 from "../../Assets/Sneks/цибулеві-кільця-1-600x600.png"
+import photoId30 from "../../Assets/Sneks/сирні-кульки-1-600x600.png"
+import photoId31 from "../../Assets/Sneks/мясні-стріпси-6шт-1-600x600.png"
+import photoId32 from "../../Assets/Sneks/картопля-фрі-1-600x600.png"
+
+
 let initialState = {
     sneks: [
         {
             id: 20,
-            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2021/03/Potato-medalion.png',
+            photoURL: photoId20,
             name: "Картопляні медальйони",
             cost: 54,
             structure: "Порція картопляних медальйонів 350 г.",
@@ -15,7 +30,7 @@ let initialState = {
         },
         {
             id: 21,
-            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2020/04/картопляні-кульки-1-600x600.png',
+            photoURL: photoId21,
             name: "Картопляні кульки",
             cost: 36,
             structure: "Велика порція картопляних кульок 20 шт",
@@ -24,7 +39,7 @@ let initialState = {
         },
         {
             id: 22,
-            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2020/04/нагетси-9шт-1-600x600.png',
+            photoURL: photoId22,
             name: "М’ясні нагетси 9 шт",
             cost: 72,
             structure: "Велика порція м'ясні нагетси 9 шт",
@@ -33,7 +48,7 @@ let initialState = {
         },
         {
             id: 23,
-            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2020/04/курячі-ніжки-4шт-1-600x600.png',
+            photoURL: photoId23,
             name: "Куряча ніжка 4 шт",
             cost: 88,
             structure: "Середня порція курячих ніжок 2 шт",
@@ -42,7 +57,7 @@ let initialState = {
         },
         {
             id: 24,
-            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2020/04/сирні-палички-1-600x600.png',
+            photoURL: photoId24,
             name: "Сирні палички",
             cost: 88,
             structure: "Велика порція сирних паличок 8 шт",
@@ -50,7 +65,7 @@ let initialState = {
 
         }, {
             id: 25,
-            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2020/04/картопля-зі-спеціями-1-600x600.png',
+            photoURL: photoId25,
             name: "Картопля зі спеціями",
             cost: 53,
             structure: "Велика порція картоплі зі спеціями 300г",
@@ -58,7 +73,7 @@ let initialState = {
 
         }, {
             id: 26,
-            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2020/04/нагетси-6шт-1-600x600.png',
+            photoURL: photoId26,
             name: "М’ясні нагетси 6 шт",
             cost: 47,
             structure: "Середня порція м'ясні нагетси 6 шт",
@@ -66,7 +81,7 @@ let initialState = {
 
         }, {
             id: 27,
-            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2020/04/картопляні-діпи-1-600x600.png',
+            photoURL: photoId27,
             name: "Картопляні діпи",
             cost: 44,
             structure: "Велика порція картопляних діпів 230 г",
@@ -74,7 +89,7 @@ let initialState = {
 
         }, {
             id: 28,
-            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2020/04/курячі-ніжки-2шт-1-600x600.png',
+            photoURL: photoId28,
             name: "Куряча ніжка 2 шт",
             cost: 48,
             structure: "Середня порція курячих ніжок 2 шт",
@@ -82,7 +97,7 @@ let initialState = {
 
         }, {
             id: 29,
-            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2020/04/цибулеві-кільця-1-600x600.png',
+            photoURL: photoId29,
             name: "Цибулеві кільця",
             cost: 42,
             structure: "Велика порція цибулевих кілець 10 шт",
@@ -90,7 +105,7 @@ let initialState = {
 
         }, {
             id: 30,
-            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2020/04/сирні-кульки-1-600x600.png',
+            photoURL: photoId30,
             name: "Сирні Кульки",
             cost: 95,
             structure: "Велика порція сирних кульок 10 шт",
@@ -98,7 +113,7 @@ let initialState = {
 
         }, {
             id: 31,
-            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2020/04/мясні-стріпси-6шт-1-600x600.png',
+            photoURL: photoId31,
             name: "М’ясні стріпси 6 шт",
             cost: 83,
             structure: "Середня порція м'ясних стріпсів 6шт",
@@ -106,7 +121,7 @@ let initialState = {
 
         }, {
             id: 32,
-            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2020/04/картопля-фрі-1-600x600.png',
+            photoURL: photoId32,
             name: "Картопля фрі",
             cost: 38,
             structure: "Велика порція картоплі фрі 150г",

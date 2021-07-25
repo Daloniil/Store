@@ -2,11 +2,21 @@ import {actionsType} from "../redux-store";
 import {AllOrderType} from "../../Types/Type";
 
 
+import photoId33 from "../../Assets/Sous/IMG_20191218_142057_843-300x300.png"
+import photoId34 from "../../Assets/Sous/IMG_20191218_142048_558-300x300.png"
+import photoId35 from "../../Assets/Sous/IMG_20191218_142050_744-300x300.png"
+import photoId36 from "../../Assets/Sous/IMG_20191218_142053_301-300x300.png"
+import photoId37 from "../../Assets/Sous/IMG_20191218_142054_571-300x300.png"
+import photoId38 from "../../Assets/Sous/IMG_20191218_142058_636-300x300.png"
+import photoId39 from "../../Assets/Sous/IMG_20191218_142055_628-300x300.png"
+import photoId40 from "../../Assets/Sous/IMG_20191218_142047_336-1-300x300.png"
+
+
 let initialState = {
     sous: [
         {
             id: 33,
-            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2019/12/IMG_20191218_142057_843-300x300.png',
+            photoURL: photoId33,
             name: "Сирний",
             cost: 10,
             structure: "",
@@ -15,7 +25,7 @@ let initialState = {
         },
         {
             id: 34,
-            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2019/12/IMG_20191218_142048_558-300x300.png',
+            photoURL: photoId34,
             name: "Часиниковий",
             cost: 10,
             structure: "",
@@ -24,7 +34,7 @@ let initialState = {
         },
         {
             id: 35,
-            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2019/12/IMG_20191218_142050_744-300x300.png',
+            photoURL: photoId35,
             name: "Чилі гострий",
             cost: 10,
             structure: "",
@@ -33,7 +43,7 @@ let initialState = {
         },
         {
             id: 36,
-            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2019/12/IMG_20191218_142053_301-300x300.png',
+            photoURL: photoId36,
             name: "Барбекю",
             cost: 10,
             structure: "",
@@ -42,7 +52,7 @@ let initialState = {
         },
         {
             id: 37,
-            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2019/12/IMG_20191218_142054_571-300x300.png',
+            photoURL: photoId37,
             name: "Кисло-солодкий",
             cost: 10,
             structure: "",
@@ -51,7 +61,7 @@ let initialState = {
         },
         {
             id: 38,
-            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2019/12/IMG_20191218_142058_636-300x300.png',
+            photoURL: photoId38,
             name: "Тартар",
             cost: 10,
             structure: "",
@@ -59,7 +69,7 @@ let initialState = {
 
         }, {
             id: 39,
-            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2019/12/IMG_20191218_142055_628-300x300.png',
+            photoURL: photoId39,
             name: "Паприка",
             cost: 10,
             structure: "",
@@ -67,7 +77,7 @@ let initialState = {
 
         }, {
             id: 40,
-            photoURL: 'https://pizzatime.com.ua/wp-content/uploads/2019/12/IMG_20191218_142047_336-1-300x300.png',
+            photoURL: photoId40,
             name: "Французький",
             cost: 10,
             structure: "",
