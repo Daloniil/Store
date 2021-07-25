@@ -2,10 +2,11 @@ import s from '../Drink/StyleDrink/Drink.module.css'
 import {NavLink} from "react-router-dom";
 import React from "react";
 import {BuyItemType} from "../../../../Redux/buy-item-reducer";
+import {AllOrderType} from "../../../../Types/Type";
 
 
 type Props = {
-    drink: Array<any>
+    drink: Array<AllOrderType>
     buy: (info: BuyItemType, cost: number, size: number) => void
 }
 

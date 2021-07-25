@@ -5,6 +5,18 @@ export type AllOrderType = {
     cost: number,
     structure: string,
     amount: number
+
+    _id: number,
+    eat: {
+        id: number,
+        name: string,
+        cost: number,
+        size: number,
+        finalcost: number,
+        amount: number
+    },
+    size: number,
+    finalcost: number,
 }
 
 

@@ -2,10 +2,11 @@ import s from '../Pizza/StylePizza/pizza.module.css'
 import {NavLink} from "react-router-dom";
 import React from "react";
 import {BuyItemType} from "../../../../Redux/buy-item-reducer";
+import {AllOrderType} from "../../../../Types/Type";
 
 
 type Props = {
-    sous: Array<any>
+    sous: Array<AllOrderType>
     buy: (info: BuyItemType, cost: number, size: number) => void
 }
 
