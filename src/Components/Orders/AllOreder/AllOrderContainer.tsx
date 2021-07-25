@@ -95,7 +95,7 @@ let mapStateToprops = (state: AppStateType) => {
 
 }
 
-export default compose(
+export default compose<React.ComponentType>(
     connect(mapStateToprops, {newItem: actionsn.newItem, buy: actions.buy}),
     withRouter,
 )(AllOrderContainer)

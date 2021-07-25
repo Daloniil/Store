@@ -61,7 +61,7 @@ let mapStateToprops = (state: AppStateType) => {
 
 }
 
-export default compose(
+export default compose<React.ComponentType>(
     connect(mapStateToprops, {}),
     withRouter,
 )(SliderItemContainer)

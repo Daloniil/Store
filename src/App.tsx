@@ -1,5 +1,5 @@
 import s from './Components/StyleApp/app.module.css'
-import {BrowserRouter, Redirect, Route, Switch} from 'react-router-dom';
+import {BrowserRouter, Redirect, Route} from 'react-router-dom';
 import Profile from "./Components/Profile/Profile";
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
@@ -10,9 +10,9 @@ import BuyContainer from "./Components/Buy/BuyContainer";
 import Checkout from "./Components/Checkout/Checkout";
 
 
-function App(props) {
+function App() {
     return (
-        <BrowserRouter path="/profile">
+        <BrowserRouter>
             <div className={s.App}>
                 <Header/>
 
