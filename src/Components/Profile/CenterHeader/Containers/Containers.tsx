@@ -3,8 +3,9 @@ import PizzaContainer from "../Pizza/PizzaContainer";
 import SneksContainer from "../Sneks/SneksContainer";
 import DrinkContainer from "../Drink/DrinkContainer";
 import SousContainer from "../Sous/SousContainer";
+import React from "react";
 
-const Containers = () => {
+const Containers: React.FC = () => {
     return (
         <div>
             <Route path="/profile/pizza" render={() => <PizzaContainer

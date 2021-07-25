@@ -1,11 +1,20 @@
 import React from 'react';
 import Sneks from "./Sneks";
 import {connect} from "react-redux";
-import {actions} from "../../../../Redux/buy-item-reducer";
+import {actions, BuyItemType} from "../../../../Redux/buy-item-reducer";
 import {compose} from "redux";
+import {AllOrderType} from "../../../../Types/Type";
+import {AppStateType} from "../../../../Redux/redux-store";
 
 
-class SneksContainer extends React.Component {
+type Props = {
+    sneks: Array<AllOrderType>
+    buy: (info: BuyItemType, cost: number, size: number) => void
+
+
+}
+
+class SneksContainer extends React.Component<Props> {
 
 
     render() {
@@ -17,7 +26,7 @@ class SneksContainer extends React.Component {
     }
 }
 
-let mapStateToprops = (state) => {
+let mapStateToprops = (state: AppStateType) => {
 
     return {
         sneks: state.sneksPage.sneks

@@ -1,7 +1,8 @@
 import s from "./StyleFooterHeader/FooterHeader.module.css"
+import React from "react";
 
 
-const FooterHeader = () => {
+const FooterHeader: React.FC = () => {
     return (
         <div className={s.footer_header}>
             <div className={s.footer_header_header}>

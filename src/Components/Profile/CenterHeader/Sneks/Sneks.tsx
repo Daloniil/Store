@@ -1,17 +1,23 @@
-import s from '../Drink/StyleDrink/Drink.module.css'
+import s from '../Sneks/StyleSneks/Sneks.module.css'
 import {NavLink} from "react-router-dom";
 import React from "react";
+import {BuyItemType} from "../../../../Redux/buy-item-reducer";
 
 
-const Drink = (props) => {
+type Props = {
+    sneks: Array<any>
+    buy: (info: BuyItemType, cost: number, size: number) => void
+}
 
+
+const Sneks: React.FC<Props> = (props) => {
     let BuyItem
 
     return (
 
         <div className={s.pizza}>
 
-            {props.drink.map(u => <div key={u.id}>
+            {props.sneks.map(u => <div key={u.id}>
                 <NavLink to={"/items/" + u.id} className={s.pizza_nav}>
                     <div className={s.pizza_container}>
                         <div className={s.pizza_all}>
@@ -39,7 +45,7 @@ const Drink = (props) => {
                                         <span className={s.button}>
                                             <NavLink className={s.your_buy} to={"/buy"}
                                                      onClick={BuyItem = () => {
-                                                         props.buy(props.drink[u.id - 14], props.drink[u.id - 14].cost)
+                                                         props.buy(props.sneks[u.id - 20], props.sneks[u.id - 20].cost, 0)
                                                      }
                                                      }> Замовити</NavLink>
 
@@ -50,13 +56,12 @@ const Drink = (props) => {
 
                         </div>
                     </div>
-                < /NavLink>
+                </NavLink>
             </div>)
             }
 
         </div>
     )
-
 }
 
-export default Drink;
+export default Sneks;

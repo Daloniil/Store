@@ -1,8 +1,9 @@
 import s from './StyleCenterCenter/CenterCenter.module.css'
 import {NavLink} from "react-router-dom";
+import React from "react";
 
 
-const CenterCenter = () => {
+const CenterCenter: React.FC = () => {
 
     return (
         <div className={s.center_center_header}>

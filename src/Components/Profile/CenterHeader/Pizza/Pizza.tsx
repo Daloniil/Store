@@ -1,16 +1,30 @@
-import s from '../Sneks/StyleSneks/Sneks.module.css'
+import s from './StylePizza/pizza.module.css'
+
 import {NavLink} from "react-router-dom";
 import React from "react";
+import {BuyItemType} from "../../../../Redux/buy-item-reducer";
 
 
-const Sneks = (props) => {
+type Props = {
+    pizza: Array<any>
+    buy: (info: BuyItemType, cost: number, size: number) => void
+}
+
+
+const Pizza: React.FC<Props> = (props) => {
+
     let BuyItem
+
+    let Scroll = require('react-scroll');
+    let scroll = Scroll.animateScroll;
+
+    scroll.scrollToTop()
 
     return (
 
         <div className={s.pizza}>
 
-            {props.sneks.map(u => <div key={u.id}>
+            {props.pizza.map(u => <div key={u.id}>
                 <NavLink to={"/items/" + u.id} className={s.pizza_nav}>
                     <div className={s.pizza_container}>
                         <div className={s.pizza_all}>
@@ -25,7 +39,7 @@ const Sneks = (props) => {
                             </div>
 
                             <div className={s.pizza_all_cost}>
-                                <div className={s.cost}>{u.cost} грн</div>
+                                <div className={s.cost}>Від {u.cost} грн</div>
                             </div>
 
                             <div className={s.pizza_all_structure}>
@@ -36,11 +50,12 @@ const Sneks = (props) => {
                                 <div className={s.pizza_all_bottom_button}>
 
                                         <span className={s.button}>
-                                            <NavLink className={s.your_buy} to={"/buy"}
-                                                     onClick={BuyItem = () => {
-                                                         props.buy(props.sneks[u.id - 20], props.sneks[u.id - 20].cost)
-                                                     }
-                                                     }> Замовити</NavLink>
+                                            <NavLink className={s.your_buy} to={"/buy"} onClick={
+                                                BuyItem = () => {
+                                                    props.buy(props.pizza[u.id - 1], props.pizza[u.id - 1].cost, 28)
+
+                                                }
+                                            }> Замовити</NavLink>
 
                                         </span>
                                 </div>
@@ -49,12 +64,13 @@ const Sneks = (props) => {
 
                         </div>
                     </div>
-                < /NavLink>
+                </NavLink>
             </div>)
             }
 
         </div>
     )
+
 }
 
-export default Sneks;
+export default Pizza;

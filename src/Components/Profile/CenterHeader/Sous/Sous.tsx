@@ -1,9 +1,16 @@
 import s from '../Pizza/StylePizza/pizza.module.css'
 import {NavLink} from "react-router-dom";
 import React from "react";
+import {BuyItemType} from "../../../../Redux/buy-item-reducer";
 
 
-const Sous = (props) => {
+type Props = {
+    sous: Array<any>
+    buy: (info: BuyItemType, cost: number, size: number) => void
+}
+
+
+const Sous: React.FC<Props> = (props) => {
     let BuyItem
 
     return (
@@ -38,7 +45,7 @@ const Sous = (props) => {
                                         <span className={s.button}>
                                             <NavLink className={s.your_buy} to={"/buy"}
                                                      onClick={BuyItem = () => {
-                                                         props.buy(props.sous[u.id - 33], props.sous[u.id - 33].cost)
+                                                         props.buy(props.sous[u.id - 33], props.sous[u.id - 33].cost, 0)
                                                      }
                                                      }> Замовити</NavLink>
 
@@ -49,7 +56,7 @@ const Sous = (props) => {
 
                         </div>
                     </div>
-                < /NavLink>
+                </NavLink>
             </div>)
             }
 

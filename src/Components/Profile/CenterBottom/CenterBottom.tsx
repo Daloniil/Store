@@ -1,7 +1,8 @@
 import s from "./StyleCenterBottom/CenterBottom.module.css";
+import React from "react";
 
 
-const CenterBottom = (props) => {
+const CenterBottom: React.FC = () => {
 
     return (
         <div className={s.center_bottom_header}>
