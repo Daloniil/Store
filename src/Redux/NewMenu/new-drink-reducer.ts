@@ -1,10 +1,10 @@
 import {actionsType, BaseThunkType} from "../redux-store";
 import {AllOrderType} from "../../Types/Type";
 
-import photoId49 from "../../Assets/Drink/Сік-яблучно-гранатовий-300x300.png"
-import photoId50 from "../../Assets/Drink/pepsi_bottle_600_square.png"
-import photoId51 from "../../Assets/Drink/Сік-мультивітамін-300x300.png"
-import photoId52 from "../../Assets/Drink/Сік-яблучно-виноградний-300x300.png"
+import photoId49 from "../../Assets/Drink/Сік-яблучно-гранатовий-300x300.webp"
+import photoId50 from "../../Assets/Drink/pepsi_bottle_600_square.webp"
+import photoId51 from "../../Assets/Drink/Сік-мультивітамін-300x300.webp"
+import photoId52 from "../../Assets/Drink/Сік-яблучно-виноградний-300x300.webp"
 
 
 let initialState = {

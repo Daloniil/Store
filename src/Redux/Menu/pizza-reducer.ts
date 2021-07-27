@@ -1,19 +1,19 @@
 import {actionsType} from "../redux-store";
 import {AllOrderType} from "../../Types/Type";
 
-import photoId1 from "../../Assets/Pizza/Premium.png.pagespeed.ce.3YPAVJIKMJ.png"
-import photoId2 from "../../Assets/Pizza/Fermerska.png.pagespeed.ce.p_Y-0X0Wda.png"
-import photoId3 from "../../Assets/Pizza/Margarita.png.pagespeed.ce.4RN5qhb1BY.png"
-import photoId4 from "../../Assets/Pizza/Selyanska.png"
-import photoId5 from "../../Assets/Pizza/Pekelna1.png"
-import photoId6 from "../../Assets/Pizza/Sytna.png"
-import photoId7 from "../../Assets/Pizza/Salami.png"
-import photoId8 from "../../Assets/Pizza/Sokovyta.png"
-import photoId9 from "../../Assets/Pizza/Apetitna.png"
-import photoId10 from "../../Assets/Pizza/4myasa.png"
-import photoId11 from "../../Assets/Pizza/4syra.png"
-import photoId12 from "../../Assets/Pizza/Pikantna.png"
-import photoId13 from "../../Assets/Pizza/Nizhna.png"
+import photoId1 from "../../Assets/Pizza/Premium.png.pagespeed.ce.3YPAVJIKMJ.webp"
+import photoId2 from "../../Assets/Pizza/Fermerska.png.pagespeed.ce.p_Y-0X0Wda.webp"
+import photoId3 from "../../Assets/Pizza/Margarita.png.pagespeed.ce.4RN5qhb1BY.webp"
+import photoId4 from "../../Assets/Pizza/Selyanska.webp"
+import photoId5 from "../../Assets/Pizza/Pekelna1.webp"
+import photoId6 from "../../Assets/Pizza/Sytna.webp"
+import photoId7 from "../../Assets/Pizza/Salami.webp"
+import photoId8 from "../../Assets/Pizza/Sokovyta.webp"
+import photoId9 from "../../Assets/Pizza/Apetitna.webp"
+import photoId10 from "../../Assets/Pizza/4myasa.webp"
+import photoId11 from "../../Assets/Pizza/4syra.webp"
+import photoId12 from "../../Assets/Pizza/Pikantna.webp"
+import photoId13 from "../../Assets/Pizza/Nizhna.webp"
 
 
 let initialState = {

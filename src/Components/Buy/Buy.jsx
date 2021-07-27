@@ -53,7 +53,7 @@ class Buy extends Component {
 
                         <div className={s.your_order}>
                             <div className={s.container_name}>
-                                {u.eat.name} {u.size > 0 ? "-" : ""} {u.size} {u.size > 0 ? "см" : ""}
+                                {u.eat.name} {u.size > 0 ? "-" : ""} {u.size > 0 ? u.size : ""} {u.size > 0 ? "см" : ""}
 
 
                             </div>
@@ -100,8 +100,6 @@ class Buy extends Component {
                     </div>
 
                 </div>)}
-
-
 
 
                 <div className={s.all}>

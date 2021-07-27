@@ -2,10 +2,10 @@ import {actionsType} from "../redux-store";
 import {AllOrderType} from "../../Types/Type";
 
 
-import photoId45 from "../../Assets/Sneks/Potato-medalion.png"
-import photoId46 from "../../Assets/Sneks/картопляні-кульки-1-600x600.png"
-import photoId47 from "../../Assets/Sneks/нагетси-9шт-1-600x600.png"
-import photoId48 from "../../Assets/Sneks/курячі-ніжки-4шт-1-600x600.png"
+import photoId45 from "../../Assets/Sneks/Potato-medalion.webp"
+import photoId46 from "../../Assets/Sneks/картопляні-кульки-1-600x600.webp"
+import photoId47 from "../../Assets/Sneks/нагетси-9шт-1-600x600.webp"
+import photoId48 from "../../Assets/Sneks/курячі-ніжки-4шт-1-600x600.webp"
 
 let initialState = {
     snek: [

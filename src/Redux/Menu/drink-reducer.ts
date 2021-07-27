@@ -1,11 +1,11 @@
 import {actionsType} from "../redux-store";
 import {AllOrderType} from "../../Types/Type";
-import photoId14 from "../../Assets/Drink/Сік-яблучно-гранатовий-300x300.png"
-import photoId15 from "../../Assets/Drink/pepsi_bottle_600_square.png"
-import photoId16 from "../../Assets/Drink/Сік-мультивітамін-300x300.png"
-import photoId17 from "../../Assets/Drink/Сік-яблучно-виноградний-300x300.png"
-import photoId18 from "../../Assets/Drink/Сік-мультивітамін-300x300.png"
-import photoId19 from "../../Assets/Drink/cocacola_bottle_600_square.png"
+import photoId14 from "../../Assets/Drink/Сік-яблучно-гранатовий-300x300.webp"
+import photoId15 from "../../Assets/Drink/pepsi_bottle_600_square.webp"
+import photoId16 from "../../Assets/Drink/Сік-мультивітамін-300x300.webp"
+import photoId17 from "../../Assets/Drink/Сік-яблучно-виноградний-300x300.webp"
+import photoId18 from "../../Assets/Drink/Сік-мультивітамін-300x300.webp"
+import photoId19 from "../../Assets/Drink/cocacola_bottle_600_square.webp"
 
 
 let initialState = {
@@ -67,7 +67,8 @@ let initialState = {
 
 
     ] as Array<AllOrderType>,
-
+    size: null,
+    ves: null
 
 };
 

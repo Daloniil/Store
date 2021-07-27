@@ -15,8 +15,8 @@ type Props = {
     ndrink: AllOrderType
     size: number
     ves: number
-    newItem: (info: AllOrderType, ves: number | undefined, size: number | undefined) => void
-    buy: (info: AllOrderType, cost: number, size: number) => void
+    newItem: (info: AllOrderType, ves: number | null, size: number | null) => void
+    buy: (info: AllOrderType, cost: number, size: number|null) => void
     number: number
 }
 
@@ -247,17 +247,17 @@ class AllOrder extends React.Component <Props> {
         if (this.props.number <= 13) {
             this.props.buy(this.state.pizza, this.state.cost, this.state.size)
         } else if (this.props.number >= 14 && this.props.number < 20) {
-            this.props.buy(this.props.drink, this.props.drink.cost, 0)
+            this.props.buy(this.props.drink, this.props.drink.cost, null)
         } else if (this.props.number >= 20 && this.props.number < 33) {
-            this.props.buy(this.props.sneks, this.props.sneks.cost, 0)
+            this.props.buy(this.props.sneks, this.props.sneks.cost, null)
         } else if (this.props.number >= 33 && this.props.number < 41) {
-            this.props.buy(this.props.sous, this.props.sous.cost, 0)
+            this.props.buy(this.props.sous, this.props.sous.cost, null)
         } else if (this.props.number >= 41 && this.props.number < 45) {
             this.props.buy(this.state.npizza, this.state.cost, this.state.size)
         } else if (this.props.number >= 45 && this.props.number < 49) {
-            this.props.buy(this.props.nsnek, this.props.nsnek.cost, 0)
+            this.props.buy(this.props.nsnek, this.props.nsnek.cost, null)
         } else if (this.props.number >= 49 && this.props.number < 53) {
-            this.props.buy(this.props.ndrink, this.props.ndrink.cost, 0)
+            this.props.buy(this.props.ndrink, this.props.ndrink.cost, null)
         }
 
     }

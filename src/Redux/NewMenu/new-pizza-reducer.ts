@@ -2,10 +2,10 @@ import {actionsType} from "../redux-store";
 import {AllOrderType} from "../../Types/Type";
 
 
-import photoId41 from "../../Assets/Pizza/Premium.png.pagespeed.ce.3YPAVJIKMJ.png"
-import photoId42 from "../../Assets/Pizza/Fermerska.png.pagespeed.ce.p_Y-0X0Wda.png"
-import photoId43 from "../../Assets/Pizza/Margarita.png.pagespeed.ce.4RN5qhb1BY.png"
-import photoId44 from "../../Assets/Pizza/Selyanska.png"
+import photoId41 from "../../Assets/Pizza/Premium.png.pagespeed.ce.3YPAVJIKMJ.webp"
+import photoId42 from "../../Assets/Pizza/Fermerska.png.pagespeed.ce.p_Y-0X0Wda.webp"
+import photoId43 from "../../Assets/Pizza/Margarita.png.pagespeed.ce.4RN5qhb1BY.webp"
+import photoId44 from "../../Assets/Pizza/Selyanska.webp"
 
 let initialState = {
     pizza: [

@@ -2,19 +2,19 @@ import {actionsType} from "../redux-store";
 import {AllOrderType} from "../../Types/Type";
 
 
-import photoId20 from "../../Assets/Sneks/Potato-medalion.png"
-import photoId21 from "../../Assets/Sneks/картопляні-кульки-1-600x600.png"
-import photoId22 from "../../Assets/Sneks/нагетси-9шт-1-600x600.png"
-import photoId23 from "../../Assets/Sneks/курячі-ніжки-4шт-1-600x600.png"
-import photoId24 from "../../Assets/Sneks/сирні-палички-1-600x600.png"
-import photoId25 from "../../Assets/Sneks/картопля-зі-спеціями-1-600x600.png"
-import photoId26 from "../../Assets/Sneks/нагетси-6шт-1-600x600.png"
-import photoId27 from "../../Assets/Sneks/картопляні-діпи-1-600x600.png"
-import photoId28 from "../../Assets/Sneks/курячі-ніжки-2шт-1-600x600.png"
-import photoId29 from "../../Assets/Sneks/цибулеві-кільця-1-600x600.png"
-import photoId30 from "../../Assets/Sneks/сирні-кульки-1-600x600.png"
-import photoId31 from "../../Assets/Sneks/мясні-стріпси-6шт-1-600x600.png"
-import photoId32 from "../../Assets/Sneks/картопля-фрі-1-600x600.png"
+import photoId20 from "../../Assets/Sneks/Potato-medalion.webp"
+import photoId21 from "../../Assets/Sneks/картопляні-кульки-1-600x600.webp"
+import photoId22 from "../../Assets/Sneks/нагетси-9шт-1-600x600.webp"
+import photoId23 from "../../Assets/Sneks/курячі-ніжки-4шт-1-600x600.webp"
+import photoId24 from "../../Assets/Sneks/сирні-палички-1-600x600.webp"
+import photoId25 from "../../Assets/Sneks/картопля-зі-спеціями-1-600x600.webp"
+import photoId26 from "../../Assets/Sneks/нагетси-6шт-1-600x600.webp"
+import photoId27 from "../../Assets/Sneks/картопляні-діпи-1-600x600.webp"
+import photoId28 from "../../Assets/Sneks/курячі-ніжки-2шт-1-600x600.webp"
+import photoId29 from "../../Assets/Sneks/цибулеві-кільця-1-600x600.webp"
+import photoId30 from "../../Assets/Sneks/сирні-кульки-1-600x600.webp"
+import photoId31 from "../../Assets/Sneks/мясні-стріпси-6шт-1-600x600.webp"
+import photoId32 from "../../Assets/Sneks/картопля-фрі-1-600x600.webp"
 
 
 let initialState = {

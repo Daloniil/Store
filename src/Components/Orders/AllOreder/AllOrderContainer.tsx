@@ -24,8 +24,8 @@ type Ownprops = {
     ndrink: Array<AllOrderType>
     size: number
     ves: number
-    newItem: (info: AllOrderType, ves: number | undefined, size: number | undefined) => void
-    buy: (info: AllOrderType, cost: number, size: number) => void
+    newItem: (info: AllOrderType, ves: number | null, size: number | null) => void
+    buy: (info: AllOrderType, cost: number | null, size: number | null) => void
     number: number | null
 }
 
@@ -42,17 +42,17 @@ class AllOrderContainer extends React.Component <Props> {
         if (numbers <= 13) {
             this.props.newItem(this.props.pizza[numbers - 1], this.props.ves, this.props.size)
         } else if (numbers >= 14 && numbers < 20) {
-            this.props.newItem(this.props.drink[numbers - 14], 0, 0)
+            this.props.newItem(this.props.drink[numbers - 14], null, null)
         } else if (numbers >= 20 && numbers < 33) {
-            this.props.newItem(this.props.sneks[numbers - 20], 0, 0)
+            this.props.newItem(this.props.sneks[numbers - 20], null, null)
         } else if (numbers >= 33 && numbers < 41) {
-            this.props.newItem(this.props.sous[numbers - 33], 0, 0)
+            this.props.newItem(this.props.sous[numbers - 33], null, null)
         } else if (numbers >= 41 && numbers < 45) {
-            this.props.newItem(this.props.npizza[numbers - 41], 0, 0)
+            this.props.newItem(this.props.npizza[numbers - 41], null, null)
         } else if (numbers >= 45 && numbers < 49) {
-            this.props.newItem(this.props.nsnek[numbers - 45], 0, 0)
+            this.props.newItem(this.props.nsnek[numbers - 45], null, null)
         } else if (numbers >= 49 && numbers < 53) {
-            this.props.newItem(this.props.ndrink[numbers - 49], 0, 0)
+            this.props.newItem(this.props.ndrink[numbers - 49], null, null)
         }
 
 
