@@ -16,7 +16,7 @@ type Props = {
     size: number
     ves: number
     newItem: (info: AllOrderType, ves: number | null, size: number | null) => void
-    buy: (info: AllOrderType, cost: number, size: number|null) => void
+    buy: (info: AllOrderType, cost: number, size: number | null) => void
     number: number
 }
 
@@ -74,7 +74,7 @@ class AllOrder extends React.Component <Props> {
                     structure: this.props.npizza.structure,
                     amount: this.props.npizza.amount,
                     cost: this.props.npizza.cost,
-                },
+                } as AllOrderType,
                 nsnek: {
                     id: this.props.nsnek.id,
                     photoURL: this.props.nsnek.photoURL,
@@ -296,7 +296,7 @@ class AllOrder extends React.Component <Props> {
             this.link = "/profile/drink"
             this.name = "Напої"
         }
-
+        debugger
 
         {
             this.props.number < 14 || this.props.number >= 41 && this.props.number < 45 ?
@@ -315,7 +315,7 @@ class AllOrder extends React.Component <Props> {
                             <div className={s.name_pizza}>{this.prov.name}</div>
                             <div className={s.cost_pizza}>{Math.round(this.prov.cost)} грн</div>
                             <div className={s.strukture_pizza}>{this.prov.structure}</div>
-                            <div className={s.ves}> Вага: {this.prov.ves}</div>
+                            <div className={s.ves}> Вага: {this.state.ves}</div>
                         </div>
 
 

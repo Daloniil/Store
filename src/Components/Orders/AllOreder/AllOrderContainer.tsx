@@ -48,7 +48,7 @@ class AllOrderContainer extends React.Component <Props> {
         } else if (numbers >= 33 && numbers < 41) {
             this.props.newItem(this.props.sous[numbers - 33], null, null)
         } else if (numbers >= 41 && numbers < 45) {
-            this.props.newItem(this.props.npizza[numbers - 41], null, null)
+            this.props.newItem(this.props.npizza[numbers - 41], this.props.ves, null)
         } else if (numbers >= 45 && numbers < 49) {
             this.props.newItem(this.props.nsnek[numbers - 45], null, null)
         } else if (numbers >= 49 && numbers < 53) {
