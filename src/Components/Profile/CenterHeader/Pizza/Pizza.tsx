@@ -3,17 +3,23 @@ import s from './StylePizza/pizza.module.css'
 import {NavLink} from "react-router-dom";
 import React from "react";
 import {ReducerType} from "../../../../Types/Type";
+import {useDispatch, useSelector} from "react-redux";
+import {getpizza} from "../../../../Selectors/Menus-selector";
+import {actions} from "../../../../Redux/buy-item-reducer";
 
 
-type Props = {
-    pizza: Array<ReducerType>
-    buy: (info: ReducerType, cost: number, size: number) => void
-}
-
-
-const Pizza: React.FC<Props> = (props) => {
+export const Pizza: React.FC = () => {
 
     let BuyItem
+
+    const pizza = useSelector(getpizza)
+    const dispatch = useDispatch()
+
+
+    const buys = (info: ReducerType, cost: number, size: number) => {
+        dispatch(actions.buy)
+    }
+
 
     let Scroll = require('react-scroll');
     let scroll = Scroll.animateScroll;
@@ -24,7 +30,7 @@ const Pizza: React.FC<Props> = (props) => {
 
         <div className={s.pizza}>
 
-            {props.pizza.map(u => <div key={u.id}>
+            {pizza.map(u => <div key={u.id}>
                 <NavLink to={"/items/" + u.id} className={s.pizza_nav}>
                     <div className={s.pizza_container}>
                         <div className={s.pizza_all}>
@@ -53,7 +59,7 @@ const Pizza: React.FC<Props> = (props) => {
                                             <NavLink className={s.your_buy} to={"/buy"} onClick={
                                                 BuyItem = () => {
 
-                                                    props.buy(props.pizza[u.id - 1], props.pizza[u.id - 1].cost, 28)
+                                                    buys(pizza[u.id - 1], pizza[u.id - 1].cost, 28)
 
                                                 }
                                             }> Замовити</NavLink>
@@ -73,5 +79,3 @@ const Pizza: React.FC<Props> = (props) => {
     )
 
 }
-
-export default Pizza;

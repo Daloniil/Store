@@ -9,9 +9,6 @@ import second from "../../../Assets/Slider/Slider_Party_for_bd_new_pizza.webp"
 import three from "../../../Assets/Slider/Slider_4pizzas_new_pizza.webp"
 
 
-
-
-
 export default class HeaderBottom extends Component {
     render() {
         const settings = {

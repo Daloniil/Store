@@ -23,7 +23,7 @@ export const getnnewpizza = createSelector(newpizza, (newpizza) => {
 
 
 export const newsneks = (state: AppStateType) => {
-    return state.newPizzaPage.pizza
+    return state.newSnekPage.snek
 
 }
 
@@ -63,7 +63,7 @@ export const getsneks = createSelector(sneks, (sneks) => {
 })
 
 export const sous = (state: AppStateType) => {
-    return state.sneksPage.sneks
+    return state.sousPage.sous
 
 }
 

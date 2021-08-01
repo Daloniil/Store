@@ -1,24 +1,27 @@
 import s from '../Sneks/StyleSneks/Sneks.module.css'
 import {NavLink} from "react-router-dom";
 import React from "react";
-import {BuyItemType} from "../../../../Redux/buy-item-reducer";
-import {AllOrderType, ReducerType} from "../../../../Types/Type";
+import {actions} from "../../../../Redux/buy-item-reducer";
+import {ReducerType} from "../../../../Types/Type";
+import {useDispatch, useSelector} from "react-redux";
+import {getsneks} from "../../../../Selectors/Menus-selector";
 
 
-type Props = {
-    sneks: Array<ReducerType>
-    buy: (info: ReducerType, cost: number, size: number) => void
-}
-
-
-const Sneks: React.FC<Props> = (props) => {
+export const Sneks: React.FC = () => {
     let BuyItem
 
+    const sneks = useSelector(getsneks)
+    const dispatch = useDispatch()
+
+
+    const buys = (info: ReducerType, cost: number, size: number) => {
+        dispatch(actions.buy)
+    }
     return (
 
         <div className={s.pizza}>
 
-            {props.sneks.map(u => <div key={u.id}>
+            {sneks.map(u => <div key={u.id}>
                 <NavLink to={"/items/" + u.id} className={s.pizza_nav}>
                     <div className={s.pizza_container}>
                         <div className={s.pizza_all}>
@@ -47,7 +50,7 @@ const Sneks: React.FC<Props> = (props) => {
                                             <NavLink className={s.your_buy} to={"/buy"}
                                                      onClick={BuyItem = () => {
 
-                                                         props.buy(props.sneks[u.id - 20], props.sneks[u.id - 20].cost, 0)
+                                                         buys(sneks[u.id - 20], sneks[u.id - 20].cost, 0)
                                                      }
                                                      }> Замовити</NavLink>
 
@@ -65,5 +68,3 @@ const Sneks: React.FC<Props> = (props) => {
         </div>
     )
 }
-
-export default Sneks;

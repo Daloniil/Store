@@ -2,22 +2,27 @@ import s from '../Pizza/StylePizza/pizza.module.css'
 import {NavLink} from "react-router-dom";
 import React from "react";
 import {ReducerType} from "../../../../Types/Type";
+import {useDispatch, useSelector} from "react-redux";
+import {getsous} from "../../../../Selectors/Menus-selector";
+import {actions} from "../../../../Redux/buy-item-reducer";
 
 
-type Props = {
-    sous: Array<ReducerType>
-    buy: (info: ReducerType, cost: number, size: number) => void
-}
-
-
-const Sous: React.FC<Props> = (props) => {
+export const Sous: React.FC = () => {
     let BuyItem
+
+    const sous = useSelector(getsous)
+    const dispatch = useDispatch()
+
+
+    const buys = (info: ReducerType, cost: number, size: number) => {
+        dispatch(actions.buy)
+    }
 
     return (
 
         <div className={s.pizza}>
 
-            {props.sous.map(u => <div key={u.id}>
+            {sous.map(u => <div key={u.id}>
                 <NavLink to={"/items/" + u.id} className={s.pizza_nav}>
                     <div className={s.pizza_container}>
                         <div className={s.pizza_all}>
@@ -46,7 +51,7 @@ const Sous: React.FC<Props> = (props) => {
                                             <NavLink className={s.your_buy} to={"/buy"}
                                                      onClick={BuyItem = () => {
 
-                                                         props.buy(props.sous[u.id - 33], props.sous[u.id - 33].cost, 0)
+                                                         buys(sous[u.id - 33], sous[u.id - 33].cost, 0)
                                                      }
                                                      }> Замовити</NavLink>
 
@@ -64,5 +69,3 @@ const Sous: React.FC<Props> = (props) => {
         </div>
     )
 }
-
-export default Sous;
