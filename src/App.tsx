@@ -6,9 +6,9 @@ import Footer from "./Components/Footer/Footer";
 import About from "./Components/About/About";
 import AllOrderContainer from "./Components/Orders/AllOreder/AllOrderContainer";
 import SliderItemContainer from "./Components/SliderItem/SliderItemContainers";
-import BuyContainer from "./Components/Buy/BuyContainer";
 import Checkout from "./Components/Checkout/Checkout";
 import Information from "./Components/Information/Information";
+import {Buy} from "./Components/Buy/Buy";
 
 
 function App() {
@@ -29,7 +29,7 @@ function App() {
 
                 <Route path="/items/:id" render={() => <SliderItemContainer/>}/>
 
-                <Route path="/buy" render={() => <BuyContainer/>}/>
+                <Route path="/buy" render={() => <Buy/>}/>
 
                 <Route path="/checkout" render={() => <Checkout/>}/>
 

@@ -1,15 +1,15 @@
 import React from 'react';
 import {connect} from "react-redux";
 import Sous from "./Sous";
-import {actions, BuyItemType} from "../../../../Redux/buy-item-reducer";
+import {actions} from "../../../../Redux/buy-item-reducer";
 import {compose} from "redux";
-import {AllOrderType} from "../../../../Types/Type";
+import {ReducerType} from "../../../../Types/Type";
 import {AppStateType} from "../../../../Redux/redux-store";
 
 
 type Props = {
-    sous: Array<AllOrderType>
-    buy: (info: BuyItemType, cost: number, size: number) => void
+    sous: Array<ReducerType>
+    buy: (info: ReducerType, cost: number, size: number) => void
 
 
 }

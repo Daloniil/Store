@@ -1,4 +1,5 @@
 import {actionsType} from "./redux-store";
+import {ReducerType} from "../Types/Type";
 
 
 let initialState = {
@@ -13,18 +14,14 @@ export type BuyItemType = {
     _id: number,
     id: number,
     name: string,
-    eat: {
-        id: number,
-        name: string,
-        cost: number,
-        size: number,
-        finalcost: number,
-        amount: number
-    },
+    eat: ReducerType
+    photoURL: string
     cost: number,
     size: number,
     finalcost: number,
     amount: number
+
+
 }
 
 
@@ -43,7 +40,9 @@ const buyItem = (state = initialState, action: ActionsTypes): initialStateType =
                 cost: action.cost,
                 size: action.size,
                 finalcost: action.cost,
-                amount: action.info.amount
+                amount: action.info.amount,
+                photoURL: action.info.photoURL
+
             }
 
 
@@ -132,7 +131,7 @@ type ActionsTypes = actionsType<typeof actions>
 
 export const actions = {
 
-    buy: (info: BuyItemType, cost: number, size: number) => {
+    buy: (info: ReducerType, cost: number, size: number) => {
         return {
             type: "BUYITEM",
             info, cost, size

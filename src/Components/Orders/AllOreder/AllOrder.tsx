@@ -3,20 +3,20 @@ import React from "react";
 import {NavLink} from "react-router-dom";
 import LastSeenContainer from "../LaterSeen/LastSeenContainer";
 
-import {AllOrderType} from "../../../Types/Type";
+import {AllOrderType, ReducerType} from "../../../Types/Type";
 
 type Props = {
-    pizza: AllOrderType
-    drink: AllOrderType
-    sneks: AllOrderType
-    sous: AllOrderType
-    npizza: AllOrderType
-    nsnek: AllOrderType
-    ndrink: AllOrderType
+    pizza: ReducerType
+    drink: ReducerType
+    sneks: ReducerType
+    sous: ReducerType
+    npizza: ReducerType
+    nsnek: ReducerType
+    ndrink: ReducerType
     size: number
     ves: number
-    newItem: (info: AllOrderType, ves: number | null, size: number | null) => void
-    buy: (info: AllOrderType, cost: number, size: number|null) => void
+    newItem: (info: ReducerType, ves: number | null, size: number | null) => void
+    buy: (info: ReducerType, cost: number, size: number | null) => void
     number: number
 }
 
@@ -39,7 +39,7 @@ class AllOrder extends React.Component <Props> {
                     amount: this.props.pizza.amount,
                     cost: this.props.pizza.cost,
 
-                } as AllOrderType,
+                } as ReducerType,
                 drink: {
                     id: this.props.drink.id,
                     photoURL: this.props.drink.photoURL,
@@ -48,7 +48,7 @@ class AllOrder extends React.Component <Props> {
                     cost: this.props.drink.cost,
                     amount: this.props.drink.amount
 
-                } as AllOrderType,
+                } as ReducerType,
                 sneks: {
                     id: this.props.sneks.id,
                     photoURL: this.props.sneks.photoURL,
@@ -57,7 +57,7 @@ class AllOrder extends React.Component <Props> {
                     cost: this.props.sneks.cost,
                     amount: this.props.sneks.amount
 
-                } as AllOrderType,
+                } as ReducerType,
                 sous: {
                     id: this.props.sous.id,
                     photoURL: this.props.sous.photoURL,
@@ -66,7 +66,7 @@ class AllOrder extends React.Component <Props> {
                     cost: this.props.sous.cost,
                     amount: this.props.sous.amount
 
-                } as AllOrderType,
+                } as ReducerType,
                 npizza: {
                     id: this.props.npizza.id,
                     photoURL: this.props.npizza.photoURL,
@@ -74,7 +74,7 @@ class AllOrder extends React.Component <Props> {
                     structure: this.props.npizza.structure,
                     amount: this.props.npizza.amount,
                     cost: this.props.npizza.cost,
-                },
+                } as ReducerType,
                 nsnek: {
                     id: this.props.nsnek.id,
                     photoURL: this.props.nsnek.photoURL,
@@ -83,7 +83,7 @@ class AllOrder extends React.Component <Props> {
                     cost: this.props.nsnek.cost,
                     amount: this.props.nsnek.amount
 
-                } as AllOrderType,
+                } as ReducerType,
                 ndrink: {
                     id: this.props.ndrink.id,
                     photoURL: this.props.ndrink.photoURL,
@@ -93,7 +93,7 @@ class AllOrder extends React.Component <Props> {
                     amount: this.props.ndrink.amount
 
 
-                } as AllOrderType,
+                } as ReducerType,
 
                 style_line28: s.no,
                 style_line33: s.no,
@@ -118,7 +118,7 @@ class AllOrder extends React.Component <Props> {
             structure: this.props.pizza.structure,
             amount: this.props.pizza.amount,
             cost: this.props.pizza.cost,
-        } as AllOrderType,
+        } as ReducerType,
         drink: {
             id: this.props.drink.id,
             photoURL: this.props.drink.photoURL,
@@ -127,7 +127,7 @@ class AllOrder extends React.Component <Props> {
             cost: this.props.drink.cost,
             amount: this.props.drink.amount
 
-        } as AllOrderType,
+        } as ReducerType,
         sneks: {
             id: this.props.sneks.id,
             photoURL: this.props.sneks.photoURL,
@@ -136,7 +136,7 @@ class AllOrder extends React.Component <Props> {
             cost: this.props.sneks.cost,
             amount: this.props.sneks.amount
 
-        } as AllOrderType,
+        } as ReducerType,
         sous: {
             id: this.props.sous.id,
             photoURL: this.props.sous.photoURL,
@@ -145,7 +145,7 @@ class AllOrder extends React.Component <Props> {
             cost: this.props.sous.cost,
             amount: this.props.sous.amount
 
-        } as AllOrderType,
+        } as ReducerType,
         npizza: {
             id: this.props.npizza.id,
             photoURL: this.props.npizza.photoURL,
@@ -155,7 +155,7 @@ class AllOrder extends React.Component <Props> {
             cost: this.props.npizza.cost,
 
 
-        } as AllOrderType,
+        } as ReducerType,
         nsnek: {
             id: this.props.nsnek.id,
             photoURL: this.props.nsnek.photoURL,
@@ -164,7 +164,7 @@ class AllOrder extends React.Component <Props> {
             cost: this.props.nsnek.cost,
             amount: this.props.nsnek.amount
 
-        } as AllOrderType,
+        } as ReducerType,
         ndrink: {
             id: this.props.ndrink.id,
             photoURL: this.props.ndrink.photoURL,
@@ -173,7 +173,7 @@ class AllOrder extends React.Component <Props> {
             cost: this.props.ndrink.cost,
             amount: this.props.ndrink.amount
 
-        } as AllOrderType,
+        } as ReducerType,
 
         style_line28: s.no,
         style_line33: s.no,
@@ -297,7 +297,6 @@ class AllOrder extends React.Component <Props> {
             this.name = "Напої"
         }
 
-
         {
             this.props.number < 14 || this.props.number >= 41 && this.props.number < 45 ?
                 item = <div className={s.container}>
@@ -315,7 +314,7 @@ class AllOrder extends React.Component <Props> {
                             <div className={s.name_pizza}>{this.prov.name}</div>
                             <div className={s.cost_pizza}>{Math.round(this.prov.cost)} грн</div>
                             <div className={s.strukture_pizza}>{this.prov.structure}</div>
-                            <div className={s.ves}> Вага: {this.prov.ves}</div>
+                            <div className={s.ves}> Вага: {this.state.ves}</div>
                         </div>
 
 

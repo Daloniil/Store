@@ -1,15 +1,15 @@
 import React from 'react';
 import Sneks from "./Sneks";
 import {connect} from "react-redux";
-import {actions, BuyItemType} from "../../../../Redux/buy-item-reducer";
+import {actions} from "../../../../Redux/buy-item-reducer";
 import {compose} from "redux";
-import {AllOrderType} from "../../../../Types/Type";
+import { ReducerType} from "../../../../Types/Type";
 import {AppStateType} from "../../../../Redux/redux-store";
 
 
 type Props = {
-    sneks: Array<AllOrderType>
-    buy: (info: BuyItemType, cost: number, size: number) => void
+    sneks: Array<ReducerType>
+    buy: (info: ReducerType, cost: number, size: number) => void
 
 
 }

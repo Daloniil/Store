@@ -1,15 +1,15 @@
 import React from 'react';
 import {connect} from "react-redux";
 import Pizza from "./Pizza";
-import {actions, BuyItemType} from "../../../../Redux/buy-item-reducer";
+import {actions} from "../../../../Redux/buy-item-reducer";
 import {compose} from "redux";
-import {AllOrderType} from "../../../../Types/Type";
+import {ReducerType} from "../../../../Types/Type";
 import {AppStateType} from "../../../../Redux/redux-store";
 
 
 type Props = {
-    pizza: Array<AllOrderType>
-    buy: (info: BuyItemType, cost: number, size: number) => void
+    pizza: Array<ReducerType>
+    buy: (info: ReducerType, cost: number, size: number) => void
 
 
 }

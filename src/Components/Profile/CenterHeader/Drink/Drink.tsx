@@ -1,13 +1,12 @@
 import s from '../Drink/StyleDrink/Drink.module.css'
 import {NavLink} from "react-router-dom";
 import React from "react";
-import {BuyItemType} from "../../../../Redux/buy-item-reducer";
-import {AllOrderType} from "../../../../Types/Type";
+import {ReducerType} from "../../../../Types/Type";
 
 
 type Props = {
-    drink: Array<AllOrderType>
-    buy: (info: BuyItemType, cost: number, size: number) => void
+    drink: Array<ReducerType>
+    buy: (info: ReducerType, cost: number, size: number) => void
 }
 
 const Drink: React.FC<Props> = (props) => {
@@ -53,6 +52,7 @@ const Drink: React.FC<Props> = (props) => {
 
                                         </span>
                                 </div>
+                                c
 
                             </div>
 

@@ -22,7 +22,16 @@ export type AllOrderType = {
 export type ItemType = {
     _id: number,
     id: number,
-    eat: AllOrderType
+    eat: ReducerType
     ves: number
     size: number,
+}
+
+export type ReducerType = {
+    id: number,
+    photoURL: string,
+    name: string,
+    cost: number,
+    structure: string,
+    amount: number
 }

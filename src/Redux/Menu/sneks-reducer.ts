@@ -1,5 +1,5 @@
 import {actionsType} from "../redux-store";
-import {AllOrderType} from "../../Types/Type";
+import {AllOrderType, ReducerType} from "../../Types/Type";
 
 
 import photoId20 from "../../Assets/Sneks/Potato-medalion.webp"
@@ -130,7 +130,7 @@ let initialState = {
         },
 
 
-    ] as Array<AllOrderType>,
+    ] as Array<ReducerType>,
 
 
 };

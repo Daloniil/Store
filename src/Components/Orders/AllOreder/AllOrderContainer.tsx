@@ -6,7 +6,7 @@ import AllOrder from "./AllOrder";
 import {actionsn} from "../../../Redux/later-seen-reducer";
 import {actions} from "../../../Redux/buy-item-reducer";
 import {AppStateType} from "../../../Redux/redux-store";
-import {AllOrderType} from "../../../Types/Type";
+import {AllOrderType, ItemType, ReducerType} from "../../../Types/Type";
 
 
 type PathParamsType = {
@@ -15,17 +15,17 @@ type PathParamsType = {
 
 
 type Ownprops = {
-    pizza: Array<AllOrderType>
-    drink: Array<AllOrderType>
-    sneks: Array<AllOrderType>
-    sous: Array<AllOrderType>
-    npizza: Array<AllOrderType>
-    nsnek: Array<AllOrderType>
-    ndrink: Array<AllOrderType>
+    pizza: Array<ReducerType>
+    drink: Array<ReducerType>
+    sneks: Array<ReducerType>
+    sous: Array<ReducerType>
+    npizza: Array<ReducerType>
+    nsnek: Array<ReducerType>
+    ndrink: Array<ReducerType>
     size: number
     ves: number
-    newItem: (info: AllOrderType, ves: number | null, size: number | null) => void
-    buy: (info: AllOrderType, cost: number | null, size: number | null) => void
+    newItem: (info: ReducerType, ves: number | null, size: number | null) => void
+    buy: (info: ReducerType, cost: number | null, size: number | null) => void
     number: number | null
 }
 
@@ -48,7 +48,7 @@ class AllOrderContainer extends React.Component <Props> {
         } else if (numbers >= 33 && numbers < 41) {
             this.props.newItem(this.props.sous[numbers - 33], null, null)
         } else if (numbers >= 41 && numbers < 45) {
-            this.props.newItem(this.props.npizza[numbers - 41], null, null)
+            this.props.newItem(this.props.npizza[numbers - 41], this.props.ves, null)
         } else if (numbers >= 45 && numbers < 49) {
             this.props.newItem(this.props.nsnek[numbers - 45], null, null)
         } else if (numbers >= 49 && numbers < 53) {

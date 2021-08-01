@@ -2,12 +2,12 @@ import s from '../Sneks/StyleSneks/Sneks.module.css'
 import {NavLink} from "react-router-dom";
 import React from "react";
 import {BuyItemType} from "../../../../Redux/buy-item-reducer";
-import {AllOrderType} from "../../../../Types/Type";
+import {AllOrderType, ReducerType} from "../../../../Types/Type";
 
 
 type Props = {
-    sneks: Array<AllOrderType>
-    buy: (info: BuyItemType, cost: number, size: number) => void
+    sneks: Array<ReducerType>
+    buy: (info: ReducerType, cost: number, size: number) => void
 }
 
 
@@ -46,6 +46,7 @@ const Sneks: React.FC<Props> = (props) => {
                                         <span className={s.button}>
                                             <NavLink className={s.your_buy} to={"/buy"}
                                                      onClick={BuyItem = () => {
+
                                                          props.buy(props.sneks[u.id - 20], props.sneks[u.id - 20].cost, 0)
                                                      }
                                                      }> Замовити</NavLink>
