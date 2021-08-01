@@ -1,5 +1,5 @@
 import {actionsType} from "../redux-store";
-import {AllOrderType, ReducerType} from "../../Types/Type";
+import {ReducerType} from "../../Types/Type";
 import photoId14 from "../../Assets/Drink/Сік-яблучно-гранатовий-300x300.webp"
 import photoId15 from "../../Assets/Drink/pepsi_bottle_600_square.webp"
 import photoId16 from "../../Assets/Drink/Сік-мультивітамін-300x300.webp"

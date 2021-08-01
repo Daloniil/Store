@@ -1,17 +1,14 @@
 import {NavLink} from "react-router-dom";
 import React from 'react';
 import './StyleHeaderCenter/HeaderCenter.css'
-import {BuyItemType} from "../../../Redux/buy-item-reducer";
+import {useSelector} from "react-redux";
+import {getamoun, getlenght} from "../../../Selectors/buy-item-selector";
 
 
-type Props = {
-    item: Array<BuyItemType>
-    length: number | null,
-    amounts: number,
-}
+export const HeaderCenter: React.FC = () => {
 
-
-const HeaderCenter: React.FC<Props> = (props) => {
+    const lenght = useSelector(getlenght)
+    const amoun = useSelector(getamoun)
 
     let header_center_container: any = React.createRef()
 
@@ -27,8 +24,10 @@ const HeaderCenter: React.FC<Props> = (props) => {
     let buy
 
 
-    if (props.length != null) {
-        buy = <span className="amount_buy">{props.amounts}</span>
+    if (lenght != null) {
+        {
+            amoun == 0 ? buy = "" : buy = <span className="amount_buy"> {amoun}</span>
+        }
     } else {
         buy = ""
     }

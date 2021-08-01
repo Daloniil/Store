@@ -5,10 +5,10 @@ import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
 import About from "./Components/About/About";
 import AllOrderContainer from "./Components/Orders/AllOreder/AllOrderContainer";
-import SliderItemContainer from "./Components/SliderItem/SliderItemContainers";
-import Checkout from "./Components/Checkout/Checkout";
 import Information from "./Components/Information/Information";
 import {Buy} from "./Components/Buy/Buy";
+import {Chekout} from "./Components/Checkout/Checkout";
+import {SliderItems} from "./Components/SliderItem/SliderItem";
 
 
 function App() {
@@ -27,11 +27,11 @@ function App() {
 
                 <Route path="/items/:id" render={() => <AllOrderContainer/>}/>
 
-                <Route path="/items/:id" render={() => <SliderItemContainer/>}/>
+                <Route path="/items/:id" render={() => <SliderItems/>}/>
 
                 <Route path="/buy" render={() => <Buy/>}/>
 
-                <Route path="/checkout" render={() => <Checkout/>}/>
+                <Route path="/checkout" render={() => <Chekout/>}/>
 
                 <Route path="*" render={() => <Redirect to={"/profile/pizza"}/>}/>
 

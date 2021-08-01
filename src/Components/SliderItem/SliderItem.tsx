@@ -1,113 +1,113 @@
-import React, {Component} from "react";
+import React, {useState} from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import {NavLink} from "react-router-dom";
+import {NavLink, useParams} from "react-router-dom";
 import s from "./SliderItem.module.css"
-import {AllOrderType} from "../../Types/Type";
+import {useSelector} from "react-redux";
+import {getdrinks, getpizza, getsneks, getsous} from "../../Selectors/Menus-selector";
 
-
-type Ownprops = {
-    pizza: Array<AllOrderType>
-    drink: Array<AllOrderType>
-    sneks: Array<AllOrderType>
-    sous: Array<AllOrderType>
-    number: number
+type numberType = {
+    id: any
 }
 
+export const SliderItems = () => {
 
-export default class SliderItem extends Component <Ownprops> {
+    const pizza = useSelector(getpizza)
+    const sneks = useSelector(getsneks)
+    const drink = useSelector(getdrinks)
+    const sous = useSelector(getsous)
+
+    const number: numberType = useParams();
+
+    const [prov, setprov] = useState(
+        number.id < 14 || +number.id >= 41 && +number.id < 45 ? pizza :
+
+            +number.id >= 14 && +number.id < 20 || +number.id >= 49 && +number.id < 53 ? drink :
+
+                +number.id >= 20 && +number.id < 33 || +number.id >= 45 && +number.id < 49 ? sneks :
+
+                    +number.id >= 33 && +number.id < 41 ? sous : pizza
+    )
 
 
-    prov: Array<AllOrderType> | null = null
-
-    render() {
-        const settings = {
-            dots: false,
-            infinite: true,
-            speed: 200,
-            slidesToShow: 4,
-            slidesToScroll: 4,
-            autoplay: true,
-            arrows: true,
-            responsive: [
-                {
-                    breakpoint: 1285,
-                    settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 3,
-                        infinite: true,
-                        dots: false
-                    }
-                },
-                {
-                    breakpoint: 1092,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2,
-                        infinite: true,
-                        dots: false
-                    }
-                },
-                {
-                    breakpoint: 700,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        infinite: true,
-                        dots: false
-                    }
-                },
-                {
-                    breakpoint: 400,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        infinite: true,
-                        dots: false,
-                        arrows: false,
-                    }
+    const settings = {
+        dots: false,
+        infinite: true,
+        speed: 200,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        autoplay: true,
+        arrows: true,
+        responsive: [
+            {
+                breakpoint: 1285,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: false
                 }
-            ]
-
-        }
-
-
-        {
-            this.props.number < 14 || this.props.number >= 41 && this.props.number < 45 ? this.prov = this.props.pizza :
-                this.props.number >= 14 && this.props.number < 20 || this.props.number >= 49 && this.props.number < 53 ? this.prov = this.props.drink :
-                    this.props.number >= 20 && this.props.number < 33 || this.props.number >= 45 && this.props.number < 49 ? this.prov = this.props.sneks :
-                        this.props.number >= 33 && this.props.number < 41 ? this.prov = this.props.sous : this.prov = this.props.pizza
-        }
-
-
-        // @ts-ignore
-        return (
-
-            <div className={s.content}>
-                <span className={s.about_slider}>Схожі товари</span>
-
-                <Slider {...settings} className={s.slider}>
-
-                    {this.prov.map(u => <div className={s.item} key={u.id}>
-                        <NavLink to={"/items/" + u.id} className={s.link}>
-
-                            <div>
-                                <img className={s.photo} src={u.photoURL} alt="" height="75" width="75"/>
-                            </div>
-                            <div className={s.text}>
-                                <div className={s.name}>{u.name}</div>
-                                <div className={s.cost}>Від {u.cost} грн</div>
-                            </div>
-                        </NavLink>
-
-
-                    </div>)}
-
-                </Slider>
-
-            </div>
-        )
+            },
+            {
+                breakpoint: 1092,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    infinite: true,
+                    dots: false
+                }
+            },
+            {
+                breakpoint: 700,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: false
+                }
+            },
+            {
+                breakpoint: 400,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: false,
+                    arrows: false,
+                }
+            }
+        ]
 
     }
+
+
+    return (
+        <div className={s.content}>
+            <span className={s.about_slider}>Схожі товари</span>
+
+            <Slider {...settings} className={s.slider}>
+
+                {prov.map(u => <div className={s.item} key={u.id}>
+                    <NavLink to={"/items/" + u.id} className={s.link}>
+
+                        <div>
+                            <img className={s.photo} src={u.photoURL} alt="" height="75" width="75"/>
+                        </div>
+                        <div className={s.text}>
+                            <div className={s.name}>{u.name}</div>
+                            <div className={s.cost}>Від {u.cost} грн</div>
+                        </div>
+                    </NavLink>
+
+
+                </div>)}
+
+            </Slider>
+
+        </div>
+    )
 }
+
+
+

@@ -1,24 +1,22 @@
-import {connect} from "react-redux";
+import {useSelector} from "react-redux";
 import {Field, InjectedFormProps, reduxForm} from "redux-form";
 import {maxLenghtCrater, required} from "../../Validators/validator"
 import s from "./CheckoutStyle/Checkout.module.css";
 import {Input} from "../FormsControl/FormContorl";
 import {Redirect} from "react-router-dom";
 import React from "react";
-import {AppStateType} from "../../Redux/redux-store";
-import {BuyItemType} from "../../Redux/buy-item-reducer";
+import {getitem, getlenght} from "../../Selectors/buy-item-selector";
 
 
 const maxLengh = maxLenghtCrater(10)
 
-type PropsType = {
-    item: Array<BuyItemType>
 
-}
+type PropsType = {}
 
 const ChekoutForm: React.FC<InjectedFormProps<Chekout, PropsType> & PropsType> = (props) => {
+    const item = useSelector(getitem)
 
-    let cost = props.item.reduce(function (a, b) {
+    let cost = item.reduce(function (a, b) {
         return Math.round(a + b.cost);
     }, 0);
 
@@ -33,7 +31,7 @@ const ChekoutForm: React.FC<InjectedFormProps<Chekout, PropsType> & PropsType> =
                         <div className={s.tov_2}>ПРОМІЖНИЙ ПІДСУМОК</div>
                     </div>
                     <div className={s.full_order}>
-                        {props.item.map(u => <div key={u._id}>
+                        {item.map(u => <div key={u._id}>
                             <div className={s.info}>
 
                                 <div className={s.your_order}>
@@ -127,17 +125,13 @@ const ReduxChekoutForm = reduxForm<Chekout, PropsType>({
 })(ChekoutForm)
 
 
-type Props = {
-    item: Array<BuyItemType>
-    lenght: number | null
-
-}
 export type Chekout = {
     formData: Array<string>
 }
 
 
-const Chekout: React.FC<Props> = (props) => {
+export const Chekout: React.FC = () => {
+    const lenght = useSelector(getlenght)
     let Scroll = require('react-scroll');
     let scroll = Scroll.animateScroll;
     scroll.scrollToTop()
@@ -153,7 +147,7 @@ const Chekout: React.FC<Props> = (props) => {
                     </div>
                 </div>
             </div>
-            {props.lenght != null ? <ReduxChekoutForm onSubmit={onSubmit} item={props.item}/> :
+            {lenght != null ? <ReduxChekoutForm onSubmit={onSubmit}/> :
                 <Redirect to={"/buy"}/>}
 
         </div>
@@ -161,15 +155,4 @@ const Chekout: React.FC<Props> = (props) => {
 }
 
 
-let mapStateToprops = (state: AppStateType): Props => {
 
-    return {
-        item: state.BuyPage.item,
-        lenght: state.BuyPage.lenght
-
-
-    }
-
-
-}
-export default connect(mapStateToprops, {})(Chekout)

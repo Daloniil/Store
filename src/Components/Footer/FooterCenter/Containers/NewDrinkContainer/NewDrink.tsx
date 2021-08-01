@@ -1,18 +1,16 @@
 import s from './StyleNewDrinkContainers/NewDrink.module.css'
 import {NavLink} from "react-router-dom";
 import React from "react";
-import {AllOrderType} from "../../../../../Types/Type";
+import {useSelector} from "react-redux";
+import {getnewdrink} from "../../../../../Selectors/Menus-selector";
 
 
-type Props = {
-    drink: Array<AllOrderType>
-}
-
-const NewDrink: React.FC<Props> = (props) => {
+const NewDrink: React.FC = () => {
+    const newdrink = useSelector(getnewdrink)
 
     return (
         <li className={s.drink}>
-            {props.drink.map(u => <div key={u.id}>
+            {newdrink.map(u => <div key={u.id}>
                 <NavLink className={s.drink_container} to={"/items/" + u.id}>
                     <div className={s.photo}>
                         <img src={u.photoURL} alt=""/>

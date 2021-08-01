@@ -1,5 +1,6 @@
 import HeaderHeader from "./HeaderHeader/HeaderHeader";
-import HeaderCenterContainer from "./HeaderCenter/HeaderCenterContainer";
+import HeaderCenter from "./HeaderCenter/HeaderCenter";
+
 import React from "react";
 
 
@@ -8,7 +9,7 @@ const Header: React.FC = () => {
         <div>
 
             <HeaderHeader/>
-            <HeaderCenterContainer/>
+            <HeaderCenter/>
 
         </div>
     )

@@ -1,5 +1,5 @@
-import {actionsType, BaseThunkType} from "../redux-store";
-import {AllOrderType} from "../../Types/Type";
+import {actionsType} from "../redux-store";
+import {ReducerType} from "../../Types/Type";
 
 import photoId49 from "../../Assets/Drink/Сік-яблучно-гранатовий-300x300.webp"
 import photoId50 from "../../Assets/Drink/pepsi_bottle_600_square.webp"
@@ -46,7 +46,7 @@ let initialState = {
 
         },
 
-    ] as Array<AllOrderType>,
+    ] as Array<ReducerType>,
 
 
 };

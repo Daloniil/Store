@@ -1,19 +1,16 @@
 import s from './StyleNewPizzaContainer/NewPizza.module.css'
 import {NavLink} from "react-router-dom";
 import React from "react";
-import {AllOrderType} from "../../../../../Types/Type";
+import {useSelector} from "react-redux";
+import {getnnewpizza} from "../../../../../Selectors/Menus-selector";
 
 
-type Props = {
-    pizza: Array<AllOrderType>
-}
-
-
-const NewPizza: React.FC<Props> = (props) => {
+const NewPizza: React.FC = () => {
+    const newpizza = useSelector(getnnewpizza)
 
     return (
         <li className={s.pizza}>
-            {props.pizza.map(u => <div key={u.id}>
+            {newpizza.map(u => <div key={u.id}>
                 <NavLink className={s.pizza_container} to={"/items/" + u.id}>
                     <div className={s.photo}>
                         <img src={u.photoURL} alt=""/>

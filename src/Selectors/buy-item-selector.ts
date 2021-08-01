@@ -22,3 +22,12 @@ export const getlenght = createSelector(lenght, (lenght) => {
 
 })
 
+export const amoun = (state: AppStateType) => {
+    return state.BuyPage.amoun
+
+}
+
+export const getamoun = createSelector(amoun, (amoun) => {
+    return amoun
+
+})

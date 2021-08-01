@@ -1,10 +1,10 @@
 import {NavLink} from "react-router-dom";
 import s from "./StyleBuy/Buy.module.css";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {actions} from "../../Redux/buy-item-reducer";
 import React from "react";
-import {getitem, getlenght} from "../../Selectors/buy-item-selector";
+import {getitem, getlenght, getamoun} from "../../Selectors/buy-item-selector";
 
 
 export const Buy = () => {
@@ -30,13 +30,16 @@ export const Buy = () => {
 
     const item = useSelector(getitem)
     const lenght = useSelector(getlenght)
+    const amoun = useSelector(getamoun)
 
 
     const [itemState, setItemState] = useState(() => item)
 
-    const [, updateState] = React.useState();
-    // @ts-ignore
-    const forceUpdate = React.useCallback(() => updateState({}), []);
+
+    useEffect(() => {
+        setItemState(item)
+    }, [amoun])
+
 
     let view
 
@@ -77,7 +80,6 @@ export const Buy = () => {
                                 <p className={s.minus} onClick={minus = () => {
                                     if (u.eat.amount > 1) {
                                         amountLeghtminus(1)
-                                        forceUpdate()
                                     }
                                     u.eat.amount = u.eat.amount > 1 ? u.eat.amount - 1 : u.eat.amount
                                     u.cost = u.eat.cost * u.eat.amount
@@ -89,7 +91,6 @@ export const Buy = () => {
                                 u.eat.amount = u.eat.amount + 1
                                 u.cost = (u.eat.cost) * u.eat.amount
                                 amountLeghtplus()
-                                forceUpdate()
                             }}>+</p>
                         </div>
 
@@ -106,6 +107,9 @@ export const Buy = () => {
 
                         amountLeghtminus(itemState[itemState.findIndex(el => el._id === searchindex)].eat.amount)
 
+                        // @ts-ignore
+
+                        setItemState(itemState[itemState.findIndex(el => el._id === searchindex)].eat.amount = 1)
 
                         setItemState(itemState.splice(itemState.findIndex((el => el._id === searchindex), 0)))
 

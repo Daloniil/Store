@@ -1,8 +1,8 @@
 import s from './StyleFooterCenter/FooterCenter.module.css'
-import NewPizzaContainer from "./Containers/NewPizzaContainer/NewPizzaContainer";
-import NewSnekContainer from "./Containers/NewSnekContainer/NewSnekContainer";
-import NewDrinkContainer from "./Containers/NewDrinkContainer/NewDrinkContainer";
 import React from "react";
+import NewDrink from "./Containers/NewDrinkContainer/NewDrink";
+import NewPizza from "./Containers/NewPizzaContainer/NewPizza";
+import NewSnek from "./Containers/NewSnekContainer/NewSnek";
 
 const FooterCenter: React.FC = () => {
     return (
@@ -31,7 +31,7 @@ const FooterCenter: React.FC = () => {
                         </div>
                         <div className={s.footer_center_center_first_colum}>
                             <ul className={s.footer_center_center_first_colum_pizza}>
-                                <NewPizzaContainer/>
+                                <NewPizza/>
                             </ul>
                         </div>
                     </div>
@@ -42,7 +42,7 @@ const FooterCenter: React.FC = () => {
                         </div>
                         <div className={s.footer_center_center_second_colum}>
                             <ul className={s.footer_center_center_second_colum_snek}>
-                                <NewSnekContainer/>
+                                <NewSnek/>
                             </ul>
                         </div>
                     </div>
@@ -53,7 +53,7 @@ const FooterCenter: React.FC = () => {
                         </div>
                         <div className={s.footer_center_center_three_colum}>
                             <ul className={s.footer_center_center_three_colum_drink}>
-                                <NewDrinkContainer/>
+                                <NewDrink/>
                             </ul>
                         </div>
                     </div>
