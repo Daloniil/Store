@@ -2,24 +2,24 @@ import s from './StyleLaterSeen/LaterSeen.module.css'
 import {NavLink} from "react-router-dom";
 import {ItemType} from "../../../Types/Type";
 import React from "react";
+import {useSelector} from "react-redux";
+import {getitem} from "../../../Selectors/buy-item-selector";
+import {getlastitem} from "../../../Selectors/last-seen-selector";
 
 
-type Props = {
-    item: Array<ItemType>
+const LastSeen: React.FC = () => {
 
-}
-
-const LastSeen: React.FC<Props> = (props) => {
+    const item = useSelector(getlastitem)
 
     let l
 
-    if (!props.item[0].eat) {
+    if (!item[0].eat) {
         l = ""
     } else {
 
 
         l = <div>
-            {[...props.item].reverse().map(u => <div key={u._id}>
+            {[...item].reverse().map(u => <div key={u._id}>
                 <NavLink className={s.container} to={"/items/" + u.eat.id}>
 
                     <div className={s.container_photo}>

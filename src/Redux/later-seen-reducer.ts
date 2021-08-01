@@ -1,5 +1,5 @@
 import {actionsType} from "./redux-store";
-import {AllOrderType, ItemType} from "../Types/Type";
+import {ItemType, ReducerType} from "../Types/Type";
 
 
 let initialState = {
@@ -47,7 +47,7 @@ const laterSeen = (state = initialState, action: ActionsTypes): initialStateType
 type ActionsTypes = actionsType<typeof actionsn>
 
 export const actionsn = {
-    newItem: (info: AllOrderType, ves: number | undefined, size: number | undefined) => {
+    newItem: (info: ReducerType, ves: number | undefined, size: number | undefined) => {
         return {
             type: "NEWITEMS",
             info, ves, size

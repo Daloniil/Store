@@ -21,7 +21,6 @@ export type AllOrderType = {
 
 export type ItemType = {
     _id: number,
-    id: number,
     eat: ReducerType
     ves: number
     size: number,
