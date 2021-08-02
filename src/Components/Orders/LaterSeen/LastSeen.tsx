@@ -1,9 +1,7 @@
 import s from './StyleLaterSeen/LaterSeen.module.css'
 import {NavLink} from "react-router-dom";
-import {ItemType} from "../../../Types/Type";
 import React from "react";
 import {useSelector} from "react-redux";
-import {getitem} from "../../../Selectors/buy-item-selector";
 import {getlastitem} from "../../../Selectors/last-seen-selector";
 
 

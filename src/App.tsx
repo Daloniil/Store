@@ -8,7 +8,7 @@ import Information from "./Components/Information/Information";
 import {Buy} from "./Components/Buy/Buy";
 import {Chekout} from "./Components/Checkout/Checkout";
 import {SliderItems} from "./Components/SliderItem/SliderItem";
-import AllOrderContainer from "./Components/Orders/AllOreder/AllOrdersContainer";
+import {AllOrder} from "./Components/Orders/AllOreder/AllOrder";
 
 
 function App() {
@@ -25,7 +25,7 @@ function App() {
 
                 <Route path="/profile/" render={() => <Profile/>}/>
 
-                <Route path="/items/:id" render={() => <AllOrderContainer/>}/>
+                <Route path="/items/:id" render={() => <AllOrder/>}/>
 
                 <Route path="/items/:id" render={() => <SliderItems/>}/>
 

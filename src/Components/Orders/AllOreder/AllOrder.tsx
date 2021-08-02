@@ -1,239 +1,229 @@
 import s from './StylePizzaOrder/PizzaOrder.module.css'
-import React from "react";
-import {NavLink} from "react-router-dom";
+import React, {useEffect, useState} from "react";
+import {NavLink, useParams} from "react-router-dom";
 import {ReducerType} from "../../../Types/Type";
+import {useDispatch, useSelector} from "react-redux";
+import {
+    getdrinks,
+    getnewdrink,
+    getnewsneks,
+    getnnewpizza,
+    getpizza, getsize,
+    getsneks,
+    getsous, getves
+} from "../../../Selectors/Menus-selector";
+import {actions} from "../../../Redux/buy-item-reducer";
+import {actionsn} from "../../../Redux/later-seen-reducer";
 import LastSeen from "../LaterSeen/LastSeen";
 
-type Props = {
-    pizza: ReducerType
-    drink: ReducerType
-    sneks: ReducerType
-    sous: ReducerType
-    npizza: ReducerType
-    nsnek: ReducerType
-    ndrink: ReducerType
-    size: number
-    ves: number
-    newItem: (info: ReducerType, ves: number | null, size: number | null) => void
-    buy: (info: ReducerType, cost: number, size: number | null) => void
-    number: number
+
+type numberType = {
+    id: any
 }
 
 
-class AllOrder extends React.Component <Props> {
+export const AllOrder: React.FC = () => {
+    const dispatch = useDispatch()
 
 
-    componentDidUpdate(prevProps: Props, prevState: Props) {
-        if (prevProps != this.props) {
-            this.setState({
-                size: this.props.size,
-                cost: this.props.pizza.cost,
-                ves: this.props.ves,
-                ncost: this.props.npizza.cost,
-                pizza: {
-                    id: this.props.pizza.id,
-                    photoURL: this.props.pizza.photoURL,
-                    name: this.props.pizza.name,
-                    structure: this.props.pizza.structure,
-                    amount: this.props.pizza.amount,
-                    cost: this.props.pizza.cost,
+    const buys = (info: ReducerType, cost: number, size: number) => {
+        dispatch(actions.buy(info, cost, size))
+    }
 
-                } as ReducerType,
-                drink: {
-                    id: this.props.drink.id,
-                    photoURL: this.props.drink.photoURL,
-                    name: this.props.drink.name,
-                    structure: this.props.drink.structure,
-                    cost: this.props.drink.cost,
-                    amount: this.props.drink.amount
+    const newItem = (info: ReducerType, ves: number | undefined, size: number | undefined) => {
+        dispatch(actionsn.newItem(info, ves, size))
+    }
 
-                } as ReducerType,
-                sneks: {
-                    id: this.props.sneks.id,
-                    photoURL: this.props.sneks.photoURL,
-                    name: this.props.sneks.name,
-                    structure: this.props.sneks.structure,
-                    cost: this.props.sneks.cost,
-                    amount: this.props.sneks.amount
-
-                } as ReducerType,
-                sous: {
-                    id: this.props.sous.id,
-                    photoURL: this.props.sous.photoURL,
-                    name: this.props.sous.name,
-                    structure: this.props.sous.structure,
-                    cost: this.props.sous.cost,
-                    amount: this.props.sous.amount
-
-                } as ReducerType,
-                npizza: {
-                    id: this.props.npizza.id,
-                    photoURL: this.props.npizza.photoURL,
-                    name: this.props.npizza.name,
-                    structure: this.props.npizza.structure,
-                    amount: this.props.npizza.amount,
-                    cost: this.props.npizza.cost,
-                } as ReducerType,
-                nsnek: {
-                    id: this.props.nsnek.id,
-                    photoURL: this.props.nsnek.photoURL,
-                    name: this.props.nsnek.name,
-                    structure: this.props.nsnek.structure,
-                    cost: this.props.nsnek.cost,
-                    amount: this.props.nsnek.amount
-
-                } as ReducerType,
-                ndrink: {
-                    id: this.props.ndrink.id,
-                    photoURL: this.props.ndrink.photoURL,
-                    name: this.props.ndrink.name,
-                    structure: this.props.ndrink.structure,
-                    cost: this.props.ndrink.cost,
-                    amount: this.props.ndrink.amount
+    const number: numberType = useParams();
 
 
-                } as ReducerType,
+    const pizza = useSelector(getpizza)
+    const sneks = useSelector(getsneks)
+    const drink = useSelector(getdrinks)
+    const sous = useSelector(getsous)
 
-                style_line28: s.line28,
-                style_line33: s.no,
-                style_line45: s.no
+    const npizza = useSelector(getnnewpizza)
+    const nsnek = useSelector(getnewsneks)
+    const ndrink = useSelector(getnewdrink)
+
+    const ves = useSelector(getves)
+    const size = useSelector(getsize)
 
 
+    if (number.id <= 13) {
+        newItem(pizza[number.id - 1], ves, size)
+    } else if (number.id >= 14 && number.id < 20) {
+        newItem(drink[number.id - 14], undefined, undefined)
+    } else if (number.id >= 20 && number.id < 33) {
+        newItem(sneks[number.id - 20], undefined, undefined)
+    } else if (number.id >= 33 && number.id < 41) {
+        newItem(sous[number.id - 33], undefined, undefined)
+    } else if (number.id >= 41 && number.id < 45) {
+        newItem(npizza[number.id - 41], ves, undefined)
+    } else if (number.id >= 45 && number.id < 49) {
+        newItem(nsnek[number.id - 45], undefined, undefined)
+    } else if (number.id >= 49 && number.id < 53) {
+        newItem(ndrink[number.id - 49], undefined, undefined)
+    }
+
+    let pizzaRef = number.id <= 13 ? pizza[number.id - 1] : pizza[0]
+    let drinkRef = number.id >= 14 && number.id < 20 ? drink[number.id - 14] : drink[0]
+    let sneksRef = number.id >= 20 && number.id < 33 ? sneks[number.id - 20] : sneks[0]
+    let sousRef = number.id >= 33 && number.id < 41 ? sous[number.id - 33] : sous[0]
+    let npizzaRef = number.id >= 41 && number.id < 45 ? npizza[number.id - 41] : npizza[0]
+    let nsnekRef = number.id >= 45 && number.id < 49 ? nsnek[number.id - 45] : nsnek[0]
+    let ndrinkRef = number.id >= 49 && number.id < 53 ? ndrink[number.id - 49] : ndrink[0]
+
+
+    let [pizzaState, setPizzaState] = useState(() => pizzaRef)
+    const [drinkState, setDrinkState] = useState(() => drinkRef)
+    const [sneksState, setSneksState] = useState(() => sneksRef)
+    const [sousState, setSousState] = useState(() => sousRef)
+
+
+    const [npizzaState, setNpizzaState] = useState(() => npizzaRef)
+    const [nsneksState, setNsneksState] = useState(() => nsnekRef)
+    const [ndrinkState, setNdrinkState] = useState(() => ndrinkRef)
+
+
+    const [vesState, setVesState] = useState(() => ves)
+    const [sizeState, setSizeState] = useState(() => size)
+
+    const [costState, setCostState] = useState(() => pizzaRef.cost)
+
+    const [ncostState, setNcostState] = useState(() => npizzaRef.cost)
+
+
+    const [style_line28State, setstyle_line28State] = useState(() => s.line28)
+    const [style_line33State, setstyle_line33State] = useState(() => s.no)
+    const [style_line45State, setstyle_line45State] = useState(() => s.no)
+
+    useEffect(() => {
+        if (number.id <= 13) {
+            setPizzaState(pizzaRef)
+        } else if (number.id >= 14 && number.id < 20) {
+            setDrinkState(drinkRef)
+        } else if (number.id >= 20 && number.id < 33) {
+            setSneksState(sneksRef)
+        } else if (number.id >= 33 && number.id < 41) {
+            setSousState(sousRef)
+        } else if (number.id >= 41 && number.id < 45) {
+            setNpizzaState(npizzaRef)
+        } else if (number.id >= 45 && number.id < 49) {
+            setNsneksState(nsnekRef)
+        } else if (number.id >= 49 && number.id < 53) {
+            setNdrinkState(ndrinkRef)
+        }
+
+
+    }, [number])
+
+    let NewSize28 = () => {
+        if (sizeState === 33 || sizeState === 45) {
+            setPizzaState((actual) => {
+                return {
+                    ...actual, cost: pizzaRef.cost
+                }
             })
-        }
-    }
 
-
-    state = {
-        size: this.props.size,
-        cost: this.props.pizza.cost,
-        ves: this.props.ves,
-        ncost: this.props.npizza.cost,
-
-        pizza: {
-            id: this.props.pizza.id,
-            photoURL: this.props.pizza.photoURL,
-            name: this.props.pizza.name,
-            structure: this.props.pizza.structure,
-            amount: this.props.pizza.amount,
-            cost: this.props.pizza.cost,
-        } as ReducerType,
-        drink: {
-            id: this.props.drink.id,
-            photoURL: this.props.drink.photoURL,
-            name: this.props.drink.name,
-            structure: this.props.drink.structure,
-            cost: this.props.drink.cost,
-            amount: this.props.drink.amount
-
-        } as ReducerType,
-        sneks: {
-            id: this.props.sneks.id,
-            photoURL: this.props.sneks.photoURL,
-            name: this.props.sneks.name,
-            structure: this.props.sneks.structure,
-            cost: this.props.sneks.cost,
-            amount: this.props.sneks.amount
-
-        } as ReducerType,
-        sous: {
-            id: this.props.sous.id,
-            photoURL: this.props.sous.photoURL,
-            name: this.props.sous.name,
-            structure: this.props.sous.structure,
-            cost: this.props.sous.cost,
-            amount: this.props.sous.amount
-
-        } as ReducerType,
-        npizza: {
-            id: this.props.npizza.id,
-            photoURL: this.props.npizza.photoURL,
-            name: this.props.npizza.name,
-            structure: this.props.npizza.structure,
-            amount: this.props.npizza.amount,
-            cost: this.props.npizza.cost,
-
-
-        } as ReducerType,
-        nsnek: {
-            id: this.props.nsnek.id,
-            photoURL: this.props.nsnek.photoURL,
-            name: this.props.nsnek.name,
-            structure: this.props.nsnek.structure,
-            cost: this.props.nsnek.cost,
-            amount: this.props.nsnek.amount
-
-        } as ReducerType,
-        ndrink: {
-            id: this.props.ndrink.id,
-            photoURL: this.props.ndrink.photoURL,
-            name: this.props.ndrink.name,
-            structure: this.props.ndrink.structure,
-            cost: this.props.ndrink.cost,
-            amount: this.props.ndrink.amount
-
-        } as ReducerType,
-
-        style_line28: s.line28,
-        style_line33: s.no,
-        style_line45: s.no
-    }
-
-
-    NewSize28 = () => {
-        this.state.pizza.cost = this.props.pizza.cost
-        this.state.npizza.cost = this.props.npizza.cost
-
-        this.setState({
-            size: 28,
-            cost: this.props.pizza.cost,
-            ncost: this.props.npizza.cost,
-            ves: 370,
-            style_line28: s.line28,
-            style_line33: s.no,
-            style_line45: s.no
-
-        })
-    }
-
-    NewSize33 = () => {
-        if (this.state.cost < this.props.pizza.cost * 3 || this.state.cost > this.props.pizza.cost * 2.6 || this.state.ncost < this.props.npizza.cost * 3 || this.state.ncost > this.props.npizza.cost * 2.6) {
-            this.setState({
-                size: 33,
-                cost: this.props.pizza.cost * 2.7,
-                ncost: this.props.npizza.cost * 2.7,
-                ves: 580,
-                style_line28: s.no,
-                style_line33: s.line33,
-                style_line45: s.no
-
-
+            setNpizzaState((actual) => {
+                return {
+                    ...actual, cost: npizzaRef.cost
+                }
             })
-            this.state.pizza.cost = this.props.pizza.cost * 2.7
-            this.state.npizza.cost = this.props.npizza.cost * 2.7
 
-            this.state.pizza.id = this.props.pizza.id * 200
-            this.state.npizza.id = this.props.npizza.id * 200
 
-        }
-    }
+            setCostState(pizzaRef.cost)
+            setNcostState(npizzaRef.cost)
 
-    NewSize45 = () => {
-        if (this.state.cost <= this.props.pizza.cost * 4 || this.state.ncost <= this.props.npizza.cost * 4) {
-            this.setState({
-                size: 45,
-                cost: this.props.pizza.cost * 4,
-                ncost: this.props.npizza.cost * 4,
-                ves: 1240,
-                style_line28: s.no,
-                style_line33: s.no,
-                style_line45: s.line45
+            setPizzaState((actual) => {
+                return {
+                    ...actual, id: pizzaRef.id
+                }
             })
-            this.state.npizza.cost = this.props.npizza.cost * 4
-            this.state.pizza.cost = this.props.pizza.cost * 4
+            setNpizzaState((actual) => {
+                return {
+                    ...actual, id: npizzaRef.id
+                }
+            })
 
-            this.state.pizza.id = this.props.pizza.id * 300
-            this.state.npizza.id = this.props.npizza.id * 300
+
+            setSizeState(28)
+            setVesState(370)
+            setstyle_line28State(s.line28)
+            setstyle_line33State(s.no)
+            setstyle_line45State(s.no)
+        }
+
+    }
+
+    let NewSize33 = () => {
+        if (sizeState === 28 || sizeState === 45) {
+
+            setPizzaState((actual) => {
+                return {
+                    ...actual, cost: pizzaRef.cost * 2.7
+                }
+            })
+            setNpizzaState((actual) => {
+                return {
+                    ...actual, cost: npizzaRef.cost * 2.7
+                }
+            })
+            setCostState(pizzaRef.cost * 2.7)
+            setNcostState(npizzaRef.cost * 2.7)
+            setPizzaState((actual) => {
+                return {
+                    ...actual, id: pizzaRef.id * 200
+                }
+            })
+            setNpizzaState((actual) => {
+                return {
+                    ...actual, id: npizzaRef.id * 200
+                }
+            })
+
+            setSizeState(33)
+            setVesState(580)
+            setstyle_line28State(s.no)
+            setstyle_line33State(s.line33)
+            setstyle_line45State(s.no)
+
+
+        }
+    }
+
+    let NewSize45 = () => {
+        if (sizeState === 28 || sizeState === 33) {
+
+            setPizzaState((actual) => {
+                return {
+                    ...actual, cost: pizzaRef.cost * 4
+                }
+            })
+
+            setNpizzaState((actual) => {
+                return {
+                    ...actual, cost: npizzaRef.cost * 4
+                }
+            })
+            setCostState(pizzaRef.cost * 4)
+            setNcostState(npizzaRef.cost * 4)
+            setPizzaState((actual) => {
+                return {
+                    ...actual, id: pizzaRef.id * 300
+                }
+            })
+            setNpizzaState((actual) => {
+                return {
+                    ...actual, id: npizzaRef.id * 300
+                }
+            })
+            setSizeState(45)
+            setVesState(1280)
+            setstyle_line28State(s.no)
+            setstyle_line33State(s.no)
+            setstyle_line45State(s.line45)
 
 
         }
@@ -242,165 +232,160 @@ class AllOrder extends React.Component <Props> {
     }
 
 
-    BuyItem = () => {
-        if (this.props.number <= 13) {
-            this.props.buy(this.state.pizza, this.state.cost, this.state.size)
-        } else if (this.props.number >= 14 && this.props.number < 20) {
-            this.props.buy(this.props.drink, this.props.drink.cost, null)
-        } else if (this.props.number >= 20 && this.props.number < 33) {
-            this.props.buy(this.props.sneks, this.props.sneks.cost, null)
-        } else if (this.props.number >= 33 && this.props.number < 41) {
-            this.props.buy(this.props.sous, this.props.sous.cost, null)
-        } else if (this.props.number >= 41 && this.props.number < 45) {
-            this.props.buy(this.state.npizza, this.state.cost, this.state.size)
-        } else if (this.props.number >= 45 && this.props.number < 49) {
-            this.props.buy(this.props.nsnek, this.props.nsnek.cost, null)
-        } else if (this.props.number >= 49 && this.props.number < 53) {
-            this.props.buy(this.props.ndrink, this.props.ndrink.cost, null)
+    let BuyItem = () => {
+        debugger
+
+        if (number.id <= 13) {
+            buys(pizzaState, costState, sizeState)
+        } else if (number.id >= 14 && number.id < 20) {
+            buys(drinkRef, drinkRef.cost, 0)
+        } else if (number.id >= 20 && number.id < 33) {
+            buys(sneksRef, sneksRef.cost, 0)
+        } else if (number.id >= 33 && number.id < 41) {
+            buys(sousRef, sousRef.cost, 0)
+        } else if (number.id >= 41 && number.id < 45) {
+            buys(npizzaState, ncostState, sizeState)
+        } else if (number.id >= 45 && number.id < 49) {
+            buys(nsnekRef, nsnekRef.cost, 0)
+        } else if (number.id >= 49 && number.id < 53) {
+            buys(ndrinkRef, ndrinkRef.cost, 0)
         }
 
     }
 
-    prov: any
-    link: any
-    name: any
+
+    let prov: any, link: any, name: any
 
 
-    render() {
-
-        let item
-
-        if (this.props.number < 14) {
-            this.prov = this.state.pizza
-        } else if (this.props.number >= 14 && this.props.number < 20) {
-            this.prov = this.state.drink
-            this.link = "/profile/drink"
-            this.name = "Напої"
-        } else if (this.props.number >= 20 && this.props.number < 33) {
-            this.prov = this.state.sneks
-            this.link = "/profile/sneks"
-            this.name = "Снеки"
-        } else if (this.props.number >= 33 && this.props.number < 41) {
-            this.prov = this.state.sous
-            this.link = "/profile/sous"
-            this.name = "Соус"
-        } else if (this.props.number >= 41 && this.props.number < 45) {
-            this.prov = this.state.npizza
-        } else if (this.props.number >= 45 && this.props.number < 49) {
-            this.prov = this.state.nsnek
-            this.link = "/profile/sneks"
-            this.name = "Снеки"
-        } else if (this.props.number >= 49 && this.props.number < 53) {
-            this.prov = this.state.ndrink
-            this.link = "/profile/drink"
-            this.name = "Напої"
-        }
-
-        {
-            this.props.number < 14 || this.props.number >= 41 && this.props.number < 45 ?
-                item = <div className={s.container}>
-                    <div className={s.photo_pizza}>
-                        <img src={this.prov.photoURL} alt="" height="400" width="400"/>
-                    </div>
-                    <div className={s.pizza_info}>
-                        <div className={s.menu}>
-                            <NavLink className={s.link_menu} to="/profile/pizza"> Меню/</NavLink><NavLink
-                            className={s.link_pizza}
-                            to="/profile/pizza"> Пица/</NavLink>
-                            <span className={s.link_name_pizza}>{this.prov.name}</span>
-                        </div>
-                        <div className={s.pizza}>
-                            <div className={s.name_pizza}>{this.prov.name}</div>
-                            <div className={s.cost_pizza}>{Math.round(this.prov.cost)} грн</div>
-                            <div className={s.strukture_pizza}>{this.prov.structure}</div>
-                            <div className={s.ves}> Вага: {this.state.ves}</div>
-                        </div>
+    if (number.id < 14) {
+        prov = pizzaState
+    } else if (number.id >= 14 && number.id < 20) {
+        prov = drinkState
+        link = "/profile/drink"
+        name = "Напої"
+    } else if (number.id >= 20 && number.id < 33) {
+        prov = sneksState
+        link = "/profile/sneks"
+        name = "Снеки"
+    } else if (number.id >= 33 && number.id < 41) {
+        prov = sousState
+        link = "/profile/sous"
+        name = "Соус"
+    } else if (number.id >= 41 && number.id < 45) {
+        prov = npizzaState
+    } else if (number.id >= 45 && number.id < 49) {
+        prov = nsneksState
+        link = "/profile/sneks"
+        name = "Снеки"
+    } else if (number.id >= 49 && number.id < 53) {
+        prov = ndrinkState
+        link = "/profile/drink"
+        name = "Напої"
+    }
 
 
-                        <div className={s.size_pizza}>
-                            <div className={s.input_size}>
-                                Розмір піци: {this.state.size}
-                            </div>
-                            <div className={s.size}>
-                                <div className={s.decor28}>
-                                    <div className={s.size28} onClick={this.NewSize28}>
-                                        28 см
-                                    </div>
-                                    <div className={this.state.style_line28}>
-                                        _______
-                                    </div>
-                                </div>
+    let item
 
-                                <div className={s.decor33}>
-                                    <div className={s.size33} onClick={this.NewSize33}>
-                                        33 см
-                                    </div>
-                                    <div className={this.state.style_line33}>
-                                        _______
-                                    </div>
-                                </div>
-
-                                <div className={s.decor45}>
-                                    <div className={s.size45} onClick={this.NewSize45}>
-                                        45 см
-                                    </div>
-                                    <div className={this.state.style_line45}>
-                                        _______
-                                    </div>
-                                </div>
-
-
-                            </div>
-                            <NavLink className={s.your_like} to="/buy" onClick={this.BuyItem}> Замовити</NavLink>
-
-                        </div>
-
-
-                    </div>
-
-                    <LastSeen/>
+    {
+        number.id < 14 || number.id >= 41 && number.id < 45 ?
+            item = <div className={s.container}>
+                <div className={s.photo_pizza}>
+                    <img src={prov.photoURL} alt="" height="400" width="400"/>
                 </div>
-                :
-                item = <div className={s.container_item}>
-                    <div className={s.photo_item}>
-                        <img src={this.prov.photoURL} alt="" height="400" width="400"/>
+                <div className={s.pizza_info}>
+                    <div className={s.menu}>
+                        <NavLink className={s.link_menu} to="/profile/pizza"> Меню/</NavLink><NavLink
+                        className={s.link_pizza}
+                        to="/profile/pizza"> Пица/</NavLink>
+                        <span className={s.link_name_pizza}>{prov.name}</span>
                     </div>
-                    <div className={s.item_info}>
-                        <div className={s.menu_info}>
-                            <NavLink className={s.link_menu_info} to="/profile/pizza">Меню/</NavLink><NavLink
-                            className={s.link_info}
-                            to={this.link}> {this.name}/</NavLink>
-                            <span className={s.link_name_info}>{this.prov.name}</span>
+                    <div className={s.pizza}>
+                        <div className={s.name_pizza}>{prov.name}</div>
+                        <div className={s.cost_pizza}>{Math.round(prov.cost)} грн</div>
+                        <div className={s.strukture_pizza}>{prov.structure}</div>
+                        <div className={s.ves}> Вага: {vesState}</div>
+                    </div>
+
+
+                    <div className={s.size_pizza}>
+                        <div className={s.input_size}>
+                            Розмір піци: {sizeState}
                         </div>
-                        <div className={s.info}>
-                            <div className={s.name_info}>{this.prov.name}</div>
-                            <div className={s.cost_info}>{Math.round(this.prov.cost)} грн</div>
-                            <div className={s.strukture_info}>{this.prov.structure}</div>
+                        <div className={s.size}>
+                            <div className={s.decor28}>
+                                <div className={s.size28} onClick={NewSize28}>
+                                    28 см
+                                </div>
+                                <div className={style_line28State}>
+                                    _______
+                                </div>
+                            </div>
+
+                            <div className={s.decor33}>
+                                <div className={s.size33} onClick={NewSize33}>
+                                    33 см
+                                </div>
+                                <div className={style_line33State}>
+                                    _______
+                                </div>
+                            </div>
+                            <div className={s.decor45}>
+                                <div className={s.size45} onClick={NewSize45}>
+                                    45 см
+                                </div>
+                                <div className={style_line45State}>
+                                    _______
+                                </div>
+                            </div>
+
+
                         </div>
-
-
-                        <NavLink className={s.your_item} to="/buy" onClick={this.BuyItem}> Замовити</NavLink>
-
+                        <NavLink className={s.your_like} to="/buy" onClick={BuyItem}> Замовити</NavLink>
 
                     </div>
-                    <LastSeen/>
 
                 </div>
+                <LastSeen/>
 
-        }
-        let Scroll = require('react-scroll');
-        let scroll = Scroll.animateScroll;
-        scroll.scrollToTop()
-
-        return (
-
-            <div className={s.content}>
-
-                {item}
             </div>
-        )
+            :
+            item = <div className={s.container_item}>
+                <div className={s.photo_item}>
+                    <img src={prov.photoURL} alt="" height="400" width="400"/>
+                </div>
+                <div className={s.item_info}>
+                    <div className={s.menu_info}>
+                        <NavLink className={s.link_menu_info} to="/profile/pizza">Меню/</NavLink><NavLink
+                        className={s.link_info}
+                        to={link}> {name}/</NavLink>
+                        <span className={s.link_name_info}>{prov.name}</span>
+                    </div>
+                    <div className={s.info}>
+                        <div className={s.name_info}>{prov.name}</div>
+                        <div className={s.cost_info}>{Math.round(prov.cost)} грн</div>
+                        <div className={s.strukture_info}>{prov.structure}</div>
+                    </div>
+
+
+                    <NavLink className={s.your_item} to="/buy" onClick={BuyItem}> Замовити</NavLink>
+
+
+                </div>
+                <LastSeen/>
+
+            </div>
     }
+
+    let Scroll = require('react-scroll');
+    let scroll = Scroll.animateScroll;
+    scroll.scrollToTop()
+
+    return (
+        <div className={s.content}>
+            {item}
+        </div>
+    )
 }
 
 
-export default AllOrder
+

@@ -1,5 +1,5 @@
 import {actionsType} from "../redux-store";
-import {AllOrderType, ReducerType} from "../../Types/Type";
+import {ReducerType} from "../../Types/Type";
 
 import photoId1 from "../../Assets/Pizza/Premium.png.pagespeed.ce.3YPAVJIKMJ.webp"
 import photoId2 from "../../Assets/Pizza/Fermerska.png.pagespeed.ce.p_Y-0X0Wda.webp"

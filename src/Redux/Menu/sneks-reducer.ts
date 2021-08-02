@@ -1,5 +1,5 @@
 import {actionsType} from "../redux-store";
-import {AllOrderType, ReducerType} from "../../Types/Type";
+import {ReducerType} from "../../Types/Type";
 
 
 import photoId20 from "../../Assets/Sneks/Potato-medalion.webp"
