@@ -4,11 +4,11 @@ import Profile from "./Components/Profile/Profile";
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
 import About from "./Components/About/About";
-import AllOrderContainer from "./Components/Orders/AllOreder/AllOrderContainer";
 import Information from "./Components/Information/Information";
 import {Buy} from "./Components/Buy/Buy";
 import {Chekout} from "./Components/Checkout/Checkout";
 import {SliderItems} from "./Components/SliderItem/SliderItem";
+import AllOrderContainer from "./Components/Orders/AllOreder/AllOrdersContainer";
 
 
 function App() {

@@ -71,3 +71,24 @@ export const getsous = createSelector(sous, (sous) => {
     return sous
 
 })
+
+
+export const ves = (state: AppStateType) => {
+    return state.pizzaPage.ves
+
+}
+
+export const getves = createSelector(ves, (ves) => {
+    return ves
+
+})
+
+export const size = (state: AppStateType) => {
+    return state.pizzaPage.siza
+
+}
+
+export const getsize = createSelector(size, (size) => {
+    return size
+
+})

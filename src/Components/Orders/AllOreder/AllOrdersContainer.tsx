@@ -6,7 +6,7 @@ import AllOrder from "./AllOrder";
 import {actionsn} from "../../../Redux/later-seen-reducer";
 import {actions} from "../../../Redux/buy-item-reducer";
 import {AppStateType} from "../../../Redux/redux-store";
-import {AllOrderType, ItemType, ReducerType} from "../../../Types/Type";
+import {ReducerType} from "../../../Types/Type";
 
 
 type PathParamsType = {
@@ -99,7 +99,3 @@ export default compose<React.ComponentType>(
     connect(mapStateToprops, {newItem: actionsn.newItem, buy: actions.buy}),
     withRouter,
 )(AllOrderContainer)
-
-
-
-

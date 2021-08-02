@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -12,23 +12,36 @@ type numberType = {
 }
 
 export const SliderItems = () => {
+    const number: numberType = useParams();
+
 
     const pizza = useSelector(getpizza)
     const sneks = useSelector(getsneks)
     const drink = useSelector(getdrinks)
     const sous = useSelector(getsous)
 
-    const number: numberType = useParams();
 
     const [prov, setprov] = useState(
-        number.id < 14 || +number.id >= 41 && +number.id < 45 ? pizza :
+        number.id < 14 || number.id >= 41 && number.id < 45 ? pizza :
 
-            +number.id >= 14 && +number.id < 20 || +number.id >= 49 && +number.id < 53 ? drink :
+            number.id >= 14 && number.id < 20 || number.id >= 49 && number.id < 53 ? drink :
 
-                +number.id >= 20 && +number.id < 33 || +number.id >= 45 && +number.id < 49 ? sneks :
+                number.id >= 20 && number.id < 33 || number.id >= 45 && number.id < 49 ? sneks :
 
-                    +number.id >= 33 && +number.id < 41 ? sous : pizza
+                    number.id >= 33 && number.id < 41 ? sous : pizza
     )
+
+    useEffect(() => {
+        if (number.id < 14 || number.id >= 41 && number.id < 45) {
+            setprov(pizza)
+        } else if (number.id >= 14 && number.id < 20 || number.id >= 49 && number.id < 53) {
+            setprov(drink)
+        } else if (number.id >= 20 && number.id < 33 || number.id >= 45 && number.id < 49) {
+            setprov(sneks)
+        } else if (number.id >= 33 && number.id < 41) {
+            setprov(sous)
+        }
+    }, [number])
 
 
     const settings = {

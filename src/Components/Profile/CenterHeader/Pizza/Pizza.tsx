@@ -17,7 +17,7 @@ export const Pizza: React.FC = () => {
 
 
     const buys = (info: ReducerType, cost: number, size: number) => {
-        dispatch(actions.buy)
+        dispatch(actions.buy(info, cost, size))
     }
 
 

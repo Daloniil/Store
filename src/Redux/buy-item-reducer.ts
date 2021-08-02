@@ -31,6 +31,8 @@ export type initialStateType = typeof initialState
 const buyItem = (state = initialState, action: ActionsTypes): initialStateType => {
     switch (action.type) {
         case "BUYITEM": {
+            debugger
+
             let n = state.item.length;
             let buyeat = {
                 _id: n,

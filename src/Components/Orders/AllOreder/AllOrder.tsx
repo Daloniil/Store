@@ -94,7 +94,7 @@ class AllOrder extends React.Component <Props> {
 
                 } as ReducerType,
 
-                style_line28: s.no,
+                style_line28: s.line28,
                 style_line33: s.no,
                 style_line45: s.no
 
@@ -174,7 +174,7 @@ class AllOrder extends React.Component <Props> {
 
         } as ReducerType,
 
-        style_line28: s.no,
+        style_line28: s.line28,
         style_line33: s.no,
         style_line45: s.no
     }
@@ -404,4 +404,3 @@ class AllOrder extends React.Component <Props> {
 
 
 export default AllOrder
-

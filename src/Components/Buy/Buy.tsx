@@ -9,6 +9,10 @@ import {getitem, getlenght, getamoun} from "../../Selectors/buy-item-selector";
 
 export const Buy = () => {
 
+    let Scroll = require('react-scroll');
+    let scroll = Scroll.animateScroll;
+    scroll.scrollToTop()
+
     let plus, minus, delet
 
 

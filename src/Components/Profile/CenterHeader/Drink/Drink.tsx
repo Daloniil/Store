@@ -16,7 +16,7 @@ export const Drink: React.FC = () => {
 
 
     const buys = (info: ReducerType, cost: number, size: number) => {
-        dispatch(actions.buy)
+        dispatch(actions.buy(info, cost, size))
     }
 
 
@@ -51,6 +51,7 @@ export const Drink: React.FC = () => {
                                         <span className={s.button}>
                                             <NavLink className={s.your_buy} to={"/buy"}
                                                      onClick={BuyItem = () => {
+                                                         // @ts-ignore
                                                          buys(drink[u.id - 14], drink[u.id - 14].cost, 0)
                                                      }
                                                      }> Замовити</NavLink>
