@@ -97,7 +97,19 @@
         text-decoration: none;
     }
 
+    .header_center_container .header_center_left .header_center_container_contact .contacs {
+        text-transform: uppercase;
+        font-size: 18px;
+        color: black;
+        text-decoration: none;
+    }
+
     .header_center_container .header_center_left .header_center_container_infromation .information:hover {
+        color: orange;
+
+    }
+
+    .header_center_container .header_center_left .header_center_container_contact .contacs:hover {
         color: orange;
 
     }

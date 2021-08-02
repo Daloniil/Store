@@ -2,7 +2,7 @@ import s from './StyleHeaderHeader/Header.module.css'
 import React from "react";
 
 
-const HeaderHeader:React.FC = () => {
+export const HeaderHeader: React.FC = () => {
 
     return (
         <div className={s.header}>
@@ -19,5 +19,3 @@ const HeaderHeader:React.FC = () => {
     )
 
 }
-
-export default HeaderHeader;

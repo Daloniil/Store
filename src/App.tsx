@@ -1,7 +1,6 @@
 import s from './Components/StyleApp/app.module.css'
 import {BrowserRouter, Redirect, Route} from 'react-router-dom';
 import Profile from "./Components/Profile/Profile";
-import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
 import About from "./Components/About/About";
 import Information from "./Components/Information/Information";
@@ -9,6 +8,8 @@ import {Buy} from "./Components/Buy/Buy";
 import {Chekout} from "./Components/Checkout/Checkout";
 import {SliderItems} from "./Components/SliderItem/SliderItem";
 import {AllOrder} from "./Components/Orders/AllOreder/AllOrder";
+import {Header} from './Components/Header/Header';
+import {Contacs} from "./Components/Contacs/Contacs";
 
 
 function App() {
@@ -22,6 +23,8 @@ function App() {
                 <Route path="/about" render={() => <About/>}/>
 
                 <Route path="/information" render={() => <Information/>}/>
+
+                <Route path="/contacs" render={() => <Contacs/>}/>
 
                 <Route path="/profile/" render={() => <Profile/>}/>
 

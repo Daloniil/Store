@@ -1,10 +1,9 @@
-import HeaderHeader from "./HeaderHeader/HeaderHeader";
-import HeaderCenter from "./HeaderCenter/HeaderCenter";
-
 import React from "react";
+import {HeaderCenter} from "./HeaderCenter/HeaderCenter";
+import {HeaderHeader} from "./HeaderHeader/HeaderHeader";
 
 
-const Header: React.FC = () => {
+export const Header: React.FC = () => {
     return (
         <div>
 
@@ -14,4 +13,3 @@ const Header: React.FC = () => {
         </div>
     )
 }
-export default Header

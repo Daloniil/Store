@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.00e9a505.chunk.css",
-    "main.js": "/static/js/main.4a850dd5.chunk.js",
-    "main.js.map": "/static/js/main.4a850dd5.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.471d59a1.js",
-    "runtime-main.js.map": "/static/js/runtime-main.471d59a1.js.map",
+    "main.css": "/static/css/main.a9704381.chunk.css",
+    "main.js": "/static/js/main.ca982466.chunk.js",
+    "main.js.map": "/static/js/main.ca982466.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.e3d16230.js",
+    "runtime-main.js.map": "/static/js/runtime-main.e3d16230.js.map",
     "static/css/2.19627560.chunk.css": "/static/css/2.19627560.chunk.css",
-    "static/js/2.ac489bf7.chunk.js": "/static/js/2.ac489bf7.chunk.js",
-    "static/js/2.ac489bf7.chunk.js.map": "/static/js/2.ac489bf7.chunk.js.map",
-    "static/js/3.0c25c0c6.chunk.js": "/static/js/3.0c25c0c6.chunk.js",
-    "static/js/3.0c25c0c6.chunk.js.map": "/static/js/3.0c25c0c6.chunk.js.map",
+    "static/js/2.31205d77.chunk.js": "/static/js/2.31205d77.chunk.js",
+    "static/js/2.31205d77.chunk.js.map": "/static/js/2.31205d77.chunk.js.map",
+    "static/js/3.1cfa1581.chunk.js": "/static/js/3.1cfa1581.chunk.js",
+    "static/js/3.1cfa1581.chunk.js.map": "/static/js/3.1cfa1581.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.19627560.chunk.css.map": "/static/css/2.19627560.chunk.css.map",
-    "static/css/main.00e9a505.chunk.css.map": "/static/css/main.00e9a505.chunk.css.map",
-    "static/js/2.ac489bf7.chunk.js.LICENSE.txt": "/static/js/2.ac489bf7.chunk.js.LICENSE.txt",
+    "static/css/main.a9704381.chunk.css.map": "/static/css/main.a9704381.chunk.css.map",
+    "static/js/2.31205d77.chunk.js.LICENSE.txt": "/static/js/2.31205d77.chunk.js.LICENSE.txt",
     "static/media/4myasa.ace43c1b.webp": "/static/media/4myasa.ace43c1b.webp",
     "static/media/4syra.506dd3f3.webp": "/static/media/4syra.506dd3f3.webp",
     "static/media/Apetitna.98007152.webp": "/static/media/Apetitna.98007152.webp",
@@ -59,10 +59,10 @@
     "static/media/цибулеві-кільця-1-600x600.0222cc07.webp": "/static/media/цибулеві-кільця-1-600x600.0222cc07.webp"
   },
   "entrypoints": [
-    "static/js/runtime-main.471d59a1.js",
+    "static/js/runtime-main.e3d16230.js",
     "static/css/2.19627560.chunk.css",
-    "static/js/2.ac489bf7.chunk.js",
-    "static/css/main.00e9a505.chunk.css",
-    "static/js/main.4a850dd5.chunk.js"
+    "static/js/2.31205d77.chunk.js",
+    "static/css/main.a9704381.chunk.css",
+    "static/js/main.ca982466.chunk.js"
   ]
 }

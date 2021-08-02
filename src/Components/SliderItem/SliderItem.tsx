@@ -23,11 +23,8 @@ export const SliderItems = () => {
 
     const [prov, setprov] = useState(
         number.id < 14 || number.id >= 41 && number.id < 45 ? pizza :
-
             number.id >= 14 && number.id < 20 || number.id >= 49 && number.id < 53 ? drink :
-
                 number.id >= 20 && number.id < 33 || number.id >= 45 && number.id < 49 ? sneks :
-
                     number.id >= 33 && number.id < 41 ? sous : pizza
     )
 

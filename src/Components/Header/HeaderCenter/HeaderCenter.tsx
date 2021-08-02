@@ -68,7 +68,7 @@ export const HeaderCenter: React.FC = () => {
                             доставка</NavLink>
                     </div>
                     <div className="header_center_container_contact">
-                        <span>Контакти</span>
+                        <NavLink to="/contacs" className="contacs" activeClassName="ac">Контакти</NavLink>
                     </div>
                 </div>
 
@@ -87,5 +87,3 @@ export const HeaderCenter: React.FC = () => {
     )
 
 }
-
-export default HeaderCenter;
