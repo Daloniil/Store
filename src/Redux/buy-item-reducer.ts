@@ -31,7 +31,7 @@ export type initialStateType = typeof initialState
 const buyItem = (state = initialState, action: ActionsTypes): initialStateType => {
     switch (action.type) {
         case "BUYITEM": {
-            debugger
+
 
             let n = state.item.length;
             let buyeat = {
@@ -123,6 +123,14 @@ const buyItem = (state = initialState, action: ActionsTypes): initialStateType =
             }
         }
 
+        case "DELETEARRAY": {
+            return {
+                ...state,
+                item: [], lenght: null, amoun: 0
+            }
+        }
+
+
         default:
             return state;
     }
@@ -157,6 +165,11 @@ export const actions = {
     amountLeghtplus: () => {
         return {
             type: "AMOUNTSPLUS",
+        } as const
+    },
+    daletArray: () => {
+        return {
+            type: "DELETEARRAY",
         } as const
     }
 }

@@ -59,9 +59,7 @@ export const HeaderCenter: React.FC = () => {
                     <div className="header_center_left_about">
                         <NavLink to="/about" className="about" activeClassName="ac">Про нас</NavLink>
                     </div>
-                    <div className="header_center_container_reviews">
-                        <span>Відгуки</span>
-                    </div>
+
                     <div className="header_center_container_infromation">
 
                         <NavLink to="/information" className="information" activeClassName="ac">Інформація і

@@ -10,8 +10,8 @@ $pid = $_POST['pid'];
 
 
 
-$token = "1747562096:AAFTYnFVGYEA2wkxsTmWGUOSzRTJ6oelrI8";
-$chat_id = "-526077068";
+$token = "1943097935:AAEMomJGzrU_8RXADyunYxOKQ8z1LOxfZIQ";
+$chat_id = "-557494888";
 $arr = array(
   'Имя пользователя: ' => $names,
     'Телефон: ' => $phone,

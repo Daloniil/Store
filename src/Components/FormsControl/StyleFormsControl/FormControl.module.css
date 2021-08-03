@@ -9,7 +9,10 @@
   color: red; }
 
 .errormessageinput {
-  font-size: 18px;
-  margin: 2px 0 10px 15px; }
+  font-size: 18px; }
+
+@media (max-width: 560px) {
+  .errormessageinput {
+    margin: 2px 0 10px 15px; } }
 
 /*# sourceMappingURL=FormControl.module.css.map */

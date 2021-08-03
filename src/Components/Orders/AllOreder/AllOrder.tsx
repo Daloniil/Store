@@ -233,7 +233,6 @@ export const AllOrder: React.FC = () => {
 
 
     let BuyItem = () => {
-        debugger
 
         if (number.id <= 13) {
             buys(pizzaState, costState, sizeState)

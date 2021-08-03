@@ -25,7 +25,7 @@
     .header_center_container .header_center_left {
         display: flex;
         margin: 0 0 0 2%;
-        justify-content: space-around;
+        justify-content: space-evenly;
         text-align: center;
         min-width: 800px;
     }

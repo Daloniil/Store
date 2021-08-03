@@ -10,6 +10,7 @@ import {SliderItems} from "./Components/SliderItem/SliderItem";
 import {AllOrder} from "./Components/Orders/AllOreder/AllOrder";
 import {Header} from './Components/Header/Header';
 import {Contacs} from "./Components/Contacs/Contacs";
+import {ThanksForOrder} from "./Components/ThanksForOrder/ThanksForOrder";
 
 
 function App() {
@@ -26,6 +27,8 @@ function App() {
 
                 <Route path="/contacs" render={() => <Contacs/>}/>
 
+                <Route path="/finallyorder" render={() => <ThanksForOrder/>}/>
+
                 <Route path="/profile/" render={() => <Profile/>}/>
 
                 <Route path="/items/:id" render={() => <AllOrder/>}/>
@@ -35,8 +38,6 @@ function App() {
                 <Route path="/buy" render={() => <Buy/>}/>
 
                 <Route path="/checkout" render={() => <Chekout/>}/>
-
-                <Route path="*" render={() => <Redirect to={"/profile/pizza"}/>}/>
 
 
                 <Footer/>

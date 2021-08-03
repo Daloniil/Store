@@ -1,11 +1,13 @@
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {Field, InjectedFormProps, reduxForm} from "redux-form";
 import {maxLenghtCrater, required} from "../../Validators/validator"
 import s from "./CheckoutStyle/Checkout.module.css";
 import {Input} from "../FormsControl/FormContorl";
-import {Redirect} from "react-router-dom";
-import React from "react";
+import {NavLink, Redirect, useHistory} from "react-router-dom";
+import React, {useEffect} from "react";
 import {getitem, getlenght} from "../../Selectors/buy-item-selector";
+import {ReducerType} from "../../Types/Type";
+import {actions} from "../../Redux/buy-item-reducer";
 
 
 const maxLengh = maxLenghtCrater(10)
@@ -19,7 +21,6 @@ const ChekoutForm: React.FC<InjectedFormProps<Chekout, PropsType> & PropsType> =
     let cost = item.reduce(function (a, b) {
         return Math.round(a + b.cost);
     }, 0);
-
 
     return (
         <div className={s.container}>
@@ -41,13 +42,13 @@ const ChekoutForm: React.FC<InjectedFormProps<Chekout, PropsType> & PropsType> =
                                         </span>
 
                                         <span className={s.x}>
-                                             {u.eat.amount}
+                                            {u.eat.amount}
                                         </span>
                                     </div>
                                     <div className={s.costs}>
-                                      <span
-                                          className={s.amount_cost}>{Math.round(u.eat.cost)} грн
-                                      </span>
+                                        <span
+                                            className={s.amount_cost}>{Math.round(u.eat.cost)} грн
+                                        </span>
                                     </div>
                                 </div>
                             </div>
@@ -62,12 +63,12 @@ const ChekoutForm: React.FC<InjectedFormProps<Chekout, PropsType> & PropsType> =
 
                     <div className={s.dostavka}>
                         <div className={s.name_dostavka}>Доставка</div>
-                        <div className={s.cost_dostavka}>{cost >= 500 ? "Безкоштовна доставка" : "40 грн"}</div>
+                        <div className={s.cost_dostavka}>{cost >= 300 ? "Безкоштовна доставка" : "40 грн"}</div>
                     </div>
 
                     <div className={s.all_cost}>
                         <div className={s.all}>Загалом</div>
-                        <div className={s.alls}>{cost >= 500 ? cost : cost + 40} грн</div>
+                        <div className={s.alls}>{cost >= 300 ? cost : cost + 40} грн</div>
 
                     </div>
                 </div>
@@ -75,7 +76,7 @@ const ChekoutForm: React.FC<InjectedFormProps<Chekout, PropsType> & PropsType> =
             </div>
             <div className={s.form}>
                 <span className={s.abz}>Оплата та доставка</span>
-                <form onSubmit={props.handleSubmit} action="telegram.php" method="POST">
+                <form onSubmit={props.handleSubmit} action="/telegram.php" method="POST">
                     <div className={s.first}>
                         <div className={s.name}>
                             <span className={s.names}>Ім'я </span><span className={s.star}>*</span>
@@ -112,7 +113,9 @@ const ChekoutForm: React.FC<InjectedFormProps<Chekout, PropsType> & PropsType> =
                     </div>
 
                     <div className={s.button}>
-                        <button type="submit">Оформити</button>
+                        <button type="submit">
+                            Оформити
+                        </button>
                     </div>
                 </form>
             </div>
@@ -129,15 +132,27 @@ export type Chekout = {
     formData: Array<string>
 }
 
-
 export const Chekout: React.FC = () => {
+    let history = useHistory();
     const lenght = useSelector(getlenght)
+    const dispatch = useDispatch()
+
+    const daletArray = () => {
+        dispatch(actions.daletArray())
+    }
+
     let Scroll = require('react-scroll');
     let scroll = Scroll.animateScroll;
     scroll.scrollToTop()
-    const onSubmit = (formData: Chekout) => {
+
+    const onSubmit = async (formData: Chekout) => {
+        daletArray()
+        history.push('/finallyorder');
         console.log(formData)
+
+
     }
+
     return (
         <div className={s.content}>
             <div className={s.about_header}>
