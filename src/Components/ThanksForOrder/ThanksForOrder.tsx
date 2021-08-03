@@ -7,11 +7,13 @@ export const ThanksForOrder = () => {
 
 
     return (
-        <div className={s.content}>
-            <span className={s.xspan} onClick={() => history.push('/profile/pizza')}>X</span>
-            <div className={s.thanks}>
-                <span>Дякуємо за замовлення!</span>
-                <span>Очікуйте дзвінка</span>
+        <div className={s.all}>
+            <div className={s.content}>
+                <span className={s.xspan} onClick={() => history.push('/profile/pizza')}>X</span>
+                <div className={s.thanks}>
+                    <span>Дякуємо за замовлення!</span>
+                    <span>Очікуйте дзвінка</span>
+                </div>
             </div>
         </div>
     )
