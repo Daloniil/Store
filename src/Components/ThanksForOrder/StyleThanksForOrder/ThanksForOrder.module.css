@@ -22,17 +22,18 @@
       font-weight: 800;
       font-size: 33px;
       color: white; }
-  @media (max-width: 570px) {
-    .content .content {
-      max-width: 450px;
-      max-height: 200px; }
-      .content .content .thanks {
-        margin: -30px 0 0 0; } }
 
+@media (max-width: 570px) {
+  .content {
+    width: 450px;
+    height: 200px; }
+    .content .thanks {
+      margin: -30px 0 0 0; } }
 @media (max-width: 470px) {
   .content {
-    max-width: 300px;
-    max-height: 200px; }
+    min-width: 300px;
+    width: 300px;
+    height: 200px; }
     .content .thanks {
       margin: -25px 0 0 0; }
       .content .thanks span {
