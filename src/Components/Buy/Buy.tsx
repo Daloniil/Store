@@ -108,19 +108,18 @@ export const Buy = () => {
                     <span className={s.delete} onClick={delet = () => {
                         let searchindex = u._id
 
-
                         amountLeghtminus(itemState[itemState.findIndex(el => el._id === searchindex)].eat.amount)
 
-                        // @ts-ignore
+                        itemState[itemState.findIndex(el => el._id === searchindex)].eat.amount = 1
 
-                        setItemState(itemState[itemState.findIndex(el => el._id === searchindex)].eat.amount = 1)
 
-                        setItemState(itemState.splice(itemState.findIndex((el => el._id === searchindex), 0)))
+                        itemState.splice(itemState.findIndex(el => el._id === searchindex), 1)
 
 
                         deleteLenght(Number(lenght) > 0 ? Number(lenght) - 1 : null)
 
 
+                     
                     }
                     }>x</span>
 
