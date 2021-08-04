@@ -19,7 +19,7 @@ function App() {
             <div className={s.App}>
                 <Header/>
 
-                <Route exact path="/" render={() => <Redirect to={"/Pizza/profile/pizza"}/>}/>
+                <Route exact path="/" render={() => <Redirect to={"/profile/pizza"}/>}/>
 
                 <Route path="/about" render={() => <About/>}/>
 
@@ -39,7 +39,7 @@ function App() {
 
                 <Route path="/checkout" render={() => <Chekout/>}/>
 
-                <Route path="*" render={() => <Redirect to={"/Pizza/profile/pizza"}
+                <Route path="*" render={() => <Redirect to={"/profile/pizza"}
                 />}/>
 
 
