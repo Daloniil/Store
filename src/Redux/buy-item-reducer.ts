@@ -50,6 +50,7 @@ const buyItem = (state = initialState, action: ActionsTypes): initialStateType =
 
             if (action.size > 0) {
                 if (!state.item.some((buy) => buy.id === action.info.id)) {
+                    debugger
                     return {
                         ...state,
                         item: [...state.item, buyeat],
@@ -57,7 +58,10 @@ const buyItem = (state = initialState, action: ActionsTypes): initialStateType =
                         amoun: state.amoun + action.info.amount
 
                     }
+
                 } else {
+                    debugger
+
                     if (!state.item.some((buy) => buy.size === action.size)) {
                         return {
                             ...state,
@@ -66,13 +70,13 @@ const buyItem = (state = initialState, action: ActionsTypes): initialStateType =
                             amoun: state.amoun + action.info.amount
                         }
                     } else {
+
                         let searchId = action.info.id
                         let indexId = state.item.findIndex(el => el.id === searchId)
-
-
                         return {
                             ...state,
-                            ...state.item[indexId].eat.amount += Object(1 as {}),
+                            // @ts-ignore
+                            ...state.item[indexId].eat.amount += 1,
                             amoun: state.amoun + 1,
                             ...state.item[indexId].cost = Object(state.item[indexId].finalcost * state.item[indexId].eat.amount as {}),
                         }
@@ -85,7 +89,7 @@ const buyItem = (state = initialState, action: ActionsTypes): initialStateType =
                     ...state,
                     item: [...state.item, buyeat],
                     lenght: state.item.length,
-                    amoun: state.amoun + 1,
+                    amoun: state.amoun,
 
                 }
             } else {
@@ -142,6 +146,8 @@ type ActionsTypes = actionsType<typeof actions>
 export const actions = {
 
     buy: (info: ReducerType, cost: number, size: number) => {
+        debugger
+
         return {
             type: "BUYITEM",
             info, cost, size

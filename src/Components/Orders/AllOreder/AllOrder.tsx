@@ -132,20 +132,22 @@ export const AllOrder: React.FC = () => {
                 }
             })
 
+            setNpizzaState((actual) => {
+                return {
+                    ...actual, amount: 1
+                }
+            })
 
-            setCostState(pizzaRef.cost)
-            setNcostState(npizzaRef.cost)
 
             setPizzaState((actual) => {
                 return {
-                    ...actual, id: pizzaRef.id
+                    ...actual, amount: 1
                 }
             })
-            setNpizzaState((actual) => {
-                return {
-                    ...actual, id: npizzaRef.id
-                }
-            })
+
+
+            setCostState(pizzaRef.cost)
+            setNcostState(npizzaRef.cost)
 
 
             setSizeState(28)
@@ -183,6 +185,20 @@ export const AllOrder: React.FC = () => {
                 }
             })
 
+            setNpizzaState((actual) => {
+                return {
+                    ...actual, amount: 1
+                }
+            })
+
+
+            setPizzaState((actual) => {
+                return {
+                    ...actual, amount: 1
+                }
+            })
+
+
             setSizeState(33)
             setVesState(580)
             setstyle_line28State(s.no)
@@ -219,6 +235,21 @@ export const AllOrder: React.FC = () => {
                     ...actual, id: npizzaRef.id * 300
                 }
             })
+
+            setNpizzaState((actual) => {
+                return {
+                    ...actual, amount: 1
+                }
+            })
+
+
+            setPizzaState((actual) => {
+                return {
+                    ...actual, amount: 1
+                }
+            })
+
+
             setSizeState(45)
             setVesState(1280)
             setstyle_line28State(s.no)
@@ -233,9 +264,10 @@ export const AllOrder: React.FC = () => {
 
 
     let BuyItem = () => {
-
         if (number.id <= 13) {
+            debugger
             buys(pizzaState, costState, sizeState)
+
         } else if (number.id >= 14 && number.id < 20) {
             buys(drinkRef, drinkRef.cost, 0)
         } else if (number.id >= 20 && number.id < 33) {
@@ -243,11 +275,15 @@ export const AllOrder: React.FC = () => {
         } else if (number.id >= 33 && number.id < 41) {
             buys(sousRef, sousRef.cost, 0)
         } else if (number.id >= 41 && number.id < 45) {
+            debugger
+
             buys(npizzaState, ncostState, sizeState)
         } else if (number.id >= 45 && number.id < 49) {
             buys(nsnekRef, nsnekRef.cost, 0)
         } else if (number.id >= 49 && number.id < 53) {
             buys(ndrinkRef, ndrinkRef.cost, 0)
+        } else {
+            buys(pizzaState, costState, sizeState)
         }
 
     }
