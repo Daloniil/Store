@@ -39,6 +39,9 @@ function App() {
 
                 <Route path="/checkout" render={() => <Chekout/>}/>
 
+                <Route path="*" render={() => <Redirect to={"/profile/pizza"}
+                />}/>
+
 
                 <Footer/>
             </div>
