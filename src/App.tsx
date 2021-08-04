@@ -1,5 +1,5 @@
 import s from './Components/StyleApp/app.module.css'
-import {BrowserRouter, Redirect, Route, Switch} from 'react-router-dom';
+import {Route, Switch} from 'react-router-dom';
 import Profile from "./Components/Profile/Profile";
 import Footer from "./Components/Footer/Footer";
 import About from "./Components/About/About";
@@ -19,7 +19,7 @@ function App() {
             <div className={s.App}>
                 <Header/>
 
-                <Route exact path="/" render={() => <Redirect to={"/profile/pizza"}/>}/>
+                <Route exact path="/" render={() => <Profile/>}/>
 
                 <Route path="/about" render={() => <About/>}/>
 
@@ -39,8 +39,7 @@ function App() {
 
                 <Route path="/checkout" render={() => <Chekout/>}/>
 
-                <Route path="*" render={() => <Redirect to={"/profile/pizza"}
-                />}/>
+                <Route path="*" render={() => <Profile/>}/>
 
 
                 <Footer/>
