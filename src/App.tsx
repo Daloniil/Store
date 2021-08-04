@@ -1,5 +1,5 @@
 import s from './Components/StyleApp/app.module.css'
-import {BrowserRouter, Redirect, Route} from 'react-router-dom';
+import {BrowserRouter, Redirect, Route, Switch} from 'react-router-dom';
 import Profile from "./Components/Profile/Profile";
 import Footer from "./Components/Footer/Footer";
 import About from "./Components/About/About";
@@ -15,7 +15,7 @@ import {ThanksForOrder} from "./Components/ThanksForOrder/ThanksForOrder";
 
 function App() {
     return (
-        <BrowserRouter>
+        <Switch>
             <div className={s.App}>
                 <Header/>
 
@@ -45,7 +45,7 @@ function App() {
 
                 <Footer/>
             </div>
-        </BrowserRouter>
+        </Switch>
 
     );
 }
