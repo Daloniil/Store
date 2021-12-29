@@ -1,5 +1,3 @@
-import s from "./StyleInformation/Information.module.css";
-
 import React from "react";
 import InformationHeader from "./InformationHeader/InformationHeader";
 import InformationCenter from "./InformationCenter/InformationCenter";
@@ -10,7 +8,7 @@ const Information: React.FC = () => {
     scroll.scrollToTop()
 
     return (
-        <div className={s.about}>
+        <div >
             <InformationHeader/>
             <InformationCenter/>
         </div>
