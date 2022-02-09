@@ -37,7 +37,7 @@ const CenterHeader: React.FC = () => {
               className={s.snek}
               activeClassName={s.ac}
             >
-              Снеки
+              Молочні продукти
             </NavLink>
           </span>
         </div>
@@ -59,7 +59,7 @@ const CenterHeader: React.FC = () => {
               className={s.soy}
               activeClassName={s.ac}
             >
-              Соуси
+              Бакалія
             </NavLink>
           </span>
         </div>

@@ -1,26 +1,36 @@
 import { actionsType } from "../redux-store";
 import { ReducerType } from "../../Types/Type";
 
-import photoId1 from "../../Assets/Pizza/197886.webp";
-import photoId2 from "../../Assets/Pizza/197919.webp";
-import photoId3 from "../../Assets/Pizza/197921.webp";
-import photoId4 from "../../Assets/Pizza/206549.webp";
-import photoId5 from "../../Assets/Pizza/206555.webp";
-import photoId6 from "../../Assets/Pizza/206897.webp";
-import photoId7 from "../../Assets/Pizza/206903.webp";
-import photoId8 from "../../Assets/Pizza/206907.webp";
-import photoId9 from "../../Assets/Pizza/206910.webp";
-import photoId10 from "../../Assets/Pizza/207081.webp";
-import photoId11 from "../../Assets/Pizza/209713.webp";
-import photoId12 from "../../Assets/Pizza/210079.webp";
-import photoId13 from "../../Assets/Pizza/210082.webp";
-import photoId14 from "../../Assets/Pizza/210096.webp";
-import photoId15 from "../../Assets/Pizza/210110.webp";
-import photoId16 from "../../Assets/Pizza/210111.webp";
-import photoId17 from "../../Assets/Pizza/210312.webp";
-import photoId18 from "../../Assets/Pizza/216246.webp";
-import photoId19 from "../../Assets/Pizza/224777.webp";
-import photoId20 from "../../Assets/Pizza/img_217696.webp";
+import photoId1 from "../../Assets/Pizza/164034-removebg-preview.webp";
+import photoId2 from "../../Assets/Pizza/164048-removebg-preview.webp";
+import photoId3 from "../../Assets/Pizza/164051-removebg-preview.webp";
+import photoId4 from "../../Assets/Pizza/164697-removebg-preview.webp";
+import photoId5 from "../../Assets/Pizza/165045-removebg-preview.webp";
+import photoId6 from "../../Assets/Pizza/165187-removebg-preview.webp";
+import photoId7 from "../../Assets/Pizza/165248-removebg-preview.webp";
+import photoId8 from "../../Assets/Pizza/165253-removebg-preview.webp";
+import photoId9 from "../../Assets/Pizza/165257-removebg-preview.webp";
+import photoId10 from "../../Assets/Pizza/165442-removebg-preview.webp";
+import photoId11 from "../../Assets/Pizza/165804-removebg-preview.webp";
+import photoId12 from "../../Assets/Pizza/165807-removebg-preview.webp";
+import photoId13 from "../../Assets/Pizza/165810-removebg-preview.webp";
+import photoId14 from "../../Assets/Pizza/166150-removebg-preview.webp";
+import photoId15 from "../../Assets/Pizza/166567-removebg-preview.webp";
+import photoId16 from "../../Assets/Pizza/166578-removebg-preview.webp";
+import photoId17 from "../../Assets/Pizza/166686-removebg-preview.webp";
+import photoId18 from "../../Assets/Pizza/197921-removebg-preview.webp";
+import photoId19 from "../../Assets/Pizza/206880-removebg-preview.webp";
+import photoId20 from "../../Assets/Pizza/206894-removebg-preview.webp";
+import photoId21 from "../../Assets/Pizza/206897-removebg-preview.webp";
+import photoId22 from "../../Assets/Pizza/206905-removebg-preview.webp";
+import photoId23 from "../../Assets/Pizza/210079-removebg-preview.webp";
+import photoId24 from "../../Assets/Pizza/216244-removebg-preview.webp";
+import photoId25 from "../../Assets/Pizza/216245-removebg-preview.webp";
+import photoId26 from "../../Assets/Pizza/216246-removebg-preview.webp";
+import photoId27 from "../../Assets/Pizza/224769-removebg-preview.webp";
+import photoId28 from "../../Assets/Pizza/232852-removebg-preview.webp";
+import photoId29 from "../../Assets/Pizza/233926-removebg-preview.webp";
+import photoId30 from "../../Assets/Pizza/img_217710-removebg-preview.webp";
 
 let initialState = {
   pizza: [
@@ -189,6 +199,103 @@ let initialState = {
     {
       id: 20,
       photoURL: photoId20,
+      name: "Бісквіт Кіндер Деліс 1 Шт.",
+      cost: 21,
+      structure:
+        "Бісквітне тістечко, покрите какао-глазур'ю (24%), з молочною начинкою (15%).",
+      amount: 1,
+    },
+
+    {
+      id: 21,
+      photoURL: photoId21,
+      name: "Бісквіт Кіндер Деліс 1 Шт.",
+      cost: 21,
+      structure:
+        "Бісквітне тістечко, покрите какао-глазур'ю (24%), з молочною начинкою (15%).",
+      amount: 1,
+    },
+
+    {
+      id: 22,
+      photoURL: photoId22,
+      name: "Бісквіт Кіндер Деліс 1 Шт.",
+      cost: 21,
+      structure:
+        "Бісквітне тістечко, покрите какао-глазур'ю (24%), з молочною начинкою (15%).",
+      amount: 1,
+    },
+
+    {
+      id: 23,
+      photoURL: photoId23,
+      name: "Бісквіт Кіндер Деліс 1 Шт.",
+      cost: 21,
+      structure:
+        "Бісквітне тістечко, покрите какао-глазур'ю (24%), з молочною начинкою (15%).",
+      amount: 1,
+    },
+
+    {
+      id: 24,
+      photoURL: photoId24,
+      name: "Бісквіт Кіндер Деліс 1 Шт.",
+      cost: 21,
+      structure:
+        "Бісквітне тістечко, покрите какао-глазур'ю (24%), з молочною начинкою (15%).",
+      amount: 1,
+    },
+
+    {
+      id: 25,
+      photoURL: photoId25,
+      name: "Бісквіт Кіндер Деліс 1 Шт.",
+      cost: 21,
+      structure:
+        "Бісквітне тістечко, покрите какао-глазур'ю (24%), з молочною начинкою (15%).",
+      amount: 1,
+    },
+
+    {
+      id: 26,
+      photoURL: photoId26,
+      name: "Бісквіт Кіндер Деліс 1 Шт.",
+      cost: 21,
+      structure:
+        "Бісквітне тістечко, покрите какао-глазур'ю (24%), з молочною начинкою (15%).",
+      amount: 1,
+    },
+
+    {
+      id: 27,
+      photoURL: photoId27,
+      name: "Бісквіт Кіндер Деліс 1 Шт.",
+      cost: 21,
+      structure:
+        "Бісквітне тістечко, покрите какао-глазур'ю (24%), з молочною начинкою (15%).",
+      amount: 1,
+    },
+    {
+      id: 28,
+      photoURL: photoId28,
+      name: "Бісквіт Кіндер Деліс 1 Шт.",
+      cost: 21,
+      structure:
+        "Бісквітне тістечко, покрите какао-глазур'ю (24%), з молочною начинкою (15%).",
+      amount: 1,
+    },
+    {
+      id: 29,
+      photoURL: photoId29,
+      name: "Бісквіт Кіндер Деліс 1 Шт.",
+      cost: 21,
+      structure:
+        "Бісквітне тістечко, покрите какао-глазур'ю (24%), з молочною начинкою (15%).",
+      amount: 1,
+    },
+    {
+      id: 30,
+      photoURL: photoId30,
       name: "Бісквіт Кіндер Деліс 1 Шт.",
       cost: 21,
       structure:

@@ -1,15 +1,15 @@
 import { actionsType } from "../redux-store";
 import { ReducerType } from "../../Types/Type";
 
-import photoId45 from "../../Assets/Sneks/Potato-medalion.webp";
-import photoId46 from "../../Assets/Sneks/картопляні-кульки-1-600x600.webp";
-import photoId47 from "../../Assets/Sneks/нагетси-9шт-1-600x600.webp";
-import photoId48 from "../../Assets/Sneks/курячі-ніжки-4шт-1-600x600.webp";
+import photoId45 from "../../Assets/Sneks/215041-removebg-preview.webp";
+import photoId46 from "../../Assets/Sneks/219337-removebg-preview.webp";
+import photoId47 from "../../Assets/Sneks/220828-removebg-preview.webp";
+import photoId48 from "../../Assets/Sneks/220832-removebg-preview.webp";
 
 let initialState = {
   snek: [
     {
-      id: 52,
+      id: 118,
       photoURL: photoId45,
       name: "Картопляні медальйони",
       cost: 54,
@@ -17,7 +17,7 @@ let initialState = {
       amount: 1,
     },
     {
-      id: 53,
+      id: 119,
       photoURL: photoId46,
       name: "Картопляні кульки",
       cost: 36,
@@ -25,7 +25,7 @@ let initialState = {
       amount: 1,
     },
     {
-      id: 54,
+      id: 120,
       photoURL: photoId47,
       name: "М’ясні нагетси 9 шт",
       cost: 72,
@@ -33,7 +33,7 @@ let initialState = {
       amount: 1,
     },
     {
-      id: 55,
+      id: 121,
       photoURL: photoId48,
       name: "Куряча ніжка 4 шт",
       cost: 88,

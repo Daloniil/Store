@@ -1,15 +1,15 @@
 import { actionsType } from "../redux-store";
 import { ReducerType } from "../../Types/Type";
 
-import photoId49 from "../../Assets/Drink/Сік-яблучно-гранатовий-300x300.webp";
-import photoId50 from "../../Assets/Drink/pepsi_bottle_600_square.webp";
-import photoId51 from "../../Assets/Drink/Сік-мультивітамін-300x300.webp";
-import photoId52 from "../../Assets/Drink/Сік-яблучно-виноградний-300x300.webp";
+import photoId49 from "../../Assets/Drink/140770-removebg-preview.webp";
+import photoId50 from "../../Assets/Drink/140771-removebg-preview.webp";
+import photoId51 from "../../Assets/Drink/148617-removebg-preview.webp";
+import photoId52 from "../../Assets/Drink/148632-removebg-preview.webp";
 
 let initialState = {
   drink: [
     {
-      id: 56,
+      id: 122,
       photoURL: photoId49,
       name: "Сік яблучно-гранатовий 1л",
       cost: 28,
@@ -17,7 +17,7 @@ let initialState = {
       amount: 1,
     },
     {
-      id: 57,
+      id: 123,
       photoURL: photoId50,
       name: "Pepsi 1 л",
       cost: 25,
@@ -25,7 +25,7 @@ let initialState = {
       amount: 1,
     },
     {
-      id: 58,
+      id: 124,
       photoURL: photoId51,
       name: "Сік мульти-вітамінний 1л",
       cost: 28,
@@ -33,7 +33,7 @@ let initialState = {
       amount: 1,
     },
     {
-      id: 59,
+      id: 125,
       photoURL: photoId52,
       name: "Сік яблучно-виноградний 1л",
       cost: 28,

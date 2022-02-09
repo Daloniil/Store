@@ -10,7 +10,7 @@ import { actions } from "../../../../Redux/buy-item-reducer";
 export const Pizza: React.FC = () => {
   let BuyItem;
 
-  const [page, setPage] = useState(1);
+  const [pageActive, setPageActive] = useState(1);
 
   const pizza = useSelector(getpizza);
   const dispatch = useDispatch();
@@ -19,19 +19,14 @@ export const Pizza: React.FC = () => {
     dispatch(actions.buy(info, cost, size));
   };
 
-  let Scroll = require("react-scroll");
-  let scroll = Scroll.animateScroll;
-
-  scroll.scrollToTop();
-
-  let pages = [];
+  const pages = [];
   for (let i = 1; i <= Math.ceil(pizza.length / 10); i++) {
     pages.push(i);
   }
   return (
     <div className={s.pizza}>
       <div className={s.pizza_con}>
-        {pizza.slice(page * 10 - 10, page * 10).map((u) => (
+        {pizza.slice(pageActive * 10 - 10, pageActive * 10).map((u) => (
           <div key={u.id}>
             <NavLink to={"/items/" + u.id} className={s.pizza_nav}>
               <div className={s.pizza_container}>
@@ -85,9 +80,9 @@ export const Pizza: React.FC = () => {
             <span
               key={i}
               onClick={() => {
-                setPage(page);
+                setPageActive(page);
               }}
-              className={s.page}
+              className={pageActive === i + 1 ? s.active_page : s.page}
             >
               {page}
             </span>

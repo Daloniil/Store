@@ -1,15 +1,15 @@
 import { actionsType } from "../redux-store";
 import { ReducerType } from "../../Types/Type";
 
-import photoId41 from "../../Assets/Pizza/197886.webp";
-import photoId42 from "../../Assets/Pizza/197919.webp";
-import photoId43 from "../../Assets/Pizza/197921.webp";
-import photoId44 from "../../Assets/Pizza/206549.webp";
+import photoId41 from "../../Assets/Pizza/164034-removebg-preview.webp";
+import photoId42 from "../../Assets/Pizza/164048-removebg-preview.webp";
+import photoId43 from "../../Assets/Pizza/164051-removebg-preview.webp";
+import photoId44 from "../../Assets/Pizza/164697-removebg-preview.webp";
 
 let initialState = {
   pizza: [
     {
-      id: 48,
+      id: 114,
       photoURL: photoId41,
       name: "Печиво Тіволі Грушеве",
       cost: 150,
@@ -18,7 +18,7 @@ let initialState = {
       amount: 1,
     },
     {
-      id: 49,
+      id: 115,
       photoURL: photoId42,
       name: "Шоколад NUT SELECTION",
       cost: 62,
@@ -26,7 +26,7 @@ let initialState = {
       amount: 1,
     },
     {
-      id: 50,
+      id: 116,
       photoURL: photoId43,
       name: "Шоколад чорний з начинкою марципан",
       cost: 64,
@@ -35,7 +35,7 @@ let initialState = {
       amount: 1,
     },
     {
-      id: 51,
+      id: 117,
       photoURL: photoId44,
       name: "Хрусткі фігурки 'Kresko'",
       cost: 55,
