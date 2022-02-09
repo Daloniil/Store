@@ -10,10 +10,8 @@ import {
   getnewsneks,
   getnnewpizza,
   getpizza,
-  getsize,
   getsneks,
   getsous,
-  getves,
 } from "../../../Selectors/Menus-selector";
 import { actions } from "../../../Redux/buy-item-reducer";
 import { actionsn } from "../../../Redux/later-seen-reducer";
