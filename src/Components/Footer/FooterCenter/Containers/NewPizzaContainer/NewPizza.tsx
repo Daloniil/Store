@@ -17,7 +17,7 @@ const NewPizza: React.FC = () => {
             </div>
             <div className={s.pizza_name}>
               <span>{u.name}</span>
-              <p>від {u.cost} грн</p>
+              <p>{u.cost} грн</p>
             </div>
           </NavLink>
         </div>

@@ -5,6 +5,7 @@
   display: flex;
   margin: 0 0 0 13%;
 }
+
 .content .container .pizza_info .menu .link_menu {
   color: black;
   text-decoration: none;
@@ -167,7 +168,11 @@
   text-align: center;
   padding: 8px 0 0 0;
 }
-
+@media (min-width: 971px) {
+  .content .container_item .photo_item {
+    transform: translate(-30px, 0px);
+  }
+}
 @media (max-width: 1328px) {
   .content .container {
     margin: 0 1px 0 5%;
@@ -176,6 +181,7 @@
     margin: 0 1px 0 5%;
   }
 }
+
 @media (max-width: 970px) {
   .content .container {
     margin: 0 1px 0 0;

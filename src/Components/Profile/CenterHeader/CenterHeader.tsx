@@ -48,7 +48,7 @@ const CenterHeader: React.FC = () => {
               className={s.drin}
               activeClassName={s.ac}
             >
-              Напої
+              Кава/Чай
             </NavLink>
           </span>
         </div>

@@ -18,7 +18,9 @@ export const Pizza: React.FC = () => {
   const buys = (info: ReducerType, cost: number, size: number) => {
     dispatch(actions.buy(info, cost, size));
   };
-
+  let Scroll = require("react-scroll");
+  let scroll = Scroll.animateScroll;
+  scroll.scrollToTop();
   const pages = [];
   for (let i = 1; i <= Math.ceil(pizza.length / 10); i++) {
     pages.push(i);
