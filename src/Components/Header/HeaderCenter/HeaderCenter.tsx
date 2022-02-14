@@ -3,6 +3,7 @@ import React from "react";
 import "./StyleHeaderCenter/HeaderCenter.css";
 import { useSelector } from "react-redux";
 import { getamoun, getlenght } from "../../../Selectors/buy-item-selector";
+import logo from "../../../Assets/Logo/4thfebruary-bladi-one-slab-4f-removebg-preview.webp";
 
 export const HeaderCenter: React.FC = () => {
   const lenght = useSelector(getlenght);
@@ -35,11 +36,7 @@ export const HeaderCenter: React.FC = () => {
           <span></span>
         </div>
         <div className="header_center_header_logo">
-          <img
-            className="logo"
-            src="https://pizzatime.com.ua/wp-content/uploads/2020/11/PT-Logo_round_150.png.pagespeed.ce.JMaxdt0csO.png"
-            alt=""
-          />
+          <img className="logo" src={logo} alt="" />
         </div>
       </div>
 
@@ -50,11 +47,7 @@ export const HeaderCenter: React.FC = () => {
       >
         <div className="header_center_left">
           <div className="header_center_left_logo">
-            <img
-              className="header_center_left_logo_img"
-              src="https://pizzatime.com.ua/wp-content/uploads/2020/11/PT-Logo_round_150.png.pagespeed.ce.JMaxdt0csO.png"
-              alt=""
-            />
+            <img className="header_center_left_logo_img" src={logo} alt="" />
           </div>
           <div className="header_center_left_menu">
             <NavLink to="/profile/pizza" className="pizza" activeClassName="ac">
