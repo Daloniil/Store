@@ -1,6 +1,6 @@
 import s from "./Components/StyleApp/app.module.css";
 import { Redirect, Route, Switch } from "react-router-dom";
-import Profile from "./Components/Drawer/Profile/Profile";
+
 import Footer from "./Components/Footer/Footer";
 import About from "./Components/Drawer/About/About";
 
@@ -13,6 +13,7 @@ import { Header } from "./Components/Header/Header";
 import { ThanksForOrder } from "./Components/ThanksForOrder/ThanksForOrder";
 import Information from "./Components/Drawer/Information/Information";
 import { Contacts } from "./Components/Drawer/Contacts/Contacts";
+import Profile from "./Components/Drawer/Menu/Profile";
 
 function App() {
   return (
