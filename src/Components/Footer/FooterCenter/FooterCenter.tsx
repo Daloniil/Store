@@ -13,20 +13,17 @@ const FooterCenter: React.FC = () => {
           <div className={s.footer_center_left}>
             <div className={s.footer_center_left_up}>
               <img src={logo} alt="" />
-              <span>
-                Швидка безкоштовна доставка найсмачнішої піци по м. Біла Церква
-              </span>
-              <p>* при замовленні від 300 грн</p>
+              <span>Швидка безкоштовна доставка товарів по Київу</span>
+              <p>* при замовленні від 500 грн</p>
             </div>
             <div className={s.footer_center_left_down}>
-              <p> (096) 744 222 4</p>
-              <p>@pizzatimebc</p>
+              <p> (096) 777 777 88</p>
               <p>Пн. - Нд.: 12:00 - 22:00</p>
             </div>
           </div>
           <div className={s.footer_center_center_first}>
             <div className={s.footer_center_center_first_name}>
-              <span>НАША НОВЕНЬКА ПІЦА</span>
+              <span>ПОПУЛЯРНІ СОЛОДОЩІ</span>
             </div>
             <div className={s.footer_center_center_first_colum}>
               <ul className={s.footer_center_center_first_colum_pizza}>
@@ -37,7 +34,7 @@ const FooterCenter: React.FC = () => {
 
           <div className={s.footer_center_center_second}>
             <div className={s.footer_center_center_second_name}>
-              <span>ПОПУЛЯРНІ СНЕКИ</span>
+              <span>ПОПУЛЯРНІ МОЛОЧНІ ПРОДУКТИ</span>
             </div>
             <div className={s.footer_center_center_second_colum}>
               <ul className={s.footer_center_center_second_colum_snek}>

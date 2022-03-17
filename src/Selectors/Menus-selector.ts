@@ -1,94 +1,74 @@
-import {AppStateType} from "../Redux/redux-store";
-import {createSelector} from "reselect";
+import { AppStateType } from "../Redux/redux-store";
+import { createSelector } from "reselect";
 
 export const newdrink = (state: AppStateType) => {
-    return state.newDrinkPage.drink
-
-}
+  return state.newDrinkPage.drink;
+};
 
 export const getnewdrink = createSelector(newdrink, (newdrink) => {
-    return newdrink
-
-})
+  return newdrink;
+});
 
 export const newpizza = (state: AppStateType) => {
-    return state.newPizzaPage.pizza
-
-}
+  return state.newPizzaPage.sweets;
+};
 
 export const getnnewpizza = createSelector(newpizza, (newpizza) => {
-    return newpizza
-
-})
-
+  return newpizza;
+});
 
 export const newsneks = (state: AppStateType) => {
-    return state.newSnekPage.snek
-
-}
+  return state.newSnekPage.dairy;
+};
 
 export const getnewsneks = createSelector(newsneks, (newsneks) => {
-    return newsneks
-
-})
+  return newsneks;
+});
 
 export const pizza = (state: AppStateType) => {
-    return state.pizzaPage.pizza
-
-}
+  return state.pizzaPage.sweets;
+};
 
 export const getpizza = createSelector(pizza, (pizza) => {
-    return pizza
-
-})
+  return pizza;
+});
 
 export const drink = (state: AppStateType) => {
-    return state.drinkPage.drink
-
-}
+  return state.drinkPage.drink;
+};
 
 export const getdrinks = createSelector(drink, (drink) => {
-    return drink
-
-})
+  return drink;
+});
 
 export const sneks = (state: AppStateType) => {
-    return state.sneksPage.sneks
-
-}
+  return state.sneksPage.dairy;
+};
 
 export const getsneks = createSelector(sneks, (sneks) => {
-    return sneks
-
-})
+  return sneks;
+});
 
 export const sous = (state: AppStateType) => {
-    return state.sousPage.sous
-
-}
+  return state.sousPage.grocery;
+};
 
 export const getsous = createSelector(sous, (sous) => {
-    return sous
-
-})
-
+  return sous;
+});
 
 export const ves = (state: AppStateType) => {
-    return state.pizzaPage.ves
-
-}
+  return state.pizzaPage.ves;
+};
 
 export const getves = createSelector(ves, (ves) => {
-    return ves
-
-})
+  return ves;
+});
 
 export const size = (state: AppStateType) => {
-    return state.pizzaPage.siza
-
-}
+  return state.pizzaPage.siza;
+};
 
 export const getsize = createSelector(size, (size) => {
-    return size
-
-})
+  return size;
+});
