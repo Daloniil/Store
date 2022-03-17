@@ -2,18 +2,18 @@ import s from "./Components/StyleApp/app.module.css";
 import { Redirect, Route, Switch } from "react-router-dom";
 
 import Footer from "./Components/Footer/Footer";
-import About from "./Components/Drawer/About/About";
+import About from "./Pages/About/About";
 
-import { Buy } from "./Components/BuyMenu/Buy/Buy";
-import { Chekout } from "./Components/BuyMenu/Checkout/Checkout";
+import { Buy } from "./Pages/Buy/Buy";
+import { Chekout } from "./Pages/Checkout/Checkout";
 import { SliderItems } from "./Components/SliderItem/SliderItem";
-import { AllOrder } from "./Components/Orders/AllOreder/AllOrder";
+import { AllOrder } from "./Pages/AllOreder/AllOrder";
 import { Header } from "./Components/Header/Header";
 
-import { ThanksForOrder } from "./Components/ThanksForOrder/ThanksForOrder";
-import Information from "./Components/Drawer/Information/Information";
-import { Contacts } from "./Components/Drawer/Contacts/Contacts";
-import Profile from "./Components/Drawer/Menu/Profile";
+import { ThanksForOrder } from "./Pages/ThanksForOrder/ThanksForOrder";
+import Information from "./Pages/Information/Information";
+import { Contacts } from "./Pages/Contacts/Contacts";
+import Menu from "./Pages/Menu/Menu";
 
 function App() {
   return (
@@ -35,7 +35,7 @@ function App() {
 
         <Route path="/finallyorder" render={() => <ThanksForOrder />} />
 
-        <Route path="/profile/" render={() => <Profile />} />
+        <Route path="/profile/" render={() => <Menu />} />
 
         <Route path="/items/:id" render={() => <AllOrder />} />
 
