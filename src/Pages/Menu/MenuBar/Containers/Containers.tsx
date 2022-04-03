@@ -17,13 +17,13 @@ const Containers: React.FC = () => {
 
   return (
     <div>
-      <Route path="/profile/pizza" render={() => <Item item={pizza} />} />
+      <Route path="/profile/sweets" render={() => <Item item={pizza} />} />
 
-      <Route path="/profile/sneks" render={() => <Item item={sneks} />} />
+      <Route path="/profile/milk" render={() => <Item item={sneks} />} />
 
       <Route path="/profile/drink" render={() => <Item item={drink} />} />
 
-      <Route path="/profile/sous" render={() => <Item item={sous} />} />
+      <Route path="/profile/grocery" render={() => <Item item={sous} />} />
     </div>
   );
 };

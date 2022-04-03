@@ -89,7 +89,7 @@ export const AllOrder = () => {
         </div>
         <div className={s.item_info}>
           <div className={s.menu_info}>
-            <NavLink className={s.link_menu_info} to="/profile/pizza">
+            <NavLink className={s.link_menu_info} to="/profile/sweets">
               Меню/
             </NavLink>
             <span className={s.link_name_info}>{statePage.name}</span>
@@ -99,7 +99,6 @@ export const AllOrder = () => {
             <div className={s.cost_info}>{Math.round(statePage.cost)} грн</div>
             <div className={s.strukture_info}>{statePage.structure}</div>
           </div>
-
           <NavLink className={s.your_item} to="/buy" onClick={BuyItem}>
             Замовити
           </NavLink>

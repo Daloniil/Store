@@ -24,7 +24,7 @@ function App() {
         <Route
           exact
           path="/"
-          render={() => <Redirect to={"/profile/pizza"} />}
+          render={() => <Redirect to={"/profile/sweets"} />}
         />
 
         <Route path="/about" render={() => <About />} />
@@ -45,7 +45,7 @@ function App() {
 
         <Route path="/checkout" render={() => <Chekout />} />
 
-        <Route path="*" render={() => <Redirect to={"/profile/pizza"} />} />
+        <Route path="*" render={() => <Redirect to={"/profile/sweets"} />} />
 
         <Footer />
       </div>

@@ -50,7 +50,7 @@ export const Buy = () => {
     view = (
       <div className={s.container_no_buy}>
         <span>Ви ще не обрали замовлення</span>
-        <NavLink to={"/profile/pizza"} className={s.p}>
+        <NavLink to={"/profile/sweets"} className={s.p}>
           Перейти в меню
         </NavLink>
       </div>

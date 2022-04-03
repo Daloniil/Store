@@ -21,7 +21,7 @@ const MenuBar: React.FC = () => {
         <div className={s.pizza}>
           <span>
             <NavLink
-              to="/profile/pizza"
+              to="/profile/sweets"
               className={s.piza}
               activeClassName={s.ac}
             >
@@ -33,7 +33,7 @@ const MenuBar: React.FC = () => {
         <div className={s.sneks}>
           <span>
             <NavLink
-              to="/profile/sneks"
+              to="/profile/milk"
               className={s.snek}
               activeClassName={s.ac}
             >
@@ -55,7 +55,7 @@ const MenuBar: React.FC = () => {
         <div className={s.soys}>
           <span>
             <NavLink
-              to="/profile/sous"
+              to="/profile/grocery"
               className={s.soy}
               activeClassName={s.ac}
             >

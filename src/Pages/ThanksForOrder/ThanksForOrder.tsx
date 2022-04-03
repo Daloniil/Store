@@ -9,7 +9,7 @@ export const ThanksForOrder = () => {
       <div className={s.content}>
         <span
           className={s.xspan}
-          onClick={() => history.push("/profile/pizza")}
+          onClick={() => history.push("/profile/sweets")}
         >
           X
         </span>

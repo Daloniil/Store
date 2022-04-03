@@ -50,7 +50,11 @@ export const HeaderCenter: React.FC = () => {
             <img className="header_center_left_logo_img" src={logo} alt="" />
           </div>
           <div className="header_center_left_menu">
-            <NavLink to="/profile/pizza" className="pizza" activeClassName="ac">
+            <NavLink
+              to="/profile/sweets"
+              className="pizza"
+              activeClassName="ac"
+            >
               Меню
             </NavLink>
           </div>
