@@ -1,4 +1,4 @@
-import s from "./StyleMenuBar/CenterHeader.module.css";
+import s from "./CenterHeader.module.css";
 import { NavLink } from "react-router-dom";
 import React from "react";
 

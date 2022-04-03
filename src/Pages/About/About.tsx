@@ -1,4 +1,4 @@
-import s from "./StyleAbout/About.module.css";
+import s from "./About.module.css";
 
 import React from "react";
 import AboutHeader from "./AboutHeader/AboutHeader";

@@ -1,4 +1,4 @@
-import SliderSale from "./SliderSale/SliderSale";
+import SliderSale from "../../Components/SliderSale/SliderSale";
 import MenuBar from "./MenuBar/MenuBar";
 import Containers from "./MenuBar/Containers/Containers";
 

@@ -1,8 +1,8 @@
-import s from "./StyleNewPizzaContainer/NewPizza.module.css";
+import s from "./NewPizza.module.css";
 import { NavLink } from "react-router-dom";
 import React from "react";
 import { useSelector } from "react-redux";
-import { getnnewpizza } from "../../../../../Selectors/Menus-selector";
+import { getnnewpizza } from "../../../../../Selectors/Menu-selector";
 
 const NewPizza: React.FC = () => {
   const newpizza = useSelector(getnnewpizza);

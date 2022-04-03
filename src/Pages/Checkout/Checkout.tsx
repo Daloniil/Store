@@ -1,12 +1,11 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Field, InjectedFormProps, reduxForm } from "redux-form";
 import { maxLenghtCrater, required } from "../../Validators/validator";
-import s from "./CheckoutStyle/Checkout.module.css";
+import s from "./Checkout.module.css";
 import { Input } from "../../Components/FormsControl/FormContorl";
-import { NavLink, Redirect, useHistory } from "react-router-dom";
-import React, { useEffect } from "react";
+import { Redirect, useHistory } from "react-router-dom";
+import React from "react";
 import { getitem, getlenght } from "../../Selectors/buy-item-selector";
-import { ReducerType } from "../../Types/Type";
 import { actions } from "../../Redux/buy-item-reducer";
 
 const maxLengh = maxLenghtCrater(10);

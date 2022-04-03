@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-expressions */
-import s from "./StylePizzaOrder/PizzaOrder.module.css";
+import s from "./PizzaOrder.module.css";
 import React, { useEffect, useState } from "react";
 import { NavLink, useParams } from "react-router-dom";
 import { ReducerType } from "../../Types/Type";
@@ -12,7 +12,7 @@ import {
   getpizza,
   getsneks,
   getsous,
-} from "../../Selectors/Menus-selector";
+} from "../../Selectors/Menu-selector";
 import { actions } from "../../Redux/buy-item-reducer";
 import { actionsn } from "../../Redux/later-seen-reducer";
 import LastSeen from "../../Components/LaterSeen/LastSeen";
@@ -21,7 +21,7 @@ type numberType = {
   id: any;
 };
 
-export const AllOrder: React.FC = () => {
+export const AllOrder = () => {
   const dispatch = useDispatch();
 
   const buys = (info: ReducerType, cost: number, size: number) => {

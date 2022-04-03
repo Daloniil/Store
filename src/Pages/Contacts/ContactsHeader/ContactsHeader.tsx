@@ -1,4 +1,4 @@
-import s from "./StyleAboutHeader/AboutHeader.module.css";
+import s from "./AboutHeader.module.css";
 import React from "react";
 
 export const ContactsHeader: React.FC = () => {

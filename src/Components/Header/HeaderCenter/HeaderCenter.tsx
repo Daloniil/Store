@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import React from "react";
-import "./StyleHeaderCenter/HeaderCenter.css";
+import "./HeaderCenter.css";
 import { useSelector } from "react-redux";
 import { getamoun, getlenght } from "../../../Selectors/buy-item-selector";
 import logo from "../../../Assets/Logo/4thfebruary-bladi-one-slab-4f-removebg-preview.webp";
@@ -79,7 +79,7 @@ export const HeaderCenter: React.FC = () => {
         <div className="header_center_right">
           <div className="header_center_container_order">
             <span>
-              Замовлення: <a href="#">(096) 383 56 54</a>{" "}
+              Замовлення: <a href="#">(096) 777 777 7</a>
             </span>
           </div>
         </div>

@@ -7,7 +7,7 @@ import {
   getpizza,
   getsneks,
   getsous,
-} from "../../../../Selectors/Menus-selector";
+} from "../../../../Selectors/Menu-selector";
 
 const Containers: React.FC = () => {
   const pizza = useSelector(getpizza);

@@ -1,4 +1,4 @@
-import s from "./StyleItem/pizza.module.css";
+import s from "./item.module.css";
 
 import { NavLink } from "react-router-dom";
 import { useState } from "react";

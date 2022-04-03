@@ -1,4 +1,4 @@
-import s from "./StyleFooterBottom/FooterBottom.module.css";
+import s from "./FooterBottom.module.css";
 import React from "react";
 
 const FooterBottom: React.FC = () => {

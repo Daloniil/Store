@@ -1,8 +1,8 @@
-import s from "./StyleNewDrinkContainers/NewDrink.module.css";
+import s from "./NewDrink.module.css";
 import { NavLink } from "react-router-dom";
 import React from "react";
 import { useSelector } from "react-redux";
-import { getnewdrink } from "../../../../../Selectors/Menus-selector";
+import { getnewdrink } from "../../../../../Selectors/Menu-selector";
 
 const NewDrink: React.FC = () => {
   const newdrink = useSelector(getnewdrink);

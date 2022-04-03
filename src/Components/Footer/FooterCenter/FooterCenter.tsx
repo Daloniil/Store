@@ -1,4 +1,4 @@
-import s from "./StyleFooterCenter/FooterCenter.module.css";
+import s from "./FooterCenter.module.css";
 import React from "react";
 import NewDrink from "./Containers/NewDrinkContainer/NewDrink";
 import NewPizza from "./Containers/NewPizzaContainer/NewPizza";

@@ -1,9 +1,8 @@
 import { NavLink } from "react-router-dom";
-import s from "./StyleBuy/Buy.module.css";
+import s from "./Buy.module.css";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { actions } from "../../Redux/buy-item-reducer";
-import React from "react";
 import {
   getitem,
   getlenght,

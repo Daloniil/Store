@@ -1,4 +1,4 @@
-import s from "./StyleLaterSeen/LaterSeen.module.css";
+import s from "./LaterSeen.module.css";
 import { NavLink } from "react-router-dom";
 import React from "react";
 import { useSelector } from "react-redux";

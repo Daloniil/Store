@@ -1,4 +1,4 @@
-import s from "./StyleContacsCenter/ContacsCenter.module.css";
+import s from "./ContacsCenter.module.css";
 import React from "react";
 
 export const ContactsCenter = () => {
@@ -18,23 +18,19 @@ export const ContactsCenter = () => {
               <li>
                 Замовити піцу:
                 <br />
-                Тел.: +380 96 744 222 4
+                Тел.: +380 96 777 777 7
               </li>
               <li>
-                Inst.:{" "}
-                <a
-                  href="https://www.instagram.com/pizzatimebc/"
-                  target="_blank"
-                >
-                  pizzatimebc
+                Inst.:
+                <a href="https://www.instagram.com/" target="_blank">
+                  prodtime замовити в direct
                 </a>
-                замовити в direct
               </li>
               <li>НWeb.: оформити замовлення або залишити зворотній дзвінок</li>
               <li>
                 Співпраця та пропозиції
                 <br />
-                Email: pizzatimebc.info@gmail.com
+                Email: prodtime.info@gmail.com
               </li>
             </ul>
           </div>
@@ -43,7 +39,7 @@ export const ContactsCenter = () => {
 
       <div className={s.mapcontainer}>
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d82398.72848589475!2d30.05194617079861!3d49.80561468584142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d3423e37227b9d%3A0x84e311f8582cc6e8!2z0JHQtdC70LDRjyDQptC10YDQutC-0LLRjCwg0JrQuNC10LLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgMDkxMDA!5e0!3m2!1sru!2sua!4v1627942613584!5m2!1sru!2sua"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.8543320527688!2d30.511577615946717!3d50.443813895723714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cef81316a8c5%3A0x2a744575ac7fe734!2z0LHRg9C7LiDQotCw0YDQsNGB0LAg0KjQtdCy0YfQtdC90LrQviwgMTQsINCa0LjQtdCyLCDQo9C60YDQsNC40L3QsCwgMDEwMzA!5e0!3m2!1sru!2sus!4v1649015492418!5m2!1sru!2sus"
           loading="lazy"
         ></iframe>
       </div>

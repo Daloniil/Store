@@ -13,7 +13,7 @@ import {
   getpizza,
   getsneks,
   getsous,
-} from "../../Selectors/Menus-selector";
+} from "../../Selectors/Menu-selector";
 
 type numberType = {
   id: any;

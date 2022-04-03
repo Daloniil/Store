@@ -1,4 +1,4 @@
-import s from "./StyleFormsControl/FormControl.module.css";
+import s from "./FormControl.module.css";
 import React from "react";
 import { WrappedFieldMetaProps, WrappedFieldProps } from "redux-form";
 

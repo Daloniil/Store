@@ -1,4 +1,4 @@
-import s from "./Components/StyleApp/app.module.css";
+import s from "./StyleApp/app.module.css";
 import { Redirect, Route, Switch } from "react-router-dom";
 
 import Footer from "./Components/Footer/Footer";

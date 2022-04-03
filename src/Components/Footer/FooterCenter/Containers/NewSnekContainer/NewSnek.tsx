@@ -1,8 +1,8 @@
-import s from "./StyleNewSnekContainer/NewSnek.module.css";
+import s from "./NewSnek.module.css";
 import { NavLink } from "react-router-dom";
 import React from "react";
 import { useSelector } from "react-redux";
-import { getnewsneks } from "../../../../../Selectors/Menus-selector";
+import { getnewsneks } from "../../../../../Selectors/Menu-selector";
 
 const NewSnek: React.FC = () => {
   const newsnek = useSelector(getnewsneks);
