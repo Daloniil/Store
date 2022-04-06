@@ -58,6 +58,7 @@ export const AllOrder = () => {
         undefined,
         undefined
       );
+      break;
     }
   }
 
@@ -73,6 +74,7 @@ export const AllOrder = () => {
     for (let i = 0; i < pages.length; i++) {
       if (pages[i].find((elem) => elem.id === Number(number.id))) {
         buys(statePage, statePage.cost, 0);
+        return;
       }
     }
   };

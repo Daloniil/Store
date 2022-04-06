@@ -13,7 +13,7 @@ const laterSeen = (
 ): initialStateType => {
   if (action.type === "NEWITEMS") {
     {
-      let n = state.item.length - 1 + 1;
+      let n = state.item.length;
       let neweat = {
         _id: n,
         eat: action.info,

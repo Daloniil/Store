@@ -40,8 +40,6 @@ const buyItem = (
         photoURL: action.info.photoURL,
       };
       if (!state.item.some((buy) => buy.id === action.info.id)) {
-        debugger;
-
         return {
           ...state,
           item: [...state.item, buyeat],
@@ -51,7 +49,6 @@ const buyItem = (
       } else {
         let Id = action.info.id;
         let index = state.item.findIndex((el) => el.id === Id);
-        debugger;
 
         return {
           ...state,

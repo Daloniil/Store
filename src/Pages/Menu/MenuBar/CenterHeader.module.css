@@ -32,7 +32,7 @@
   margin: 0 10px 0 10px;
 }
 .center_header .menu .pizza {
-  padding: 0 20px 0 0;
+  padding: 0 10px 0 0;
 }
 .center_header .menu .pizza span .piza {
   font-size: 22px;
@@ -46,7 +46,7 @@
   color: #f0c24d;
 }
 .center_header .menu .sneks {
-  padding: 0 10px 0 0;
+  padding: 0 5px 0 0;
 }
 .center_header .menu .sneks span .snek {
   font-size: 22px;
@@ -60,7 +60,7 @@
   color: #f0c24d;
 }
 .center_header .menu .drink {
-  padding: 0 0 0 10px;
+  padding: 0 0 0 5px;
 }
 .center_header .menu .drink span .drin {
   font-size: 22px;
@@ -74,7 +74,7 @@
   color: #f0c24d;
 }
 .center_header .menu .soys {
-  padding: 0 0 0 20px;
+  padding: 0 0 0 10px;
 }
 .center_header .menu .soys span .soy {
   font-size: 22px;

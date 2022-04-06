@@ -18,7 +18,7 @@ const MenuBar: React.FC = () => {
       </div>
 
       <div className={s.menu}>
-        <div className={s.pizza}>
+        <div className={s.pizza} style={{ textAlign: "center" }}>
           <span>
             <NavLink
               to="/profile/sweets"
@@ -30,7 +30,7 @@ const MenuBar: React.FC = () => {
           </span>
         </div>
 
-        <div className={s.sneks}>
+        <div className={s.sneks} style={{ textAlign: "center" }}>
           <span>
             <NavLink
               to="/profile/milk"
@@ -41,7 +41,7 @@ const MenuBar: React.FC = () => {
             </NavLink>
           </span>
         </div>
-        <div className={s.drink}>
+        <div className={s.drink} style={{ textAlign: "center" }}>
           <span>
             <NavLink
               to="/profile/drink"
@@ -52,7 +52,7 @@ const MenuBar: React.FC = () => {
             </NavLink>
           </span>
         </div>
-        <div className={s.soys}>
+        <div className={s.soys} style={{ textAlign: "center" }}>
           <span>
             <NavLink
               to="/profile/grocery"
