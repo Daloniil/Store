@@ -20,12 +20,6 @@ export const ContactsCenter = () => {
                 <br />
                 Тел.: +380 96 777 777 7
               </li>
-              <li>
-                Inst.:
-                <a href="https://www.instagram.com/" target="_blank">
-                  prodtime замовити в direct
-                </a>
-              </li>
               <li>НWeb.: оформити замовлення або залишити зворотній дзвінок</li>
               <li>
                 Співпраця та пропозиції
