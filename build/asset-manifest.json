@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/Store/static/css/main.99d8878f.chunk.css",
-    "main.js": "/Store/static/js/main.8661c7f2.chunk.js",
-    "main.js.map": "/Store/static/js/main.8661c7f2.chunk.js.map",
+    "main.css": "/Store/static/css/main.312592a2.chunk.css",
+    "main.js": "/Store/static/js/main.0f507106.chunk.js",
+    "main.js.map": "/Store/static/js/main.0f507106.chunk.js.map",
     "runtime-main.js": "/Store/static/js/runtime-main.214f6960.js",
     "runtime-main.js.map": "/Store/static/js/runtime-main.214f6960.js.map",
     "static/css/2.c111570f.chunk.css": "/Store/static/css/2.c111570f.chunk.css",
@@ -12,7 +12,7 @@
     "static/js/3.0a22bf58.chunk.js.map": "/Store/static/js/3.0a22bf58.chunk.js.map",
     "index.html": "/Store/index.html",
     "static/css/2.c111570f.chunk.css.map": "/Store/static/css/2.c111570f.chunk.css.map",
-    "static/css/main.99d8878f.chunk.css.map": "/Store/static/css/main.99d8878f.chunk.css.map",
+    "static/css/main.312592a2.chunk.css.map": "/Store/static/css/main.312592a2.chunk.css.map",
     "static/js/2.6b7cbd62.chunk.js.LICENSE.txt": "/Store/static/js/2.6b7cbd62.chunk.js.LICENSE.txt",
     "static/media/140770-removebg-preview.32ba3c1e.webp": "/Store/static/media/140770-removebg-preview.32ba3c1e.webp",
     "static/media/140771-removebg-preview.5553a354.webp": "/Store/static/media/140771-removebg-preview.5553a354.webp",
@@ -127,18 +127,18 @@
     "static/media/4thfebruary-bladi-one-slab-4f-removebg-preview.fd425e0e.webp": "/Store/static/media/4thfebruary-bladi-one-slab-4f-removebg-preview.fd425e0e.webp",
     "static/media/86466-removebg-preview.ffac21ff.webp": "/Store/static/media/86466-removebg-preview.ffac21ff.webp",
     "static/media/92969-removebg-preview.fe50fe04.webp": "/Store/static/media/92969-removebg-preview.fe50fe04.webp",
-    "static/media/Slider_4pizzas_new_pizza.a2b90da8.webp": "/Store/static/media/Slider_4pizzas_new_pizza.a2b90da8.webp",
-    "static/media/Slider_Happy_new_pizza_F2F0EA.100e8eae.webp": "/Store/static/media/Slider_Happy_new_pizza_F2F0EA.100e8eae.webp",
-    "static/media/Slider_Party_for_bd_new_pizza.5b21ccd2.webp": "/Store/static/media/Slider_Party_for_bd_new_pizza.5b21ccd2.webp",
+    "static/media/bf1a42cbe1f152ba4ce1f4734730605d.37a37892.png": "/Store/static/media/bf1a42cbe1f152ba4ce1f4734730605d.37a37892.png",
     "static/media/img_217710-removebg-preview.8dfa01d5.webp": "/Store/static/media/img_217710-removebg-preview.8dfa01d5.webp",
-    "static/media/slick-theme.css": "/Store/static/media/slick.c94f7671.ttf",
-    "static/media/AboutHeader.module.css": "/Store/static/media/tmb_259821_283955.7f88bf36.webp"
+    "static/media/imgonline-com-ua-Resize-JtXbvusMjvD.e257a2ca.jpg": "/Store/static/media/imgonline-com-ua-Resize-JtXbvusMjvD.e257a2ca.jpg",
+    "static/media/imgonline-com-ua-Resize-LcPPgxG23pmmmD.bcf1a0ea.jpg": "/Store/static/media/imgonline-com-ua-Resize-LcPPgxG23pmmmD.bcf1a0ea.jpg",
+    "static/media/AboutHeader.module.css": "/Store/static/media/imgonline-com-ua-Resize-OoP4yQreUlrIXH.26f4a1fb.jpg",
+    "static/media/slick-theme.css": "/Store/static/media/slick.c94f7671.ttf"
   },
   "entrypoints": [
     "static/js/runtime-main.214f6960.js",
     "static/css/2.c111570f.chunk.css",
     "static/js/2.6b7cbd62.chunk.js",
-    "static/css/main.99d8878f.chunk.css",
-    "static/js/main.8661c7f2.chunk.js"
+    "static/css/main.312592a2.chunk.css",
+    "static/js/main.0f507106.chunk.js"
   ]
 }
