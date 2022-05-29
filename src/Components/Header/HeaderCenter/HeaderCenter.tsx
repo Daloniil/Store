@@ -3,7 +3,7 @@ import React from "react";
 import "./HeaderCenter.css";
 import { useSelector } from "react-redux";
 import { getamoun, getlenght } from "../../../Selectors/buy-item-selector";
-import logo from "../../../Assets/Logo/4thfebruary-bladi-one-slab-4f-removebg-preview.webp";
+import logo from "../../../Assets/Logo/bf1a42cbe1f152ba4ce1f4734730605d.png";
 
 export const HeaderCenter: React.FC = () => {
   const lenght = useSelector(getlenght);

@@ -3,9 +3,9 @@ import { Component } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import first from "../../Assets/Slider/Slider_Happy_new_pizza_F2F0EA.webp";
-import second from "../../Assets/Slider/Slider_Party_for_bd_new_pizza.webp";
-import three from "../../Assets/Slider/Slider_4pizzas_new_pizza.webp";
+import first from "../../Assets/Slider/imgonline-com-ua-Resize-JtXbvusMjvD.jpg";
+import second from "../../Assets/Slider/imgonline-com-ua-Resize-LcPPgxG23pmmmD.jpg";
+import three from "../../Assets/Slider/imgonline-com-ua-Resize-OoP4yQreUlrIXH.jpg";
 
 export default class SliderSale extends Component {
   render() {

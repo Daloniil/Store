@@ -5,10 +5,10 @@ import {
   compose,
   createStore,
 } from "redux";
-import pizzaReducer from "./Menu/sweets-reducer";
-import sneksReducer from "./Menu/dairy-reducer";
-import drinkReducer from "./Menu/drink-reducer";
-import sousReducer from "./Menu/grocery-reducer";
+import pizzaReducer from "./Product/sweets-reducer";
+import sneksReducer from "./Product/dairy-reducer";
+import drinkReducer from "./Product/drink-reducer";
+import sousReducer from "./Product/grocery-reducer";
 import newPizzaReducer from "./PopularProduct/new-sweets-reducer";
 import newSnekReducer from "./PopularProduct/new-dairy-reducer";
 import newDrinkReducer from "./PopularProduct/new-drink-reducer";
