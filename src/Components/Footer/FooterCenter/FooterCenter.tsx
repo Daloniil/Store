@@ -3,7 +3,7 @@ import React from "react";
 import NewDrink from "./Containers/NewDrinkContainer/NewDrink";
 import NewPizza from "./Containers/NewPizzaContainer/NewPizza";
 import NewSnek from "./Containers/NewSnekContainer/NewSnek";
-import logo from "../../../Assets/Logo/4thfebruary-bladi-one-slab-4f-removebg-preview.webp";
+import logo from "../../../Assets/Logo/bf1a42cbe1f152ba4ce1f4734730605d.png";
 
 const FooterCenter: React.FC = () => {
   return (
