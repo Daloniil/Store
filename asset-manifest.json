@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Store/static/css/main.312592a2.chunk.css",
-    "main.js": "/Store/static/js/main.0f507106.chunk.js",
-    "main.js.map": "/Store/static/js/main.0f507106.chunk.js.map",
+    "main.js": "/Store/static/js/main.3fa6c206.chunk.js",
+    "main.js.map": "/Store/static/js/main.3fa6c206.chunk.js.map",
     "runtime-main.js": "/Store/static/js/runtime-main.214f6960.js",
     "runtime-main.js.map": "/Store/static/js/runtime-main.214f6960.js.map",
     "static/css/2.c111570f.chunk.css": "/Store/static/css/2.c111570f.chunk.css",
@@ -124,10 +124,9 @@
     "static/media/243722-removebg-preview.29b3625a.webp": "/Store/static/media/243722-removebg-preview.29b3625a.webp",
     "static/media/243995-removebg-preview.4d6eca96.webp": "/Store/static/media/243995-removebg-preview.4d6eca96.webp",
     "static/media/244002-removebg-preview.8d33240f.webp": "/Store/static/media/244002-removebg-preview.8d33240f.webp",
-    "static/media/4thfebruary-bladi-one-slab-4f-removebg-preview.fd425e0e.webp": "/Store/static/media/4thfebruary-bladi-one-slab-4f-removebg-preview.fd425e0e.webp",
     "static/media/86466-removebg-preview.ffac21ff.webp": "/Store/static/media/86466-removebg-preview.ffac21ff.webp",
     "static/media/92969-removebg-preview.fe50fe04.webp": "/Store/static/media/92969-removebg-preview.fe50fe04.webp",
-    "static/media/bf1a42cbe1f152ba4ce1f4734730605d.37a37892.png": "/Store/static/media/bf1a42cbe1f152ba4ce1f4734730605d.37a37892.png",
+    "static/media/bf1a42cbe1f152ba4ce1f4734730605d.d6484446.png": "/Store/static/media/bf1a42cbe1f152ba4ce1f4734730605d.d6484446.png",
     "static/media/img_217710-removebg-preview.8dfa01d5.webp": "/Store/static/media/img_217710-removebg-preview.8dfa01d5.webp",
     "static/media/imgonline-com-ua-Resize-JtXbvusMjvD.e257a2ca.jpg": "/Store/static/media/imgonline-com-ua-Resize-JtXbvusMjvD.e257a2ca.jpg",
     "static/media/imgonline-com-ua-Resize-LcPPgxG23pmmmD.bcf1a0ea.jpg": "/Store/static/media/imgonline-com-ua-Resize-LcPPgxG23pmmmD.bcf1a0ea.jpg",
@@ -139,6 +138,6 @@
     "static/css/2.c111570f.chunk.css",
     "static/js/2.6b7cbd62.chunk.js",
     "static/css/main.312592a2.chunk.css",
-    "static/js/main.0f507106.chunk.js"
+    "static/js/main.3fa6c206.chunk.js"
   ]
 }
