@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Store/static/css/main.312592a2.chunk.css",
+    "main.css": "/Store/static/css/main.bdfd447d.chunk.css",
     "main.js": "/Store/static/js/main.3fa6c206.chunk.js",
     "main.js.map": "/Store/static/js/main.3fa6c206.chunk.js.map",
     "runtime-main.js": "/Store/static/js/runtime-main.214f6960.js",
@@ -12,7 +12,7 @@
     "static/js/3.0a22bf58.chunk.js.map": "/Store/static/js/3.0a22bf58.chunk.js.map",
     "index.html": "/Store/index.html",
     "static/css/2.c111570f.chunk.css.map": "/Store/static/css/2.c111570f.chunk.css.map",
-    "static/css/main.312592a2.chunk.css.map": "/Store/static/css/main.312592a2.chunk.css.map",
+    "static/css/main.bdfd447d.chunk.css.map": "/Store/static/css/main.bdfd447d.chunk.css.map",
     "static/js/2.6b7cbd62.chunk.js.LICENSE.txt": "/Store/static/js/2.6b7cbd62.chunk.js.LICENSE.txt",
     "static/media/140770-removebg-preview.32ba3c1e.webp": "/Store/static/media/140770-removebg-preview.32ba3c1e.webp",
     "static/media/140771-removebg-preview.5553a354.webp": "/Store/static/media/140771-removebg-preview.5553a354.webp",
@@ -137,7 +137,7 @@
     "static/js/runtime-main.214f6960.js",
     "static/css/2.c111570f.chunk.css",
     "static/js/2.6b7cbd62.chunk.js",
-    "static/css/main.312592a2.chunk.css",
+    "static/css/main.bdfd447d.chunk.css",
     "static/js/main.3fa6c206.chunk.js"
   ]
 }
