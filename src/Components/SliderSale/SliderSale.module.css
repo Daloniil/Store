@@ -1,6 +1,7 @@
 .header_bottom_photo {
-  min-height: 500px;
+  min-height: 115px;
 }
+
 
 .slick-prev:before,
 .slick-next:before {
@@ -14,19 +15,24 @@
   z-index: 5;
 }
 
-.slick-prev,
-.slick-prev:hover,
-.slick-prev:focus {
+.slick-prev, .slick-prev:hover, .slick-prev:focus {
   margin: 0 0 0 -30px;
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy0YQ1GHcuAuQevNUR36hnR8bRwFVyVeyJZw&usqp=CAU");
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy0YQ1GHcuAuQevNUR36hnR8bRwFVyVeyJZw&usqp=CAU');
   background-size: 100%;
+
+
 }
 
-.slick-next,
-.slick-next:hover,
-.slick-next:focus {
+.slick-next, .slick-next:hover, .slick-next:focus {
   margin: 0 -25px 0 0;
-  background-image: url("https://cdns.iconmonstr.com/wp-content/assets/preview/2012/240/iconmonstr-arrow-24.png");
+  background-image: url('https://cdns.iconmonstr.com/wp-content/assets/preview/2012/240/iconmonstr-arrow-24.png');
   background-size: 100%;
   background-repeat: no-repeat;
+
+
 }
+
+
+
+
+
