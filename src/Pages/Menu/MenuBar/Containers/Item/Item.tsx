@@ -59,20 +59,10 @@ export const Pizza: React.FC<Item> = ({ item }) => {
 
       if (select === "expensive") {
         forceUpdate();
-        setMenu(
-          Array.from(
-            //@ts-ignore
-            addArray.sort((a, b) => parseFloat(b.cost) - parseFloat(a.cost))
-          )
-        );
+        setMenu(Array.from(addArray.sort((a, b) => b.cost - a.cost)));
       } else if (select === "cheap") {
         forceUpdate();
-        setMenu(
-          Array.from(
-            //@ts-ignore
-            addArray.sort((a, b) => parseFloat(a.cost) - parseFloat(b.cost))
-          )
-        );
+        setMenu(Array.from(addArray.sort((a, b) => a.cost - b.cost)));
       } else if (menuItems.length > 0) {
         forceUpdate();
         setMenu(Array.from(addArray));
@@ -83,18 +73,13 @@ export const Pizza: React.FC<Item> = ({ item }) => {
   useEffect(() => {
     if (select === "expensive") {
       forceUpdate();
-      setMenu(
-        //@ts-ignore
-        menuItems.sort((a, b) => parseFloat(b.cost) - parseFloat(a.cost))
-      );
+      setMenu(menuItems.sort((a, b) => b.cost - a.cost));
     } else if (select === "cheap") {
       forceUpdate();
-      //@ts-ignore
-      menuItems.sort((a, b) => parseFloat(a.cost) - parseFloat(b.cost));
+      menuItems.sort((a, b) => a.cost - b.cost);
     } else if (menuItems.length > 0) {
       forceUpdate();
-      //@ts-ignore
-      setMenu(menuItems.sort((a, b) => parseFloat(a.id) - parseFloat(b.id)));
+      setMenu(menuItems.sort((a, b) => a.id - b.id));
     }
   }, [select]);
 

@@ -61,13 +61,13 @@ const ChekoutForm: React.FC<
           <div className={s.dostavka}>
             <div className={s.name_dostavka}>Доставка</div>
             <div className={s.cost_dostavka}>
-              {cost >= 300 ? "Безкоштовна доставка" : "40 грн"}
+              {cost >= 500 ? "Безкоштовна доставка" : "40 грн"}
             </div>
           </div>
 
           <div className={s.all_cost}>
             <div className={s.all}>Загалом</div>
-            <div className={s.alls}>{cost >= 300 ? cost : cost + 40} грн</div>
+            <div className={s.alls}>{cost >= 500 ? cost : cost + 40} грн</div>
           </div>
         </div>
       </div>
