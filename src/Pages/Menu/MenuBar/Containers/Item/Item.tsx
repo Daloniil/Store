@@ -85,42 +85,6 @@ export const Pizza: React.FC<Item> = ({ item }) => {
 
   return (
     <div className={s.pizza}>
-      <div style={{ display: "flex", justifyContent: "center" }}>
-        <select
-          onChange={(e) => handleChangeSelect(e.target.value)}
-          style={{
-            width: "150px",
-            minWidth: "15ch",
-            maxWidth: "30ch",
-            border: " 1px solid var(--select-border)",
-            borderRadius: " 0.25em",
-            padding: "0.25em 0.5em",
-            fontSize: " 17px",
-            cursor: "pointer",
-            margin: "0 12.5px 0 12.5px",
-            lineHeight: " 1.1",
-            backgroundColor: " #fff",
-            backgroundImage: "linear-gradient(to top, #f9f9f9, #fff 33%)",
-          }}
-        >
-          <option value="">Нічого</option>
-          <option value="cheap">Від дешевого до дорожчого</option>
-          <option value="expensive">Від дорожчого до дешевого</option>
-        </select>
-
-        <input
-          type="text"
-          value={search}
-          onChange={(e) => handleSearch(e.target.value)}
-          style={{
-            width: "100px",
-            padding: "12px 20px",
-            margin: "0 12.5px 0 12.5px",
-            fontSize: "17px",
-          }}
-          placeholder="Шукати..."
-        />
-      </div>
       <div className={s.pizza_con}>
         {menuItems.length > 0 ? (
           menuItems.slice(pageActive * 10 - 10, pageActive * 10).map((u) => (
